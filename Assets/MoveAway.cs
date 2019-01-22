@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MoveAway : MonoBehaviour
 {
-    public GameObject target;
-    public float speed;
-
-    // Update is called once per frame
-    void Update()
+    public Vector3 vel;
+    public float speed=10.0f;
+    void Start()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -1 * speed * Time.deltaTime);
+       Vector3 values = Vector3.Normalize(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+       vel= new Vector3(values.x, values.y, 0);
+    }
+    // Update is called once per frame
+    void Update() {
+        transform.position =transform.position + vel;
     }
 }

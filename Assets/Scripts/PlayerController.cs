@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour{
     public Text countText;
     public Text winText;
     private Rigidbody2D rb2d;
+    public GameObject projectile;
     private int count;
     void Start(){
         count = 0;
@@ -20,6 +21,12 @@ public class PlayerController : MonoBehaviour{
         float moveVert = Input.GetAxis("Vertical");
         Vector2 move = new Vector2 (moveHori,moveVert);
         rb2d.AddForce(move *speed);
+    }
+    void Update() {
+       if (Input.GetKeyDown(KeyCode.LeftShift))
+         {
+             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
