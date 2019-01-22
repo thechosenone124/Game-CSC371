@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour{
     public Text winText;
     private Rigidbody2D rb2d;
     public GameObject projectile;
+    private bool shoot;
     private int count;
     void Start(){
         count = 0;
         winText.text = "";
         SetCountText();
         rb2d = GetComponent<Rigidbody2D>();
+        shoot = false;
     }
     void FixedUpdate(){
         float moveHori = Input.GetAxis("Horizontal");
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour{
         rb2d.AddForce(move *speed);
     }
     void Update() {
-       if (Input.GetKeyDown(KeyCode.LeftShift))
+       if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
          {
              GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
          }
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour{
             collision.gameObject.SetActive(false); 
             count = count + 1;
             SetCountText();
+            shoot = true;
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
