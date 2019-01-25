@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{74DFDF0D-55E5-7705-2312-AA02BEC88520}</ProjectGuid>
+    <ProjectGuid>{0C1C531D-EC3F-58DF-D47E-AA5B99044277}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,22 +53,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyController.cs" />
-     <Compile Include="Assets\MoveAway.cs" />
-     <Compile Include="Assets\Rotator.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\MoveAway.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371-1-24-19/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371-1-24-19/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371-1-24-19/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371-1-24-19/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/eradb/Desktop/Winter2019/Unity Projects/Game-CSC371/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity_Lab/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
