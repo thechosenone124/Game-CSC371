@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PickUp
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 742745511
+    locked: 0
+  - name: Projectile
+    uniqueID: 937074289
     locked: 0
   - name: Ships
     uniqueID: 973497689
