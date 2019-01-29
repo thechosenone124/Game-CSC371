@@ -47,9 +47,24 @@ TagManager:
   - name: Background
     uniqueID: 742745511
     locked: 0
+  - name: Ship Background
+    uniqueID: 235000981
+    locked: 0
+  - name: Ship Midground
+    uniqueID: 503014235
+    locked: 0
+  - name: Ship Foreground
+    uniqueID: 2074784289
+    locked: 0
+  - name: Enemies
+    uniqueID: 2914737349
+    locked: 0
   - name: Projectile
     uniqueID: 937074289
     locked: 0
   - name: Ships
     uniqueID: 973497689
+    locked: 0
+  - name: Players
+    uniqueID: 437400225
     locked: 0
