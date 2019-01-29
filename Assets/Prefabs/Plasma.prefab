@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50809766905690802}
   - component: {fileID: 58442228996781326}
   - component: {fileID: 114735919301985602}
+  - component: {fileID: 114607103544211876}
   m_Layer: 0
   m_Name: Plasma
   m_TagString: Projectile
@@ -95,6 +96,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.37
+--- !u!114 &114607103544211876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079983964451360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a780954b462b4642b6de551565cb290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114735919301985602
 MonoBehaviour:
   m_ObjectHideFlags: 1
