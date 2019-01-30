@@ -8,9 +8,13 @@ public class GameCtrl : MonoBehaviour {
 
     public static GameCtrl instance;
     public bool gameOver = false;
+
     public Text balanceText;
     public Text healthText;
+
     public GameObject gameOverText;
+    public PlayerController2 pc2;
+
     public int initialHealth = 3;
 
     private int balance;
@@ -69,5 +73,7 @@ public class GameCtrl : MonoBehaviour {
     {
         gameOverText.SetActive(true);
         gameOver = true;
+        pc2.disableMovement();
+        pc2.turnDead();
     }
 }
