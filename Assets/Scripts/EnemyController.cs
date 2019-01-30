@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
         {
             gameObject.SetActive(false);
             col.gameObject.SetActive(false);
+            GameCtrl.instance.playerScored();
         }
 
     }
