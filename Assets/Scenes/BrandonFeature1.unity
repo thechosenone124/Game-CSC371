@@ -376,7 +376,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62640422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -404,7 +404,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -539,7 +539,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81720078}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -567,7 +567,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1127,7 +1127,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae8ab7a18ad51474fbc7b905c25779e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1277,7 +1277,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae8ab7a18ad51474fbc7b905c25779e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1219943643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 809464369bf964026b17856802b6306d, type: 3}
+  m_Script: {fileID: 11500000, guid: 26a354232d4e44948bfad3158ebe4dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
@@ -1848,7 +1848,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394596377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1876,7 +1876,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2011,7 +2011,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1618807203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2039,7 +2039,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2144,7 +2144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715660082}
-  - component: {fileID: 1715660081}
   m_Layer: 0
   m_Name: SpaceBG
   m_TagString: Untagged
@@ -2152,20 +2151,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1715660081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1715660080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bcfcc64dfde848d2af92c1ca2ec3b8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background1: {fileID: 885627755}
-  background2: {fileID: 661892870}
-  cam: {fileID: 1336877973}
 --- !u!4 &1715660082
 Transform:
   m_ObjectHideFlags: 0
@@ -2284,7 +2269,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2087969587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378f8247911bd4fcd91319b37059bf0c, type: 3}
+  m_Script: {fileID: 11500000, guid: e3e2910ce7ec0cf4c8309af0e454869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -2401,7 +2386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2087969587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbda4c654e1c445aaedeb94c057b61e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b6691dea63075c4f8b3edd75dcb4e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealthBar: {fileID: 1246978546}
