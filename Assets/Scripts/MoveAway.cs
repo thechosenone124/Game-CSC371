@@ -28,6 +28,6 @@ public class MoveAway : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
-        transform.position =transform.position + vel/15;
+        transform.position =transform.position + vel/10;
     }
 }
