@@ -8,10 +8,14 @@ public class GameCtrl : MonoBehaviour {
 
     public static GameCtrl instance;
     public bool gameOver = false;
+
     public Text balanceText;
     public Text healthText;
+
     public GameObject gameOverText;
-    public int initialHealth = 3;
+    public PlayerController2 pc2;
+
+    //public int initialHealth = 3;
 
     private int balance;
     private int health;
@@ -31,8 +35,8 @@ public class GameCtrl : MonoBehaviour {
 
     void Start()
     {
-        health = initialHealth;
-        healthText.text = "Health: " + health;
+        //health = initialHealth;
+        //healthText.text = "Health: " + health;
     }
 	
 	// Update is called once per frame
@@ -54,7 +58,7 @@ public class GameCtrl : MonoBehaviour {
         balanceText.text = "Balance: $" + balance.ToString();
     }
 
-    public void damagedByEnemy()
+    /*public void damagedByEnemy()
     {
         health -= 1;
         healthText.text = "Health: " + health.ToString();
@@ -62,12 +66,14 @@ public class GameCtrl : MonoBehaviour {
         {
             playerDied();
         }
-    }
+    }*/
 
 
     public void playerDied()
     {
         gameOverText.SetActive(true);
         gameOver = true;
+        pc2.disableMovement();
+        pc2.turnDead();
     }
 }

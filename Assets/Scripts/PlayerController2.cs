@@ -9,6 +9,7 @@ public class PlayerController2 : MonoBehaviour
     private Rigidbody2D rb2d;
     public GameObject projectile;
     private bool shoot;
+    private bool isDead = false;
     private int count;
 
     private int health;
@@ -24,10 +25,13 @@ public class PlayerController2 : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float moveHori = Input.GetAxis("Horizontal");
-        float moveVert = Input.GetAxis("Vertical");
-        Vector2 move = new Vector2(moveHori, moveVert);
-        rb2d.AddForce(move * speed);
+        if (isDead != true)
+        {
+            float moveHori = Input.GetAxis("Horizontal");
+            float moveVert = Input.GetAxis("Vertical");
+            Vector2 move = new Vector2(moveHori, moveVert);
+            rb2d.AddForce(move * speed);
+        }
     }
     void Update()
     {
@@ -52,7 +56,8 @@ public class PlayerController2 : MonoBehaviour
             collision.gameObject.SetActive(false);
             count = count - 1;
             SetCountText();
-            GameCtrl.instance.damagedByEnemy();
+            //GameCtrl.instance.damagedByEnemy();
+            SendMessage("TakeDamage", 1);
         }
     }
 
@@ -64,5 +69,16 @@ public class PlayerController2 : MonoBehaviour
             // winText.text = "You Win!";
         }
     }
-    //stead
+
+    public void disableMovement()
+    {
+        rb2d.velocity = Vector2.zero;
+        print("here");
+    }
+
+    public void turnDead()
+    {
+        isDead = true;
+    }
+
 }
