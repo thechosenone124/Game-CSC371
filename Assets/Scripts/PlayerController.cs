@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour{
         rb2d.AddForce(move *speed);
     }
     void Update() {
-       if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
-         {
-             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-         }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
+        {
+            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
