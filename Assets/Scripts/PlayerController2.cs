@@ -7,12 +7,19 @@ public class PlayerController2 : MonoBehaviour
 
     public float speed;
     private Rigidbody2D rb2d;
+
     public GameObject projectile;
     private bool shoot;
     private bool isDead = false;
     private int count;
 
     private int health;
+
+    //controller support
+    private Vector3 movementVector;
+    private Transform mousePosition;
+    public GameObject crosshair;
+    public float dampener;
 
     void Start()
     {
@@ -27,16 +34,40 @@ public class PlayerController2 : MonoBehaviour
     {
         if (isDead != true)
         {
-            float moveHori = Input.GetAxis("Horizontal");
+            /*float moveHori = Input.GetAxis("Horizontal");
             float moveVert = Input.GetAxis("Vertical");
             Vector2 move = new Vector2(moveHori, moveVert);
-            rb2d.AddForce(move * speed);
+            rb2d.AddForce(move * speed);*/
+
+            //controller support
+            movementVector.x = Input.GetAxis("LeftJoystickX") * speed;
+            movementVector.y = Input.GetAxis("LeftJoystickY") * speed *-1;
+            rb2d.AddForce(movementVector);
+
+            mousePosition = crosshair.transform;
+
+            float rStickX = Input.GetAxis("RightJoystickX");
+            float rStickY = Input.GetAxis("RightJoystickY") *-1;
+
+            Vector3 movement = new Vector3(rStickX/dampener, rStickY/dampener, 0);
+            crosshair.transform.position = crosshair.transform.position + movement;
+            //mousePosition = crosshair.transform; 
+            
+
         }
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
+        float shooting = Input.GetAxis("RightTrigger");
+        bool isShooting = false;
+        if(shooting > 0)
         {
+            isShooting = true;
+        }
+
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || isShooting) && shoot)
+        {
+            //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
         }
     }
@@ -79,6 +110,11 @@ public class PlayerController2 : MonoBehaviour
     public void turnDead()
     {
         isDead = true;
+    }
+
+    public Transform getCrosshairTransform()
+    {
+        return crosshair.transform;
     }
 
 }
