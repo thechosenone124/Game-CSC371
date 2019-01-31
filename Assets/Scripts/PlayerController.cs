@@ -11,21 +11,28 @@ public class PlayerController : MonoBehaviour{
     public GameObject projectile;
     private bool shoot;
     private int count;
+    public bool navigationControls;
+    public bool gunControls;
     void Start(){
         count = 0;
         winText.text = "";
         SetCountText();
         rb2d = GetComponent<Rigidbody2D>();
         shoot = false;
+        navigationControls = false;
+        gunControls = false;
     }
     void FixedUpdate(){
-        float moveHori = Input.GetAxis("Horizontal");
-        float moveVert = Input.GetAxis("Vertical");
-        Vector2 move = new Vector2 (moveHori,moveVert);
-        rb2d.AddForce(move *speed);
+        if (navigationControls)
+        {
+           float moveHori = Input.GetAxis("Horizontal");
+           float moveVert = Input.GetAxis("Vertical");
+           Vector2 move = new Vector2 (moveHori,moveVert);
+           rb2d.AddForce(move *speed);
+        }
     }
     void Update() {
-       if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
+       if (Input.GetKeyDown(KeyCode.LeftShift) && shoot && gunControls)
          {
              GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
          }
