@@ -5,27 +5,30 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour{
 
     public float speed;
-    public Text countText;
-    public Text winText;
+    public float maxSpeed = 10f;
+    public float drag = 5f;
     private Rigidbody2D rb2d;
     public GameObject projectile;
-    private bool shoot;
-    private int count;
+    private bool canShoot;
+    private int score;
+
     void Start(){
-        count = 0;
-        winText.text = "";
-        SetCountText();
+        score = 0;
         rb2d = GetComponent<Rigidbody2D>();
-        shoot = false;
+        rb2d.drag = drag;
+        canShoot = false;
     }
+
     void FixedUpdate(){
         float moveHori = Input.GetAxis("Horizontal");
         float moveVert = Input.GetAxis("Vertical");
         Vector2 move = new Vector2 (moveHori,moveVert);
-        rb2d.AddForce(move *speed);
+
+        if((rb2d.velocity + move).magnitude < maxSpeed) rb2d.AddForce(move *speed);
     }
+
     void Update() {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && shoot)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot)
         {
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
         }
@@ -33,25 +36,17 @@ public class PlayerController : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("PlayerController -- Hit something");
         if (collision.gameObject.CompareTag("PickUp"))
         {
             collision.gameObject.SetActive(false); 
-            count = count + 1;
-            SetCountText();
-            shoot = true;
+            score = score + 1;
+            canShoot = true;
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.SetActive(false); 
-            count = count - 1;
-            SetCountText();
-        }
-    }
-
-    void SetCountText(){
-        countText.text = "Count: " + count.ToString();
-        if(count >= 12){
-            winText.text = "You Win!";
+            Debug.Log("PlayerController -- Hit enemy");
+            //collision.gameObject.SetActive(false); 
         }
     }
 }
