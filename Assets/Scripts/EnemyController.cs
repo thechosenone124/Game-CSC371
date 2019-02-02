@@ -17,8 +17,7 @@ public class EnemyController : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
+    void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.CompareTag("Projectile"))
         {
             Die();
