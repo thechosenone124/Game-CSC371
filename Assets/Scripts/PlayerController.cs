@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour{
         {
             Debug.Log("PlayerController -- Hit enemy");
             //collision.gameObject.SetActive(false); 
+            SendMessage("TakeDamage", 1);
         }
     }
 }
