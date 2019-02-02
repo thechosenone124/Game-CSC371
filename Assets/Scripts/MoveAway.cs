@@ -26,7 +26,7 @@ public class MoveAway : MonoBehaviour
         vel = new Vector3(values.x*-1, values.y*-1, 0);
         print("vel: " + vel.ToString());
     }
-    // Update is called once per frame
+
     void Update() {
         transform.position =transform.position + vel/10;
     }
