@@ -14,7 +14,7 @@ public class WeaponAimControl : MonoBehaviour {
 
       Vector2 stickInput = new Vector2(horizontalAxis, verticalAxis);
       stickInput = Vector2.ClampMagnitude(stickInput, 1);   //clamp magnitude to keep circle boundary for x/y-axis, instead of square
-      print(stickInput.x + "," + stickInput.y);
+      print(stickInput.x + "," + stickInput.y + ": " + stickInput.magnitude);
 
       if (stickInput.magnitude < deadZone)
       {
