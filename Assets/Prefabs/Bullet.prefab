@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f080cf6fb510614ba02ee5a2fecf80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLength: 0.5
+  spawnLength: 0.75
   speed: 10
   rb: {fileID: 50527655138244060}
 --- !u!212 &212437597197824964

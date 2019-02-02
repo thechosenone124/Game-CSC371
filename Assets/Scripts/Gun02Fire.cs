@@ -7,14 +7,10 @@ public class Gun02Fire : MonoBehaviour
 
    public GameObject projectile;
 
-   void Update()
+   void Fire()
    {
-
-      if (Input.GetButtonDown("Fire2"))
-      {
-         Instantiate(projectile, transform.position, transform.rotation);
-         Instantiate(projectile, transform.position, transform.rotation);
-         Instantiate(projectile, transform.position, transform.rotation);
-      }
+      Instantiate(projectile, transform.position, transform.rotation);
+      Instantiate(projectile, transform.position, transform.rotation);
+      Instantiate(projectile, transform.position, transform.rotation);
    }
 }

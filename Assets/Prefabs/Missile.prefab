@@ -119,9 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLength: 2
-  speed: 4
-  timeToFlurry: 0.15
+  speed: 5
+  timeToFlurry: 0.6
   timeBetweenTurns: 0.1
+  turnAngleRange: 30
   rb: {fileID: 50113941455144174}
 --- !u!212 &212344374994714492
 SpriteRenderer:
