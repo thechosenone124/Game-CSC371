@@ -28,10 +28,10 @@ public class PlayerController : MonoBehaviour{
     }
 
     void Update() {
-       if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot)
-         {
-             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-         }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot)
+        {
+            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
