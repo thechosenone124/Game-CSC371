@@ -6,11 +6,13 @@ public class WeaponAimControl : MonoBehaviour {
 
    public float deadZone = 0.2f;
    public float rotationSpeed = 5f;
+   public string inputXAxis = "RightJoystickX";
+   public string inputYAxis = "RightJoystickY";
 
    void Update()
    {
-      float horizontalAxis = Input.GetAxisRaw("RightJoystickX");
-      float verticalAxis = Input.GetAxisRaw("RightJoystickY");
+      float horizontalAxis = Input.GetAxisRaw(inputXAxis);
+      float verticalAxis = Input.GetAxisRaw(inputYAxis);
 
       Vector2 stickInput = new Vector2(horizontalAxis, verticalAxis);
       stickInput = Vector2.ClampMagnitude(stickInput, 1);   //clamp magnitude to keep circle boundary for x/y-axis, instead of square

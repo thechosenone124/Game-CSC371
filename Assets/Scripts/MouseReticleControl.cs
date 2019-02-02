@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReticleControl : MonoBehaviour {
+public class MouseReticleControl : MonoBehaviour {
 
    public Texture2D reticle;
 
