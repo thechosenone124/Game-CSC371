@@ -11,7 +11,7 @@ public class MoveAway : MonoBehaviour
        Vector3 values = Vector3.Normalize(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
        vel= new Vector3(values.x, values.y, 0);
     }
-    // Update is called once per frame
+
     void Update() {
         transform.position =transform.position + vel;
     }
