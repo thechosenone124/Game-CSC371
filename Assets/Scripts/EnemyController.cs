@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         else if (col.gameObject.CompareTag("PlayerShip"))
         {
             Die();
-            mainCamera.GetComponent<ShakeBehavior>().TriggerShake();
+//            mainCamera.GetComponent<ShakeBehavior>().TriggerShake();
         }
 
     }
