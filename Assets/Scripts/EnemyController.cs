@@ -6,6 +6,9 @@ public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject target;
+    public GameObject particles;
+    public GameObject ship;
+    public GameObject mainCamera;
     public float speed;
 
     // Update is called once per frame
@@ -17,9 +20,21 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.CompareTag("Projectile"))
         {
-            gameObject.SetActive(false);
-            col.gameObject.SetActive(false);
+            Die();
+        }
+        else if (col.gameObject.CompareTag("PlayerShip"))
+        {
+            Die();
+            mainCamera.GetComponent<ShakeBehavior>().TriggerShake();
         }
 
+    }
+
+    void Die()
+    {
+        particles.SetActive(true);
+        ship.SetActive(false);
+        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        gameObject.GetComponent<EnemyController>().enabled = false;
     }
 }
