@@ -6,8 +6,9 @@ public class MissileMovement : MonoBehaviour {
 
    public float spawnLength = 0.5f;
    public float speed = 10f;
-   public float timeToFlurry = 0.15f;
+   public float timeToFlurry = 0.25f;
    public float timeBetweenTurns = 0.5f;
+   public float turnAngleRange = 30f;
    public Rigidbody2D rb;
 
    private float timer = 0;
@@ -15,7 +16,7 @@ public class MissileMovement : MonoBehaviour {
 
    void Start()
    {
-      transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, Random.Range(-30f, 30f));
+      transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, Random.Range(-10f, 10f));
       rb.velocity = transform.up * speed;
    }
 
@@ -23,9 +24,9 @@ public class MissileMovement : MonoBehaviour {
    {
       timer += Time.deltaTime;
 
-      if (timer >= 0.15f && timeSinceLastTurn >= timeBetweenTurns)
+      if (timer >= timeToFlurry && timeSinceLastTurn >= timeBetweenTurns)
       {
-         transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, Random.Range(-30f, 30f));
+         transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, Random.Range(-turnAngleRange, turnAngleRange));
          rb.velocity = transform.up * speed;
          timeSinceLastTurn = 0;
       }

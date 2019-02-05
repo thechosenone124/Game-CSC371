@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun01Fire : MonoBehaviour {
-
+public class GunFire : MonoBehaviour
+{
+   public int numProjectiles = 1;
    public GameObject projectile;
 
-   void Update()
+   void Fire()
    {
-      if (Input.GetButtonDown("Fire1"))
+      for (int i = 0; i < numProjectiles; i++)
       {
          Instantiate(projectile, transform.position, transform.rotation);
       }

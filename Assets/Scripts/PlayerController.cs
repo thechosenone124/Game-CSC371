@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour{
     public GameObject projectile;
     private bool canShoot;
     private int score;
+    public bool navigationControls;
+    public bool gunControls;
 
     void Start(){
         score = 0;
@@ -28,9 +30,12 @@ public class PlayerController : MonoBehaviour{
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot)
+        if (navigationControls)
         {
-            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+           if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot && gunControls)
+           {
+               GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+           }
         }
     }
 
@@ -49,5 +54,17 @@ public class PlayerController : MonoBehaviour{
             //collision.gameObject.SetActive(false); 
             SendMessage("TakeDamage", 1);
         }
+    }
+    
+    public void disableMovement()
+    {
+        rb2d.velocity = Vector2.zero;
+        print("here");
+    }
+
+    public void turnDead()
+    {
+        navigationControls = false;
+        gunControls = false;
     }
 }

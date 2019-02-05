@@ -294,6 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &116377971
 BoxCollider2D:
@@ -457,6 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &117019703
 BoxCollider2D:
@@ -695,6 +701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &194296904
 BoxCollider2D:
@@ -858,6 +867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &195761770
 BoxCollider2D:
@@ -1021,6 +1033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &233103305
 BoxCollider2D:
@@ -1184,6 +1199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &300960771
 BoxCollider2D:
@@ -1347,6 +1365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &305112892
 BoxCollider2D:
@@ -1585,6 +1606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &335121412
 BoxCollider2D:
@@ -1823,6 +1847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &376293551
 BoxCollider2D:
@@ -2061,6 +2088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &433005275
 BoxCollider2D:
@@ -2374,6 +2404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &496002016
 BoxCollider2D:
@@ -2777,6 +2810,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &666064657
 BoxCollider2D:
@@ -2940,6 +2976,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &677566161
 BoxCollider2D:
@@ -3103,6 +3142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &687133651
 BoxCollider2D:
@@ -3478,6 +3520,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &743095400
 BoxCollider2D:
@@ -3716,6 +3761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &854090422
 BoxCollider2D:
@@ -3879,6 +3927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &912574546
 BoxCollider2D:
@@ -4358,6 +4409,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &980701280
 BoxCollider2D:
@@ -4651,6 +4705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1029448232
 BoxCollider2D:
@@ -4919,6 +4976,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1067747020
 BoxCollider2D:
@@ -5082,6 +5142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1105385555
 BoxCollider2D:
@@ -5245,6 +5308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1134665921
 BoxCollider2D:
@@ -5408,6 +5474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1187055434
 BoxCollider2D:
@@ -5646,6 +5715,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1236000768
 BoxCollider2D:
@@ -5809,6 +5881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1245244646
 BoxCollider2D:
@@ -5987,6 +6062,11 @@ Prefab:
     - target: {fileID: 4685341840060866, guid: dd42e90b76e1fd34392c2fc89c4c220a, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61735721604988898, guid: dd42e90b76e1fd34392c2fc89c4c220a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd42e90b76e1fd34392c2fc89c4c220a, type: 2}
@@ -6177,6 +6257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1268635702
 BoxCollider2D:
@@ -6340,9 +6423,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  countText: {fileID: 1474871166}
-  winText: {fileID: 721592269}
+  maxSpeed: 10
+  drag: 5
   projectile: {fileID: 1079983964451360, guid: dfbe5a9798f1bd44daba923867569c9c, type: 2}
+  navigationControls: 0
+  gunControls: 0
 --- !u!50 &1270497442
 Rigidbody2D:
   serializedVersion: 4
@@ -6630,6 +6715,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1313302386
 BoxCollider2D:
@@ -6793,6 +6881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1337044331
 BoxCollider2D:
@@ -6956,6 +7047,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1431274914
 BoxCollider2D:
@@ -7119,6 +7213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1452291668
 BoxCollider2D:
@@ -7357,6 +7454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1486755684
 BoxCollider2D:
@@ -7494,6 +7594,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1211467442469894, guid: dd42e90b76e1fd34392c2fc89c4c220a,
     type: 2}
   m_PrefabInternal: {fileID: 1251544753}
+--- !u!114 &1507689866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507689865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7919da2f63aabb74982b96e1b324ed9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 1270497440}
+  speed: 5
 --- !u!1 &1537982303
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,6 +7638,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1537982305
 BoxCollider2D:
@@ -7688,6 +7804,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1558368753
 BoxCollider2D:
@@ -7926,6 +8045,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1576767092
 BoxCollider2D:
@@ -8089,6 +8211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1576769411
 BoxCollider2D:
@@ -8347,6 +8472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1604290920
 BoxCollider2D:
@@ -8510,6 +8638,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1606806520
 BoxCollider2D:
@@ -8727,6 +8858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1715588927
 BoxCollider2D:
@@ -8890,6 +9024,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1754916188
 BoxCollider2D:
@@ -9053,6 +9190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1781119897
 BoxCollider2D:
@@ -9371,6 +9511,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1861824609
 BoxCollider2D:
@@ -9534,6 +9677,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1862627001
 BoxCollider2D:
@@ -9847,6 +9993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &1919701911
 BoxCollider2D:
@@ -10105,6 +10254,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &2049390172
 BoxCollider2D:
@@ -10268,6 +10420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &2079800344
 BoxCollider2D:
@@ -10431,6 +10586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1270497440}
+  particles: {fileID: 0}
+  ship: {fileID: 0}
+  mainCamera: {fileID: 0}
   speed: 1
 --- !u!61 &2140513220
 BoxCollider2D:

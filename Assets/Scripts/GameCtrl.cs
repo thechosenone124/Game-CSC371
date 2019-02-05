@@ -13,7 +13,7 @@ public class GameCtrl : MonoBehaviour {
     public Text healthText;
 
     public GameObject gameOverText;
-    public PlayerController2 pc2;
+    public PlayerController pc2;
 
     //public int initialHealth = 3;
 
