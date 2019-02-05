@@ -23,7 +23,6 @@ public class CreateRoom : MonoBehaviour {
 			flag = 1;
     	}
 		else if(Input.GetMouseButtonDown(0) && flag == 1){
-			Debug.Log("You are trying to delete");
 			Destroy(transform.GetChild(0).gameObject);
 			Instantiate(obj2,transform.position,Quaternion.identity,transform);
 			flag = 2;
