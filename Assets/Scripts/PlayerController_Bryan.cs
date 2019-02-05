@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerController : MonoBehaviour{
+public class PlayerController_Bryan : MonoBehaviour{
 
     public float speed;
     public Text countText;
