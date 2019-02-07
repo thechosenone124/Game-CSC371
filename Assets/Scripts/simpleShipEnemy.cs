@@ -21,9 +21,8 @@ public class simpleShipEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timer += Time.deltaTime;
 
-        print(CheckDistance());
+        timer += Time.deltaTime;
 
         float step = speed * Time.deltaTime;
         if(CheckDistance() < triggerRange && CheckDistance() > shootRange)
@@ -33,15 +32,22 @@ public class simpleShipEnemy : MonoBehaviour {
 
         if (timer >= bulletFreq && CheckDistance() <= shootRange + .5)
         {
-            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+            Shoot();
             timer = 0;
         }
-
+            
     }
 
     private float CheckDistance()
     {
         float dist = Vector2.Distance(target.transform.position, transform.position);
         return dist;
+    }
+
+    private void Shoot()
+    {
+        GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        bullet.transform.rotation = Quaternion.LookRotation(Vector3.forward, target.transform.position - transform.position);
+
     }
 }
