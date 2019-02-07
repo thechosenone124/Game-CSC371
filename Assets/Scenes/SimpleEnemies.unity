@@ -213,7 +213,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -541,11 +541,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2139200366}
   projectile: {fileID: 1977772271130670, guid: 27980727a4c15de40a626c43fded7010, type: 2}
-  speed: 10
+  speed: 3
   shootRange: 10
   triggerRange: 20
   bulletFreq: 2
-  rotateSpeed: 5
+  rotateSpeed: 0.8
   radius: 10
 --- !u!1 &2139200366 stripped
 GameObject:
