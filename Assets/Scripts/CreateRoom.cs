@@ -8,6 +8,8 @@ public class CreateRoom : MonoBehaviour {
 	public GameObject obj1;
 	public GameObject obj2;
 	private int flag = 0;
+
+	private int hasChild = 0;
 	void Start () {
 		
 	}
@@ -19,17 +21,24 @@ public class CreateRoom : MonoBehaviour {
 
 	void OnMouseOver(){
 		if(Input.GetMouseButtonDown(0) && flag == 0){
-			Instantiate(obj1,transform.position,Quaternion.identity,transform);
+			BuildRoom(obj1);
 			flag = 1;
     	}
 		else if(Input.GetMouseButtonDown(0) && flag == 1){
-			Destroy(transform.GetChild(0).gameObject);
-			Instantiate(obj2,transform.position,Quaternion.identity,transform);
+			BuildRoom(obj2);
 			flag = 2;
 		}
 		else if(Input.GetMouseButtonDown(0) && flag == 2){
-			Destroy(transform.GetChild(0).gameObject);
 			flag = 0;
 		}
+	}
+
+	public void BuildRoom(GameObject module){
+		if(hasChild == 1){
+			Destroy(transform.GetChild(0).gameObject);
+			hasChild = 0;
+		}
+		Instantiate(module,transform.position,Quaternion.identity,transform);
+		hasChild = 1;
 	}
 }
