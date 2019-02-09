@@ -8,6 +8,10 @@ TagManager:
   - PickUp
   - Projectile
   - PlayerShip
+  - Room
+  - Gun
+  - Cockpit
+  - EngineRoom
   layers:
   - Default
   - TransparentFX
