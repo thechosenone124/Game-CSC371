@@ -13,7 +13,7 @@ public class CreateRoom : MonoBehaviour {
 	private int flag = 0;
 	private int moduleType = -1;
 	private int hasChild = 0;
-	public GameObject child;
+	private GameObject child;
 
 	private int switchCount = 0;
 	void OnMouseDown(){
