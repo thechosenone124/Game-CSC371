@@ -4996,6 +4996,8 @@ MonoBehaviour:
   maxSpeed: 10
   drag: 5
   projectile: {fileID: 1079983964451360, guid: dfbe5a9798f1bd44daba923867569c9c, type: 2}
+  navigationControls: 0
+  gunControls: 0
 --- !u!50 &1270497442
 Rigidbody2D:
   serializedVersion: 4
@@ -6012,6 +6014,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1211467442469894, guid: dd42e90b76e1fd34392c2fc89c4c220a,
     type: 2}
   m_PrefabInternal: {fileID: 1251544753}
+--- !u!114 &1507689866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507689865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7919da2f63aabb74982b96e1b324ed9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 1270497440}
+  speed: 5
 --- !u!1 &1537982303
 GameObject:
   m_ObjectHideFlags: 0

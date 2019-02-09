@@ -85,6 +85,5 @@ public class CreateRoom : MonoBehaviour {
 			case FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
-		}
 	}
 }
