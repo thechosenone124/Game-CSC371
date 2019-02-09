@@ -36,9 +36,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4112697311689112}
+  - component: {fileID: 114935565382204354}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646443763223958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.391626, y: -12.183256, z: 0}
+  m_LocalPosition: {x: -42.36262, y: -7.1674657, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4063114429965630}
@@ -169,6 +170,17 @@ PolygonCollider2D:
       - {x: 0.42999998, y: -1.39}
       - {x: 0.65, y: -1.39}
       - {x: 0.69, y: -1.3299999}
+--- !u!114 &114935565382204354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646443763223958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85db98b4d3ebb04fa928ac7ed13859c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212398196420894552
 SpriteRenderer:
   m_ObjectHideFlags: 1
