@@ -16,6 +16,7 @@ public class SpawnStartingShip : MonoBehaviour {
 	private GameObject engineRoom;
 	private GameObject cockpit;
 	private GameObject weaponsRoom;
+	private GameObject gun1,gun2;
 
 	private int roomSwitch = 0;
 	void Start () {
@@ -50,6 +51,16 @@ public class SpawnStartingShip : MonoBehaviour {
 		cockpit.GetComponent<CreateRoom>().BuildRoom(modules[COCKPIT],HasNeighbors(2,2),COCKPIT);
 		rooms[2,2] = cockpit;
 		UpdateNeighbors(2,2);
+
+		gun1 = transform.GetChild(16).gameObject;
+		gun1.GetComponent<CreateRoom>().BuildRoom(modules[GUN],HasNeighbors(1,3),GUN);
+		rooms[1,3] = gun1;
+		UpdateNeighbors(1,3);
+
+		gun2 = transform.GetChild(18).gameObject;
+		gun2.GetComponent<CreateRoom>().BuildRoom(modules[GUN],HasNeighbors(3,3),GUN);
+		rooms[3,3] = gun2;
+		UpdateNeighbors(3,3);
 	}
 
 	void SpawnModule(int child, GameObject module, int x, int y, int moduleType){

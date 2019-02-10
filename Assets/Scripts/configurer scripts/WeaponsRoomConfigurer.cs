@@ -19,7 +19,6 @@ public class WeaponsRoomConfigurer : MonoBehaviour {
 	
 	public void Doors(int neighbors){
 		if((neighbors & 1) > 0){
-			Debug.Log("Up");
 			upDoor.SetActive(false);
 			upPath.SetActive(true);
 		}
@@ -28,7 +27,6 @@ public class WeaponsRoomConfigurer : MonoBehaviour {
 			upPath.SetActive(false);
 		}
 		if((neighbors & 2) > 0){
-			Debug.Log("Down");
 			downDoor.SetActive(false);
 			downPath.SetActive(true);
 		}
@@ -37,7 +35,6 @@ public class WeaponsRoomConfigurer : MonoBehaviour {
 			downPath.SetActive(false);
 		}
 		if((neighbors & 4) > 0){
-			Debug.Log("Left");
 			leftDoor.SetActive(false);
 			leftPath.SetActive(true);
 		}
@@ -46,7 +43,6 @@ public class WeaponsRoomConfigurer : MonoBehaviour {
 			leftPath.SetActive(false);
 		}
 		if((neighbors & 8) > 0){
-			Debug.Log("Right");
 			rightDoor.SetActive(false);
 			rightPath.SetActive(true);
 		}
