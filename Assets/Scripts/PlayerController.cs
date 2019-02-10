@@ -28,7 +28,9 @@ public class PlayerController : MonoBehaviour{
         Debug.Log(moveVert);
         Vector2 move = new Vector2 (moveHori,moveVert);
 
-        if((rb2d.velocity + move).magnitude < maxSpeed) rb2d.AddForce(move *speed);
+        if((rb2d.velocity + move).magnitude < maxSpeed){
+            rb2d.AddForce(move *speed);
+        }
     }
 
     void Update() {
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour{
         }
     }
 
+    /*
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("PlayerController -- Hit something");
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour{
             //collision.gameObject.SetActive(false); 
         }
     }
+    */
     
     public void disableMovement()
     {
