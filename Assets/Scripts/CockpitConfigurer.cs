@@ -13,7 +13,6 @@ public class CockpitConfigurer : MonoBehaviour {
 
 	public void Doors(int neighbors){
 		if((neighbors & 2) > 0){
-			Debug.Log("CockpitDown");
 			downDoor.SetActive(false);
 			downPath.SetActive(true);
 		}
