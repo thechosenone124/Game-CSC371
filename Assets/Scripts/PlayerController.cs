@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour{
     void FixedUpdate(){
         float moveHori = Input.GetAxis("Horizontal");
         float moveVert = Input.GetAxis("Vertical");
+        Debug.Log(moveHori);
+        Debug.Log(moveVert);
         Vector2 move = new Vector2 (moveHori,moveVert);
 
         if((rb2d.velocity + move).magnitude < maxSpeed) rb2d.AddForce(move *speed);
