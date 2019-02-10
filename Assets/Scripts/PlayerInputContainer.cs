@@ -10,6 +10,8 @@ public class PlayerInputContainer : MonoBehaviour {
     private float vertical = 0f;
     private bool aButton = false;
     private bool bButton = false;
+    private bool xButton = false;
+    private bool yButton = false;
 
 
     public void SetInput(float hori, float vert, bool aBut, bool bBut)
@@ -24,4 +26,6 @@ public class PlayerInputContainer : MonoBehaviour {
     public float GetVertical  () { return vertical;   }
     public bool  GetAButton   () { return aButton;    }
     public bool  GetBButton   () { return bButton;    }
+    public bool  GetXButton   () { return xButton;    }
+    public bool  GetYButton   () { return yButton;    }
 }

@@ -25,8 +25,6 @@ GameObject:
   - component: {fileID: 114377835853456790}
   - component: {fileID: 114914995530671760}
   - component: {fileID: 50886519265837830}
-  - component: {fileID: 114014059221510466}
-  - component: {fileID: 114744890216491966}
   - component: {fileID: 114307742345685926}
   m_Layer: 0
   m_Name: Player 2
@@ -65,7 +63,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 9b72818fe458a6049ac446b3f7adb145, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61990647861677508
@@ -111,18 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114014059221510466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1568688118211254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc9c9d869a84ad4297a0c879facbcf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOperatingStation: 0
 --- !u!114 &114307742345685926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,18 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 0.2
---- !u!114 &114744890216491966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1568688118211254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc67c09b961a1469b6ea59fb7abf01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ship: {fileID: 0}
 --- !u!114 &114914995530671760
 MonoBehaviour:
   m_ObjectHideFlags: 1
