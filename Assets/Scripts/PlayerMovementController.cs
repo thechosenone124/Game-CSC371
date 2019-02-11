@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour {
 
-    [Range(0.1f, 0.5f)]
-    public float MovementSpeed = 0.2f;
+    [Range(0.1f, 5f)]
+    public float MovementSpeed = 2f;
 
     private Rigidbody2D rb2d;
     private Vector2 input;
@@ -24,7 +24,7 @@ public class PlayerMovementController : MonoBehaviour {
     {
         if(!pic.isOperatingStation)
         {
-            input = new Vector2(pic.GetHorizontal(), pic.GetVertical()) * MovementSpeed;
+            input = new Vector2(pic.GetHorizontal(), pic.GetVertical()) * MovementSpeed * Time.deltaTime;
 
             rb2d.MovePosition(new Vector2(rb2d.position.x + input.x, rb2d.position.y + input.y));
         }
