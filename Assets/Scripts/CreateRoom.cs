@@ -8,6 +8,7 @@ public class CreateRoom : MonoBehaviour {
 	const int ENGINEROOM = 2;
 	const int GUN = 3;
 	const int FOURWAYROOM = 4;
+	const int NOAHGUN = 5;
 	private int x,y;
 	private int childNum;
 	private int flag = 0;
@@ -61,6 +62,8 @@ public class CreateRoom : MonoBehaviour {
 			case FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
+			case NOAHGUN:
+				break;
 		}
 	}
 
@@ -84,6 +87,10 @@ public class CreateRoom : MonoBehaviour {
 				break;
 			case FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
+				break;
+			case NOAHGUN:
+				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
+				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;
 		}
 	}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipWeaponController : MonoBehaviour {
 
-    public GameObject[] guns;
+    private ArrayList guns = new ArrayList();
     public GameObject reticle;
     public float reticleDeadZone = 0.2f;
     public float reticleRotationSpeed = 5f;
@@ -19,9 +19,9 @@ public class ShipWeaponController : MonoBehaviour {
 
     public void TryShoot(PlayerInputContainer pcon)
     {
-        for(int i = 0; i < guns.Length; i++)
+        for(int i = 0; i < guns.Count; i++)
         {
-            guns[i].GetComponent<GunControl>().Fire(pcon);
+            ((GameObject)guns[i]).GetComponent<GunControl>().Fire(pcon);
         }
     }
 
@@ -29,7 +29,6 @@ public class ShipWeaponController : MonoBehaviour {
     {
         Vector2 stickInput = new Vector2(pcon.GetHorizontal(), pcon.GetVertical());
         stickInput = Vector2.ClampMagnitude(stickInput, 1);   //clamp magnitude to keep circle boundary for x/y-axis, instead of square
-
         if (stickInput.magnitude < reticleDeadZone)
         {
             stickInput.x = 0;
@@ -41,7 +40,9 @@ public class ShipWeaponController : MonoBehaviour {
         }
         else
         {
-            reticle.transform.position = Vector3.Slerp(reticle.transform.position, new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
+            Debug.Log(reticle.transform.position.x);
+            Debug.Log(reticle.transform.position.y);
+            reticle.transform.position = Vector3.Slerp(reticle.transform.position, transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
             //reticle.transform.position = transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0);
             //Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, -stickInput.y) * 180 / Mathf.PI);
             //reticle.transform.rotation = Quaternion.Slerp(reticle.transform.rotation, eulerRot, Time.deltaTime * reticleRotationSpeed);
@@ -51,10 +52,14 @@ public class ShipWeaponController : MonoBehaviour {
 
     void RotateGunsTowardsReticle()
     {
-        for (int i = 0; i < guns.Length; i++)
+        for (int i = 0; i < guns.Count; i++)
         {
-            guns[i].GetComponent<GunControl>().RotateAtReticle(reticle.transform.position);
+            ((GameObject)guns[i]).GetComponent<GunControl>().RotateAtReticle(reticle.transform.position);
         }
+    }
+
+    public void AddGun(GameObject gun){
+        guns.Add(gun);
     }
     
 }

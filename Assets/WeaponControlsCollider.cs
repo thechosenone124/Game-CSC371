@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class WeaponControlsCollider : MonoBehaviour {
 
-    public GameObject ship;
+    private GameObject ship;
 
     private ShipInformation shipInfo;
     // Use this for initialization
     void Start()
     {
+        ship = GameObject.Find("Ship");
         shipInfo = ship.GetComponent<ShipInformation>();
     }
 
