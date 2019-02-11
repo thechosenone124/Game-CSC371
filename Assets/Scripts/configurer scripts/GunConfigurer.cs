@@ -17,4 +17,9 @@ public class GunConfigurer : MonoBehaviour {
 			transform.Rotate(0,0,90);
 		}
 	}
+
+	public void AddSelfToGuns(){
+		GameObject ship = transform.parent.transform.parent.transform.parent.gameObject;
+		ship.GetComponent<ShipWeaponController>().AddGun(transform.GetChild(1).gameObject);
+	}
 }

@@ -11,11 +11,13 @@ public class SpawnStartingShip : MonoBehaviour {
 	const int ENGINEROOM = 2;
 	const int GUN = 3;
 	const int FOURWAYROOM = 4;
+	const int NOAHGUN = 5;
 
 	private GameObject[,] rooms;
 	private GameObject engineRoom;
 	private GameObject cockpit;
 	private GameObject weaponsRoom;
+	private GameObject gun1,gun2;
 
 	private int roomSwitch = 0;
 	void Start () {
@@ -50,6 +52,16 @@ public class SpawnStartingShip : MonoBehaviour {
 		cockpit.GetComponent<CreateRoom>().BuildRoom(modules[COCKPIT],HasNeighbors(2,2),COCKPIT);
 		rooms[2,2] = cockpit;
 		UpdateNeighbors(2,2);
+
+		gun1 = transform.GetChild(16).gameObject;
+		gun1.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(1,3),NOAHGUN);
+		rooms[1,3] = gun1;
+		UpdateNeighbors(1,3);
+
+		gun2 = transform.GetChild(18).gameObject;
+		gun2.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(3,3),NOAHGUN);
+		rooms[3,3] = gun2;
+		UpdateNeighbors(3,3);
 	}
 
 	void SpawnModule(int child, GameObject module, int x, int y, int moduleType){
@@ -86,6 +98,9 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == GUN){
 			return false;
 		}
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+			return false;
+		}
 		else{
 			return true;
 		}
@@ -98,6 +113,9 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GUN){
+			return false;
+		}
+		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
 			return false;
 		}
 		else{
@@ -117,6 +135,9 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == GUN){
 			return false;
 		}
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+			return false;
+		}
 		else{
 			return true;
 		}
@@ -132,6 +153,9 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == GUN){
+			return false;
+		}
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
 			return false;
 		}
 		else{

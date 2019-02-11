@@ -19,7 +19,7 @@ public class InputController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log("Player1 A: " + Input.GetButton("J1A"));
+        //Debug.Log("Player1 B: " + Input.GetButton("J1B"));
 
         if (container1 != null) SendPlayer1Input();
         if (container2 != null) SendPlayer2Input();
