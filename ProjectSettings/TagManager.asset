@@ -12,6 +12,7 @@ TagManager:
   - Gun
   - Cockpit
   - EngineRoom
+  - SpaceDebris
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - WorldObjects
+  - PlayerObjects
   - 
   - 
   - 
