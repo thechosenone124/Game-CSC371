@@ -8,6 +8,11 @@ TagManager:
   - PickUp
   - Projectile
   - PlayerShip
+  - Room
+  - Gun
+  - Cockpit
+  - EngineRoom
+  - SpaceDebris
   layers:
   - Default
   - TransparentFX
@@ -17,15 +22,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ClickableTrigger
+  - InsideShip
+  - OutsideShip
+  - Cockpit
+  - WeaponsRoom
+  - EngineRoom
+  - Players
+  - Ship
+  - Room
   - 
   - 
   - 

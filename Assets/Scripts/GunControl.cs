@@ -4,28 +4,46 @@ using UnityEngine;
 
 public class GunControl : MonoBehaviour {
 
-   public float shootFrequency = 0.5f;
-   public string fireButton;
-   public GameObject reticle;
-   public GameObject projectileSpawner;
+    public float shootFrequency = 0.5f;
+    [Header("Buttons: {A, X, Y, RT}")]
+    public string fireButton;
+    public int projectilesFiredPerPress = 1;
+    public GameObject projectile;
 
-   private Animator gunAnim;
-   private float timer = 0;
+    private Animator gunAnim;
+    private float timer = 0;
 
-	void Start () {
+    void Start ()
+    {
       gunAnim = GetComponent<Animator>();
 	}
 	
-	void Update () {
-
+	void Update ()
+    {
       timer += Time.deltaTime;
-      transform.rotation = Quaternion.LookRotation(Vector3.forward, reticle.transform.position - transform.position);
-
-      if ((Input.GetButtonDown(fireButton) || Input.GetAxis(fireButton) == 1) && timer >= shootFrequency)
-      {
-         gunAnim.SetTrigger("Fire");
-         projectileSpawner.SendMessage("Fire");
-         timer = 0;
-      }
 	}
+
+    public void Fire(PlayerInputContainer pcon)
+    {
+        if (timer < shootFrequency) return;
+
+        if( (fireButton == "A" && pcon.GetAButton()) ||
+            (fireButton == "X" && pcon.GetXButton()) ||
+            (fireButton == "Y" && pcon.GetYButton()) ||
+            (fireButton == "RT" && pcon.GetRTButton() == 1))
+        {
+            for (int i = 0; i < projectilesFiredPerPress; i++)
+            {
+                Instantiate(projectile, transform.position, transform.rotation);
+            }
+            gunAnim.SetTrigger("Fire");
+            timer = 0;
+
+        }
+    }
+
+    public void RotateAtReticle(Vector3 retPos)
+    {
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, retPos - transform.position);
+    }
 }
