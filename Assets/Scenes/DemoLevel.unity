@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4603503}
   - component: {fileID: 4603504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 25713633}
   - component: {fileID: 25713634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 27741182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AsteroidRooms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27741181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -23.427473, y: 24.29217, z: -4.6875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 237143705}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55903734}
   - component: {fileID: 55903735}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 77003459}
   - component: {fileID: 77003461}
   - component: {fileID: 77003460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirstRoomCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92196744}
   - component: {fileID: 92196745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94210739}
   - component: {fileID: 94210740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,6 +718,76 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 97432866}
   m_CullTransparentMesh: 0
+--- !u!1 &101447934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1734601063317118, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101447935}
+  - component: {fileID: 101447937}
+  - component: {fileID: 101447936}
+  m_Layer: 15
+  m_Name: BuildRoom (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101447935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4360246652533632, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101447934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: -4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &101447936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61527318728011502, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101447934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &101447937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114390592460420708, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101447934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &115851245
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +858,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115851245}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &115851249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,7 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129435756}
   - component: {fileID: 129435757}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139006192}
   - component: {fileID: 139006193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,6 +1021,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &141636062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1521089717756866, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141636063}
+  - component: {fileID: 141636065}
+  - component: {fileID: 141636064}
+  m_Layer: 15
+  m_Name: BuildRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141636063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4285763988335872, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141636062}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: 9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &141636064
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61766027434369932, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141636062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &141636065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114557025040956318, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141636062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &146605566
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +1100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146605567}
   - component: {fileID: 146605568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1101,6 +1241,195 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &157915593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1163325366779854, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157915601}
+  - component: {fileID: 157915600}
+  - component: {fileID: 157915599}
+  - component: {fileID: 157915598}
+  - component: {fileID: 157915597}
+  - component: {fileID: 157915596}
+  - component: {fileID: 157915595}
+  - component: {fileID: 157915594}
+  m_Layer: 14
+  m_Name: Player 1
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &157915594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114947181909458078, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffc67c09b961a1469b6ea59fb7abf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 1090705912}
+--- !u!114 &157915595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114582008333927288, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9c9d869a84ad4297a0c879facbcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOperatingStation: 0
+--- !u!114 &157915596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114135225589245100, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0368901f8e8dc45a1096ce1d6915b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 5
+--- !u!61 &157915597
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61851587455576648, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 9b72818fe458a6049ac446b3f7adb145, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 2.16}
+    newSize: {x: 0.96, y: 2.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 2.16}
+  m_EdgeRadius: 0
+--- !u!50 &157915598
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 50421553709981680, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 9b72818fe458a6049ac446b3f7adb145, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!95 &157915599
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 95772328387460542, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eefc70ca0824fc94898e115f5ea498c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &157915600
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212394755583544290, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 437400225
+  m_SortingLayer: 8
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 587f1a7cb836ee844b2884042e972314, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.96, y: 2.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &157915601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4812478889599574, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157915593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6787463, y: 3.0351958, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 626162287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160774019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160774020}
   - component: {fileID: 160774021}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,7 +1683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205686533}
   - component: {fileID: 205686534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217085142}
   - component: {fileID: 217085143}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,6 +1824,151 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &227459272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1641731177744626, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227459273}
+  - component: {fileID: 227459275}
+  - component: {fileID: 227459274}
+  m_Layer: 15
+  m_Name: BuildRoom (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227459273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4889582374278704, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227459272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: 9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &227459274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61602622529321118, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227459272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &227459275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114262121626316312, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227459272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &227663271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1238229511656470, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227663272}
+  - component: {fileID: 227663273}
+  m_Layer: 0
+  m_Name: BuildController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227663272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4540893719471826, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227663271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 141636063}
+  - {fileID: 1929521143}
+  - {fileID: 1529178053}
+  - {fileID: 383938816}
+  - {fileID: 227459273}
+  - {fileID: 1378829315}
+  - {fileID: 1139920745}
+  - {fileID: 835016273}
+  - {fileID: 926746752}
+  - {fileID: 1571396809}
+  - {fileID: 374116698}
+  - {fileID: 1749931631}
+  - {fileID: 1630628340}
+  - {fileID: 1147271658}
+  - {fileID: 1637084556}
+  - {fileID: 939929214}
+  - {fileID: 1423848828}
+  - {fileID: 2087401376}
+  - {fileID: 101447935}
+  - {fileID: 664368553}
+  - {fileID: 1591662714}
+  - {fileID: 1911651702}
+  - {fileID: 531088032}
+  - {fileID: 695863443}
+  - {fileID: 1813541642}
+  m_Father: {fileID: 1090705917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227663273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114300121010531448, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227663271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cc5faac6b6a174a86163b33120f270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modules:
+  - {fileID: 1785826518468538, guid: e40b99adf1495334daee1e63cdfb4f63, type: 2}
+  - {fileID: 1237947254461192, guid: 32e586ce847f92242affcb005a1a1381, type: 2}
+  - {fileID: 1380429502395638, guid: f01805ed73531734ab70861d80fcff2e, type: 2}
+  - {fileID: 1646443763223958, guid: 7cea685dcfd280f478f8cfbc64feb4dc, type: 2}
+  - {fileID: 1509410745348424, guid: f122972832fec0848a7c24a66111771d, type: 2}
+  - {fileID: 1235601884258886, guid: 41523527bc1df9946b38d2ca52c8541c, type: 2}
 --- !u!1 &237143704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237143705}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StartRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +2189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290922771}
   - component: {fileID: 290922772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,7 +2264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290929933}
   - component: {fileID: 290929934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1865,7 +2339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302161047}
   - component: {fileID: 302161048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +2414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310252933}
   - component: {fileID: 310252934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,7 +2489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321069748}
   - component: {fileID: 321069749}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2090,7 +2564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365100145}
   - component: {fileID: 365100146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,6 +2630,146 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &374116697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1172876165459122, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 374116698}
+  - component: {fileID: 374116700}
+  - component: {fileID: 374116699}
+  m_Layer: 15
+  m_Name: BuildRoom (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &374116698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4966599353380108, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374116697}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &374116699
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61804924052648406, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374116697}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &374116700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114252533749564610, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374116697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &383938815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1105284869894528, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383938816}
+  - component: {fileID: 383938818}
+  - component: {fileID: 383938817}
+  m_Layer: 15
+  m_Name: BuildRoom (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &383938816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4413429552457792, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383938815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: 9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &383938817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61569073791520224, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383938815}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &383938818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114276854631427856, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383938815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &386262557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386262558}
   - component: {fileID: 386262559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2320,7 +2934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfbc57794c83cd4db50422f37762d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followObject: {fileID: 1056756242}
+  followObject: {fileID: 1090705912}
   followSpeed: 2
 --- !u!1 &419998911
 GameObject:
@@ -2331,7 +2945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419998912}
   - component: {fileID: 419998913}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2486,7 +3100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444767283}
   - component: {fileID: 444767284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2561,7 +3175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445423151}
   - component: {fileID: 445423152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2636,7 +3250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456261017}
   - component: {fileID: 456261018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2711,7 +3325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461048446}
   - component: {fileID: 461048447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2786,7 +3400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468569225}
   - component: {fileID: 468569226}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2861,7 +3475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488271945}
   - component: {fileID: 488271946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2936,7 +3550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491245160}
   - component: {fileID: 491245161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3082,6 +3696,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &531088031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1258119570410062, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531088032}
+  - component: {fileID: 531088034}
+  - component: {fileID: 531088033}
+  m_Layer: 15
+  m_Name: BuildRoom (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531088032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4623462068437192, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531088031}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &531088033
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61639645014415406, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531088031}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &531088034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114469768930885110, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531088031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567947463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567947464}
   - component: {fileID: 567947465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3167,7 +3851,7 @@ GameObject:
   - component: {fileID: 582626158}
   - component: {fileID: 582626160}
   - component: {fileID: 582626159}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirstRoomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3292,6 +3976,107 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &626162286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626162287}
+  m_Layer: 14
+  m_Name: Players
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &626162287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 626162286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 157915601}
+  - {fileID: 672715810}
+  - {fileID: 1632635131}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &664368552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1316780859152344, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664368553}
+  - component: {fileID: 664368555}
+  - component: {fileID: 664368554}
+  m_Layer: 15
+  m_Name: BuildRoom (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &664368553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4002736487642864, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664368552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: -4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &664368554
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61235116733517634, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664368552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &664368555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114928689378006054, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664368552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667593382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,6 +4152,195 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &672715802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1765653014138628, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672715810}
+  - component: {fileID: 672715809}
+  - component: {fileID: 672715808}
+  - component: {fileID: 672715807}
+  - component: {fileID: 672715806}
+  - component: {fileID: 672715805}
+  - component: {fileID: 672715804}
+  - component: {fileID: 672715803}
+  m_Layer: 14
+  m_Name: Player 2
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &672715803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114061197532218178, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffc67c09b961a1469b6ea59fb7abf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 1090705912}
+--- !u!114 &672715804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114348491325196812, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9c9d869a84ad4297a0c879facbcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOperatingStation: 0
+--- !u!114 &672715805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114610186638234560, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0368901f8e8dc45a1096ce1d6915b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 2
+--- !u!61 &672715806
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61561735212327902, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 9b72818fe458a6049ac446b3f7adb145, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 2.16}
+    newSize: {x: 0.96, y: 2.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 2.16}
+  m_EdgeRadius: 0
+--- !u!50 &672715807
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 50839070296846468, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 9b72818fe458a6049ac446b3f7adb145, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!95 &672715808
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 95878239172720770, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdef99da82b9b0843acfecc5410a33a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &672715809
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212083697949959462, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 437400225
+  m_SortingLayer: 8
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 302b9ae70ed358f4dbb72b16b115cfde, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.96, y: 2.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &672715810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4961868019488886, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672715802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.439417, y: 3.371805, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 626162287}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694368138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,7 +4350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694368139}
   - component: {fileID: 694368140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3442,6 +4416,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &695863442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1439655812526510, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695863443}
+  - component: {fileID: 695863445}
+  - component: {fileID: 695863444}
+  m_Layer: 15
+  m_Name: BuildRoom (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &695863443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4871702119451072, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695863442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: -9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &695863444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61483354632449452, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695863442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &695863445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114382781867367258, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695863442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &712895251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,7 +4495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712895252}
   - component: {fileID: 712895253}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3526,7 +4570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750985440}
   - component: {fileID: 750985441}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3601,7 +4645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784302359}
   - component: {fileID: 784302360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,64 +4711,169 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &830917323
-Prefab:
+--- !u!1 &801969567
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1861602261723202, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801969570}
+  - component: {fileID: 801969569}
+  - component: {fileID: 801969568}
+  m_Layer: 0
+  m_Name: Reticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &801969568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114816199828197140, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 801969567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca775568185dd47448101c9a709ea044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticleOrigin: {fileID: 1647349821}
+  reticleDistance: 40
+--- !u!212 &801969569
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212864388227745854, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 801969567}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 437400225
+  m_SortingLayer: 8
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6824db7c8ca6aca449a03f7688723480, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.56, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &801969570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4205776381189212, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 801969567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1647349822}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &835016272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1979754825933804, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835016273}
+  - component: {fileID: 835016275}
+  - component: {fileID: 835016274}
+  m_Layer: 15
+  m_Name: BuildRoom (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &835016273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4680132204491392, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835016272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &835016274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61398035215718374, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835016272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.010765076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.5194656
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210969470528910, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114521297597800006, guid: 1e9f6f1319bf9a248982a51681e6469b,
-        type: 2}
-      propertyPath: speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 60341470543011862, guid: 1e9f6f1319bf9a248982a51681e6469b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 58859095545842588, guid: 1e9f6f1319bf9a248982a51681e6469b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114353130889073218, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-  m_SourcePrefab: {fileID: 100100000, guid: 1e9f6f1319bf9a248982a51681e6469b, type: 2}
-  m_IsPrefabAsset: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &835016275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114124210609324286, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835016272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &846390405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,7 +5033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886961651}
   - component: {fileID: 886961652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3959,7 +5108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891128676}
   - component: {fileID: 891128677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4034,7 +5183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893228200}
   - component: {fileID: 893228201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4109,7 +5258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901507219}
   - component: {fileID: 901507220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4184,7 +5333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902244464}
   - component: {fileID: 902244465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +5408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907144480}
   - component: {fileID: 907144481}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4333,7 +5482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917151129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AsteroidRoomColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4347,7 +5496,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 917151128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -23.427473, y: 24.29217, z: -4.6875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1364172821}
@@ -4365,7 +5514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 919986849}
   - component: {fileID: 919986850}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4440,7 +5589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923656146}
   - component: {fileID: 923656147}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4506,6 +5655,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &926746751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1252610381422598, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926746752}
+  - component: {fileID: 926746754}
+  - component: {fileID: 926746753}
+  m_Layer: 15
+  m_Name: BuildRoom (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &926746752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4417676120522512, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926746751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: 4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &926746753
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61406309874278486, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926746751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &926746754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114953870521675084, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926746751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931983953
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,7 +5734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 931983954}
   - component: {fileID: 931983955}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4581,6 +5800,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &939929213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1966657533603096, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939929214}
+  - component: {fileID: 939929216}
+  - component: {fileID: 939929215}
+  m_Layer: 15
+  m_Name: BuildRoom (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939929214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4631114839167262, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939929213}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: -4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &939929215
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61855206315886830, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939929213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &939929216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114695435822803552, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939929213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966089215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,7 +5879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966089216}
   - component: {fileID: 966089217}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +5954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977204288}
   - component: {fileID: 977204289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4740,7 +6029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982870422}
   - component: {fileID: 982870423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,11 +6095,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1056756242 stripped
+--- !u!1 &1090705912
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1313442797805350, guid: 1e9f6f1319bf9a248982a51681e6469b,
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1899474655768658, guid: 1e9f6f1319bf9a248982a51681e6469b,
     type: 2}
-  m_PrefabInternal: {fileID: 830917323}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090705917}
+  - component: {fileID: 1090705916}
+  - component: {fileID: 1090705915}
+  - component: {fileID: 1090705914}
+  - component: {fileID: 1090705913}
+  m_Layer: 15
+  m_Name: Ship
+  m_TagString: PlayerShip
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1090705913
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 50467565892089738, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090705912}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &1090705914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114521259116653604, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090705912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a74180ff06d4ae42911d8f6d9ba8b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponAimControlCenter: {fileID: 1647349821}
+  reticle: {fileID: 801969567}
+  reticleDeadZone: 0.2
+  reticleRotationSpeed: 5
+  reticleDistance: 5
+--- !u!114 &1090705915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114454046383232270, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090705912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6783b447999aa442af9cef14b822e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!114 &1090705916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114848724125038350, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090705912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9a19b5b9a48564ab2b2641c60e917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!4 &1090705917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4033173120647490, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090705912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.660583, y: 3.624805, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 227663272}
+  - {fileID: 1647349822}
+  - {fileID: 1313801367}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100282545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,7 +6205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100282546}
   - component: {fileID: 1100282547}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4895,7 +6280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103353113}
   - component: {fileID: 1103353114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4970,7 +6355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111111218}
   - component: {fileID: 1111111219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5045,7 +6430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121657988}
   - component: {fileID: 1121657989}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5120,7 +6505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126707410}
   - component: {fileID: 1126707411}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5195,7 +6580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129369537}
   - component: {fileID: 1129369538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5261,6 +6646,146 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1139920744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1683435063697894, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139920745}
+  - component: {fileID: 1139920747}
+  - component: {fileID: 1139920746}
+  m_Layer: 15
+  m_Name: BuildRoom (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139920745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4312671643598560, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139920744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7, y: 4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1139920746
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61123466733632692, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139920744}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1139920747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114750094965727986, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139920744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1147271657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1287067988258690, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147271658}
+  - component: {fileID: 1147271660}
+  - component: {fileID: 1147271659}
+  m_Layer: 15
+  m_Name: BuildRoom (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147271658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4205206925706072, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147271657}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1147271659
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61221778121283572, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147271657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1147271660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114696665482575932, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147271657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166835946
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +6795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166835947}
   - component: {fileID: 1166835948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +6870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179412767}
   - component: {fileID: 1179412768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5419,7 +6944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185300809}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirstRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5502,7 +7027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225796504}
   - component: {fileID: 1225796505}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5577,7 +7102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227539185}
   - component: {fileID: 1227539186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5718,6 +7243,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1313801366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1994473369244750, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313801367}
+  - component: {fileID: 1313801368}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1313801367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4755402352731770, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313801366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7893124, z: -0.5285584}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090705917}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313801368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114056897547309646, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313801366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7faead9e0b53f40a0776b4217406c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 157915593}
+  Player2: {fileID: 672715802}
+  container1: {fileID: 0}
+  container2: {fileID: 0}
 --- !u!1 &1315220357
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,7 +7373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345225645}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MapObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5815,7 +7387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1345225644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.427473, y: 24.29217, z: -4.6875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430831622}
@@ -5833,7 +7405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346957862}
   - component: {fileID: 1346957863}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5984,7 +7556,7 @@ GameObject:
   - component: {fileID: 1364172821}
   - component: {fileID: 1364172823}
   - component: {fileID: 1364172822}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: StartRoomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6126,6 +7698,146 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1378829314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1945363512099582, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378829315}
+  - component: {fileID: 1378829317}
+  - component: {fileID: 1378829316}
+  m_Layer: 15
+  m_Name: BuildRoom (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378829315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4225233146885412, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378829314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: 4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1378829316
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61533558867193596, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378829314}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1378829317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114658859496284214, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378829314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1423848827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1334457186723534, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423848828}
+  - component: {fileID: 1423848830}
+  - component: {fileID: 1423848829}
+  m_Layer: 15
+  m_Name: BuildRoom (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423848828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4967593641788776, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423848827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7, y: -4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1423848829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61777761898856326, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423848827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1423848830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114091565773320888, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423848827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433383099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,7 +7847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433383100}
   - component: {fileID: 1433383101}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6279,7 +7991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1437188854}
   - component: {fileID: 1437188855}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6428,7 +8140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443679901}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MapBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6459,7 +8171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474168807}
   - component: {fileID: 1474168808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6534,7 +8246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492857277}
   - component: {fileID: 1492857278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6609,7 +8321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503270421}
   - component: {fileID: 1503270422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6675,6 +8387,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1529178052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1771477791050310, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529178053}
+  - component: {fileID: 1529178055}
+  - component: {fileID: 1529178054}
+  m_Layer: 15
+  m_Name: BuildRoom (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1529178053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4009501626322794, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529178052}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1529178054
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61209532629911898, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529178052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1529178055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114762038941382054, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529178052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538599686
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,7 +8541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540302967}
   - component: {fileID: 1540302968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6834,7 +8616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1544176867}
   - component: {fileID: 1544176868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6900,6 +8682,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1571396808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1599632525085478, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571396809}
+  - component: {fileID: 1571396811}
+  - component: {fileID: 1571396810}
+  m_Layer: 15
+  m_Name: BuildRoom (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571396809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4649759492687960, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571396808}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: 4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1571396810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61579413980028800, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571396808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1571396811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114696606425173532, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571396808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1572456668
 GameObject:
   m_ObjectHideFlags: 0
@@ -6909,7 +8761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572456669}
   - component: {fileID: 1572456670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6975,6 +8827,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1591662713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1611987696539232, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591662714}
+  - component: {fileID: 1591662716}
+  - component: {fileID: 1591662715}
+  m_Layer: 15
+  m_Name: BuildRoom (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591662714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4258575626011458, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591662713}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: -9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1591662715
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61002196042524554, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591662713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1591662716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114527476871167278, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591662713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603616942
 GameObject:
   m_ObjectHideFlags: 0
@@ -6984,7 +8906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603616943}
   - component: {fileID: 1603616944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7050,6 +8972,277 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1630628339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1369850411650354, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630628340}
+  - component: {fileID: 1630628342}
+  - component: {fileID: 1630628341}
+  m_Layer: 15
+  m_Name: BuildRoom (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1630628340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4348388861908866, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630628339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1630628341
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61186274566461830, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630628339}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1630628342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114515190557042006, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630628339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1632635130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632635131}
+  - component: {fileID: 1632635133}
+  - component: {fileID: 1632635132}
+  m_Layer: 14
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1632635131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632635130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -8.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 626162287}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632635132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632635130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfbc57794c83cd4db50422f37762d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followObject: {fileID: 157915593}
+  followSpeed: 100
+--- !u!20 &1632635133
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632635130}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: f33b8c17fe4972b498aaf27684cd6a40, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &1637084555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1762056033477222, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637084556}
+  - component: {fileID: 1637084558}
+  - component: {fileID: 1637084557}
+  m_Layer: 15
+  m_Name: BuildRoom (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1637084556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4300176417836170, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637084555}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1637084557
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61090312353126988, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637084555}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1637084558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114065570948395414, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637084555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1647349821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1388161852751488, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647349822}
+  - component: {fileID: 1647349823}
+  m_Layer: 0
+  m_Name: WeaponAimCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647349822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4496603439299320, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647349821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 801969570}
+  m_Father: {fileID: 1090705917}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647349823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114668446561719264, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647349821}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8af0b13cf6a56438b12a7f40de899d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticleDeadZone: 0.2
+  reticleRotationSpeed: 5
+  inputXAxis: RightJoystickX
+  inputYAxis: RightJoystickY
 --- !u!1 &1659038666
 GameObject:
   m_ObjectHideFlags: 0
@@ -7059,7 +9252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1659038667}
   - component: {fileID: 1659038668}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7134,7 +9327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686256941}
   - component: {fileID: 1686256942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7284,7 +9477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702205138}
   - component: {fileID: 1702205139}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7434,7 +9627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729865558}
   - component: {fileID: 1729865559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7509,7 +9702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730024160}
   - component: {fileID: 1730024161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7584,7 +9777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731983922}
   - component: {fileID: 1731983923}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7659,27 +9852,27 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.4
+      value: 2.9725266
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 273.4
+      value: 297.69217
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.6875
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.w
@@ -7692,6 +9885,70 @@ Prefab:
     - target: {fileID: 1070869044845320, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_Name
       value: AsteroidBarrier (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181101130359150, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723504909423542, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469418955410184, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543780409356150, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615355912218046, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473390031427042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096355498005416, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156356512753760, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270796942119342, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976657423137566, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853928457838684, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592652458131208, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519775833301212, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735393691808822, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070869044845320, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846019827425324, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
@@ -7771,6 +10028,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1749931630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1198664920518722, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749931631}
+  - component: {fileID: 1749931633}
+  - component: {fileID: 1749931632}
+  m_Layer: 15
+  m_Name: BuildRoom (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749931631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4789591628172170, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749931630}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1749931632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61113565389914960, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749931630}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1749931633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114987940928013484, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749931630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766345173
 GameObject:
   m_ObjectHideFlags: 0
@@ -7780,7 +10107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766345174}
   - component: {fileID: 1766345175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7855,7 +10182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780537777}
   - component: {fileID: 1780537778}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7930,7 +10257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785942235}
   - component: {fileID: 1785942236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7996,6 +10323,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1813541641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1304978574422150, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813541642}
+  - component: {fileID: 1813541644}
+  - component: {fileID: 1813541643}
+  m_Layer: 15
+  m_Name: BuildRoom (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1813541642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4975507311202646, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813541641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: -9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1813541643
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61732473620847544, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813541641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1813541644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114863099571036268, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813541641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827834358
 GameObject:
   m_ObjectHideFlags: 0
@@ -8005,7 +10402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827834359}
   - component: {fileID: 1827834360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8155,7 +10552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836901893}
   - component: {fileID: 1836901894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8230,7 +10627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839370806}
   - component: {fileID: 1839370807}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8305,7 +10702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861104166}
   - component: {fileID: 1861104167}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8380,7 +10777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876212967}
   - component: {fileID: 1876212968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8455,7 +10852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884294955}
   - component: {fileID: 1884294956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_5 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8576,7 +10973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897026930}
   - component: {fileID: 1897026931}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8677,6 +11074,146 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1911651701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1736905040323822, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911651702}
+  - component: {fileID: 1911651704}
+  - component: {fileID: 1911651703}
+  m_Layer: 15
+  m_Name: BuildRoom (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911651702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4104359012593216, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911651701}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7, y: -9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1911651703
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61029026028181294, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911651701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1911651704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114423711382755444, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1911651701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1929521142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1947206680081034, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1929521143}
+  - component: {fileID: 1929521145}
+  - component: {fileID: 1929521144}
+  m_Layer: 15
+  m_Name: BuildRoom (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1929521143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4250826017314070, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929521142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7, y: 9.4, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1929521144
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61780193693958986, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929521142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &1929521145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114060617338155258, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929521142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932193275
 GameObject:
   m_ObjectHideFlags: 0
@@ -8686,7 +11223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932193276}
   - component: {fileID: 1932193277}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8761,7 +11298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973824604}
   - component: {fileID: 1973824605}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8836,27 +11373,27 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 29.79
+      value: 6.362528
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 43.8
+      value: 68.09217
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.6875
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_LocalRotation.w
@@ -8865,6 +11402,70 @@ Prefab:
     - target: {fileID: 4476820840042042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615355912218046, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070869044845320, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519775833301212, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853928457838684, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181101130359150, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270796942119342, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846019827425324, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735393691808822, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156356512753760, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976657423137566, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543780409356150, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723504909423542, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473390031427042, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592652458131208, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096355498005416, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469418955410184, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33788ba8e08d0614faf7aeba1fc69e77, type: 2}
@@ -8878,7 +11479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992122055}
   - component: {fileID: 1992122056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8953,7 +11554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2043412132}
   - component: {fileID: 2043412133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9019,6 +11620,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2087401375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1735160935940060, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087401376}
+  - component: {fileID: 2087401378}
+  - component: {fileID: 2087401377}
+  m_Layer: 15
+  m_Name: BuildRoom (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087401376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4662767316865752, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087401375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 227663272}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2087401377
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61076565847262894, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087401375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
+--- !u!114 &2087401378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114305992817025834, guid: 1e9f6f1319bf9a248982a51681e6469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087401375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2097263705
 GameObject:
   m_ObjectHideFlags: 0
@@ -9028,7 +11699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097263706}
   - component: {fileID: 2097263707}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9103,7 +11774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101042152}
   - component: {fileID: 2101042153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9178,7 +11849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116467005}
   - component: {fileID: 2116467006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9253,7 +11924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141468627}
   - component: {fileID: 2141468628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: asteroids_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
