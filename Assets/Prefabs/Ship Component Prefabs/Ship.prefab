@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4047192456700152}
   - component: {fileID: 114791986960912498}
   - component: {fileID: 61311693891075758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4418025208640216}
   - component: {fileID: 114466872604612418}
   - component: {fileID: 61518113309167524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4378474777480728}
   - component: {fileID: 114776178972637398}
   - component: {fileID: 61962534084925074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4462816188822682}
   - component: {fileID: 114180903168063154}
   - component: {fileID: 61174083831775208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4092166273631734}
   - component: {fileID: 114838995772628790}
   - component: {fileID: 61276054381037338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4128298415377788}
   - component: {fileID: 114787191977001588}
   - component: {fileID: 61359030214690574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4878192685973362}
   - component: {fileID: 114102379329397654}
   - component: {fileID: 61715288113398132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4574879097353004}
   - component: {fileID: 114164773445203834}
   - component: {fileID: 61836304789646684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,8 @@ GameObject:
   - component: {fileID: 114984631559457198}
   - component: {fileID: 114521297597800006}
   - component: {fileID: 114704033379225314}
-  m_Layer: 0
+  - component: {fileID: 50102352944619834}
+  m_Layer: 15
   m_Name: Ship
   m_TagString: PlayerShip
   m_Icon: {fileID: 0}
@@ -194,7 +195,7 @@ GameObject:
   - component: {fileID: 4122521088593682}
   - component: {fileID: 114418577455121904}
   - component: {fileID: 61686043755861258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +228,7 @@ GameObject:
   - component: {fileID: 4132467564189626}
   - component: {fileID: 114105740142094290}
   - component: {fileID: 61033349128025274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +245,7 @@ GameObject:
   - component: {fileID: 4465112542923538}
   - component: {fileID: 114642042198429680}
   - component: {fileID: 61802915074631912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +262,7 @@ GameObject:
   - component: {fileID: 4025475430815438}
   - component: {fileID: 114013953715378642}
   - component: {fileID: 61787063437985146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +279,7 @@ GameObject:
   - component: {fileID: 4977088400704298}
   - component: {fileID: 114837245677403550}
   - component: {fileID: 61953626162312162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +296,7 @@ GameObject:
   - component: {fileID: 4922679006993904}
   - component: {fileID: 114010390481875418}
   - component: {fileID: 61226651851486432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +313,7 @@ GameObject:
   - component: {fileID: 4285287067549522}
   - component: {fileID: 114809505219163052}
   - component: {fileID: 61223858026543028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +330,7 @@ GameObject:
   - component: {fileID: 4264568841385594}
   - component: {fileID: 114559745977744136}
   - component: {fileID: 61477442373382406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +347,7 @@ GameObject:
   - component: {fileID: 4806718703452060}
   - component: {fileID: 114864530188181092}
   - component: {fileID: 61338106885518064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +364,7 @@ GameObject:
   - component: {fileID: 4958517370776572}
   - component: {fileID: 114996798422808404}
   - component: {fileID: 61263528176764908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +402,7 @@ GameObject:
   - component: {fileID: 114777235447164906}
   - component: {fileID: 114051583246213364}
   - component: {fileID: 114677461038838814}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -418,7 +419,7 @@ GameObject:
   - component: {fileID: 4968799843018738}
   - component: {fileID: 114236273848896598}
   - component: {fileID: 61378795456055098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,8 +456,8 @@ GameObject:
   - component: {fileID: 61811262331241400}
   - component: {fileID: 114276012919324768}
   - component: {fileID: 114206561349399656}
-  - component: {fileID: 114087585921369310}
-  m_Layer: 0
+  - component: {fileID: 50493274740822922}
+  m_Layer: 14
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -473,7 +474,7 @@ GameObject:
   - component: {fileID: 4270511022867224}
   - component: {fileID: 114567718277398540}
   - component: {fileID: 61470825139682560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +491,7 @@ GameObject:
   - component: {fileID: 4667495072786552}
   - component: {fileID: 114766916894287488}
   - component: {fileID: 61067842366504136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +508,7 @@ GameObject:
   - component: {fileID: 4833659168389342}
   - component: {fileID: 114319476334222362}
   - component: {fileID: 61312243504541480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +525,7 @@ GameObject:
   - component: {fileID: 4009968608070010}
   - component: {fileID: 114519411749737478}
   - component: {fileID: 61386216686474574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +542,7 @@ GameObject:
   - component: {fileID: 4660717595496258}
   - component: {fileID: 114596388448641138}
   - component: {fileID: 61735943615043270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +577,7 @@ GameObject:
   - component: {fileID: 4846685990588500}
   - component: {fileID: 114601485016485334}
   - component: {fileID: 61657159175847296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +696,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313442797805350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.010765076, y: -1.5194656, z: 0}
+  m_LocalPosition: {x: 0.660583, y: 3.624805, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4728539232565042}
@@ -1044,46 +1045,26 @@ Transform:
   m_Father: {fileID: 4728539232565042}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20863571550622948
-Camera:
+--- !u!50 &50102352944619834
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992907226679006}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: f33b8c17fe4972b498aaf27684cd6a40, type: 2}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
+  m_GameObject: {fileID: 1313442797805350}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!50 &50299764511325022
 Rigidbody2D:
   serializedVersion: 4

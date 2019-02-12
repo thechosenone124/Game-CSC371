@@ -22,15 +22,15 @@ TagManager:
   - UI
   - 
   - 
-  - WorldObjects
-  - PlayerObjects
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ClickableTrigger
+  - InsideShip
+  - OutsideShip
+  - Cockpit
+  - WeaponsRoom
+  - EngineRoom
+  - Players
+  - Ship
+  - Room
   - 
   - 
   - 
