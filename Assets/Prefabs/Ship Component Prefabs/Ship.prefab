@@ -172,13 +172,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210969470528910}
-  - component: {fileID: 50480503884757816}
   - component: {fileID: 58859095545842588}
   - component: {fileID: 60341470543011862}
   - component: {fileID: 114984631559457198}
   - component: {fileID: 114521297597800006}
   - component: {fileID: 114704033379225314}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ship
   m_TagString: PlayerShip
   m_Icon: {fileID: 0}
@@ -1105,26 +1104,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!50 &50480503884757816
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1313442797805350}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!50 &50493274740822922
 Rigidbody2D:
   serializedVersion: 4
@@ -1151,7 +1130,7 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313442797805350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2142,7 +2121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6783b447999aa442af9cef14b822e1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 50480503884757816}
   speed: 15
 --- !u!114 &114559745977744136
 MonoBehaviour:
