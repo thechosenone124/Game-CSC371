@@ -29,18 +29,10 @@ public class PlayerController : MonoBehaviour
         float moveVert = Input.GetAxis("Vertical");
         Debug.Log(moveHori);
         Debug.Log(moveVert);
-<<<<<<< HEAD
-        Vector2 move = new Vector2(moveHori, moveVert);
-
-        if ((rb2d.velocity + move).magnitude < maxSpeed)
-        {
-            rb2d.AddForce(move * speed);
-=======
         Vector2 move = new Vector2 (moveHori,moveVert);
 
         if((rb2d.velocity + move).magnitude < maxSpeed){
             rb2d.AddForce(move *speed);
->>>>>>> master
         }
     }
 
@@ -73,11 +65,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     */
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> master
     public void disableMovement()
     {
         rb2d.velocity = Vector2.zero;
