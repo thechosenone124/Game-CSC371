@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunControl : MonoBehaviour {
 
     public float shootFrequency = 0.5f;
-    [Header("Buttons: {A, X, Y}")]
+    [Header("Buttons: {A, X, Y, RT}")]
     public string fireButton;
     public int projectilesFiredPerPress = 1;
     public GameObject projectile;
@@ -29,7 +29,8 @@ public class GunControl : MonoBehaviour {
 
         if( (fireButton == "A" && pcon.GetAButton()) ||
             (fireButton == "X" && pcon.GetXButton()) ||
-            (fireButton == "Y" && pcon.GetYButton()))
+            (fireButton == "Y" && pcon.GetYButton()) ||
+            (fireButton == "RT" && pcon.GetRTButton() == 1))
         {
             for (int i = 0; i < projectilesFiredPerPress; i++)
             {

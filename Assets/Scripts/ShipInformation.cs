@@ -17,7 +17,7 @@ public class ShipInformation : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         if (pilot  != null) moveCon.MoveShip(pilot.GetComponent<PlayerInputContainer>());
         if (gunner != null)
@@ -53,7 +53,7 @@ public class ShipInformation : MonoBehaviour {
         if (gunner == null)
         {
             gunner = player;
-            weapCon.reticle.SetActive(true);
+            weapCon.reticle.GetComponent<SpriteRenderer>().enabled = true;
             return true;
         }
         return false;
@@ -64,7 +64,7 @@ public class ShipInformation : MonoBehaviour {
         if (gunner == player)
         {
             gunner = null;
-            weapCon.reticle.SetActive(false);
+            weapCon.reticle.GetComponent<SpriteRenderer>().enabled = false;
             return true;
         }
         return false;
