@@ -28,7 +28,8 @@ public class WeaponControlsCollider : MonoBehaviour {
                     Debug.Log(collision.gameObject.name + "'s a button: " + pcon.GetAButton());
                     pcon.isOperatingStation = true;
                     collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                }
+                    collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(false);
+            }
             }
             
             else if (pcon.GetBButton() && pcon.isOperatingStation)
@@ -38,6 +39,7 @@ public class WeaponControlsCollider : MonoBehaviour {
                 {
                     pcon.isOperatingStation = false;
                     collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(true);
                 }
 
             }
