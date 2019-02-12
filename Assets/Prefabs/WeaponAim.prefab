@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8af0b13cf6a56438b12a7f40de899d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reticleDeadZone: 0.2
-  reticleRotationSpeed: 5
+  deadZone: 0.7
+  rotationSpeed: 6.5
   inputXAxis: RightJoystickX
   inputYAxis: RightJoystickY
 --- !u!212 &212227943012701670

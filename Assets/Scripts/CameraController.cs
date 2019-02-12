@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public GameObject followObject;
-   [Range(1f, 100f)]
-   public float followSpeed = 2.0f;
+	public GameObject player;
 
+	private Vector3 offset;
+	// Use this for initialization
+	void Start () {
+		offset = transform.position - player.transform.position;
+	}
+	
+	// Update is called once per frame
 	void LateUpdate () {
-      float interpolation = followSpeed * Time.deltaTime;
-
-      Vector3 position = this.transform.position;
-      position.y = Mathf.Lerp(this.transform.position.y, followObject.transform.position.y, interpolation);
-      position.x = Mathf.Lerp(this.transform.position.x, followObject.transform.position.x, interpolation);
-
-      this.transform.position = position;
+		transform.position = player.transform.position + offset;
 	}
 }
