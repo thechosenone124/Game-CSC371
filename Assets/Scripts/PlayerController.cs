@@ -9,34 +9,34 @@ public class PlayerController : MonoBehaviour{
     public float drag = 5f;
     private Rigidbody2D rb2d;
     public GameObject projectile;
-    private bool canShoot;
-    private int score;
+    private bool shoot;
+    private int count;
     public bool navigationControls;
     public bool gunControls;
 
     void Start(){
         score = 0;
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.drag = drag;
-        canShoot = false;
+        shoot = false;
+        navigationControls = false;
+        gunControls = false;
     }
 
     void FixedUpdate(){
-        float moveHori = Input.GetAxis("Horizontal");
-        float moveVert = Input.GetAxis("Vertical");
-        Vector2 move = new Vector2 (moveHori,moveVert);
-
-        if((rb2d.velocity + move).magnitude < maxSpeed) rb2d.AddForce(move *speed);
+        if (navigationControls)
+        {
+           float moveHori = Input.GetAxis("Horizontal");
+           float moveVert = Input.GetAxis("Vertical");
+           Vector2 move = new Vector2 (moveHori,moveVert);
+           rb2d.AddForce(move *speed);
+        }
     }
 
     void Update() {
-        if (navigationControls)
-        {
-           if (Input.GetKeyDown(KeyCode.LeftShift) && canShoot && gunControls)
-           {
-               GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-           }
-        }
+       if (Input.GetKeyDown(KeyCode.LeftShift) && shoot && gunControls)
+         {
+             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
