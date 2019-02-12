@@ -22,4 +22,10 @@ public class BulletMovement : MonoBehaviour {
          timer = 0;
       }
    }
+
+   void OnTriggerEnter2D(Collider2D other){
+      if(other.CompareTag("SpaceDebris")){
+         Destroy(gameObject);
+      }
+   }
 }
