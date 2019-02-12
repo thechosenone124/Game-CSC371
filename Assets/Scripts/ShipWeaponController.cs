@@ -5,11 +5,12 @@ using UnityEngine;
 public class ShipWeaponController : MonoBehaviour {
 
     private ArrayList guns = new ArrayList();
+    public GameObject weaponAimControlCenter;
     public GameObject reticle;
     public float reticleDeadZone = 0.2f;
     public float reticleRotationSpeed = 5f;
 
-    [Range(10f, 100f)]
+    [Range(1f, 100f)]
     public float reticleDistance = 20f;
 
     private void Update()
@@ -42,12 +43,14 @@ public class ShipWeaponController : MonoBehaviour {
         {
             Debug.Log(reticle.transform.position.x);
             Debug.Log(reticle.transform.position.y);
-            reticle.transform.position = Vector3.Slerp(reticle.transform.position, transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
+            //reticle.transform.position = Vector3.Slerp(reticle.transform.position, transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
             //reticle.transform.position = transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0);
             //Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, -stickInput.y) * 180 / Mathf.PI);
             //reticle.transform.rotation = Quaternion.Slerp(reticle.transform.rotation, eulerRot, Time.deltaTime * reticleRotationSpeed);
+            Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, stickInput.y) * 180 / Mathf.PI);
+            weaponAimControlCenter.transform.rotation = Quaternion.Slerp(weaponAimControlCenter.transform.rotation, eulerRot, Time.deltaTime * reticleRotationSpeed);
 
-        }
+      }
     }
 
     void RotateGunsTowardsReticle()

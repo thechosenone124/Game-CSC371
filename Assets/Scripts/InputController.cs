@@ -29,11 +29,11 @@ public class InputController : MonoBehaviour {
 
     void SendPlayer1Input()
     {
-        container1.SetInput(Input.GetAxis("J1Horizontal"), -Input.GetAxis("J1Vertical"), Input.GetButton("J1A"), Input.GetButton("J1B"));
+        container1.SetInput(Input.GetAxis("J1Horizontal"), -Input.GetAxis("J1Vertical"), Input.GetButton("J1A"), Input.GetButton("J1B"), Input.GetAxis("J1RT"));
     }
 
     void SendPlayer2Input()
     {
-        container2.SetInput(Input.GetAxis("J2Horizontal"), -Input.GetAxis("J2Vertical"), Input.GetButton("J2A"), Input.GetButton("J2B"));
+        container2.SetInput(Input.GetAxis("J2Horizontal"), -Input.GetAxis("J2Vertical"), Input.GetButton("J2A"), Input.GetButton("J2B"), Input.GetAxis("J2RT"));
     }
 }
