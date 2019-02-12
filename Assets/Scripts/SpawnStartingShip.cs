@@ -38,32 +38,19 @@ public class SpawnStartingShip : MonoBehaviour {
 	}
 
 	void SpawnStartShip(){
-		engineRoom = transform.GetChild(22).gameObject;
-		engineRoom.GetComponent<CreateRoom>().BuildRoom(modules[ENGINEROOM],HasNeighbors(2,4),ENGINEROOM);
-		rooms[2,4] = engineRoom;
-		UpdateNeighbors(2,4);
-
-		weaponsRoom = transform.GetChild(17).gameObject;
-		weaponsRoom.GetComponent<CreateRoom>().BuildRoom(modules[WEAPONSROOM],HasNeighbors(2,3),WEAPONSROOM);
-		rooms[2,3] = weaponsRoom;
-		UpdateNeighbors(2,3);
-
-		cockpit = transform.GetChild(12).gameObject;
-		cockpit.GetComponent<CreateRoom>().BuildRoom(modules[COCKPIT],HasNeighbors(2,2),COCKPIT);
-		rooms[2,2] = cockpit;
-		UpdateNeighbors(2,2);
-
-		gun1 = transform.GetChild(16).gameObject;
-		gun1.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(1,3),NOAHGUN);
-		rooms[1,3] = gun1;
-		UpdateNeighbors(1,3);
-
-		gun2 = transform.GetChild(18).gameObject;
-		gun2.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(3,3),NOAHGUN);
-		rooms[3,3] = gun2;
-		UpdateNeighbors(3,3);
+		SpawnModuleAtLocation(2,4,ENGINEROOM);
+		SpawnModuleAtLocation(2,3,WEAPONSROOM);
+		SpawnModuleAtLocation(3,3,NOAHGUN);
+		SpawnModuleAtLocation(2,2,COCKPIT);
+		SpawnModuleAtLocation(1,3,NOAHGUN);
 	}
-
+	void SpawnModuleAtLocation(int x, int y, int moduleType){
+		int shipSize = rooms.GetLength(0);
+		GameObject shipPart = transform.GetChild(y*shipSize + x).gameObject;
+		shipPart.GetComponent<CreateRoom>().BuildRoom(modules[moduleType],HasNeighbors(x,y),moduleType);
+		rooms[x,y] = shipPart;
+		UpdateNeighbors(x,y);
+	}
 	void SpawnModule(int child, GameObject module, int x, int y, int moduleType){
 		int neighbors = HasNeighbors(x,y);
 		if(HasNeighbors(x,y) > 0){
@@ -74,16 +61,10 @@ public class SpawnStartingShip : MonoBehaviour {
 	}
 
 	public void RoomClicked(int x, int y, int childNum){
-		if(roomSwitch == 0){
-			SpawnModule(childNum,modules[FOURWAYROOM],x,y,FOURWAYROOM);
-			roomSwitch++;
-		}
-		
-		else if(roomSwitch == 1){
-			SpawnModule(childNum,modules[GUN],x,y,GUN);
-			roomSwitch = 0;
-		}
-		
+		gun2 = transform.GetChild(18).gameObject;
+		gun2.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(3,3),NOAHGUN);
+		rooms[3,3] = gun2;
+		UpdateNeighbors(3,3);
 	}
 	bool CheckDown(int x, int y){
 		if(y == rooms.GetLength(1) - 1){

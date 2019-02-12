@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4193323538684944}
   - component: {fileID: 114406450140320284}
   - component: {fileID: 61578358893439330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
