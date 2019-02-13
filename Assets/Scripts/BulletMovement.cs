@@ -27,5 +27,11 @@ public class BulletMovement : MonoBehaviour {
       if(other.CompareTag("SpaceDebris")){
          Destroy(gameObject);
       }
+      else if(other.CompareTag("MapBorder")){
+         Destroy(gameObject);
+      }
+      else if(other.CompareTag("Enemy")){
+         Destroy(gameObject);
+      }
    }
 }

@@ -83,8 +83,8 @@ public class ShipInformation : MonoBehaviour {
     private void UpdateHealthBar()
     {
         float ratio = currentHealth / maxHealth;
-        currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        ratioText.text = (ratio * 100).ToString("0") + "%";
+        //currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        //ratioText.text = (ratio * 100).ToString("0") + "%";
     }
 
     private void TakeDamage(float damage)

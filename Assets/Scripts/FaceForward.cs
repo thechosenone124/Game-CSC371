@@ -6,6 +6,11 @@ public class FaceForward : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject target;
+	void Awake(){
+		if(target == null){
+			target = GameObject.Find("Ship");
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
