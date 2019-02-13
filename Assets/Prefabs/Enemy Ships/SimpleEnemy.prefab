@@ -25,8 +25,8 @@ GameObject:
   - component: {fileID: 95043241106707920}
   - component: {fileID: 114638473997554462}
   - component: {fileID: 114332558538779274}
-  - component: {fileID: 60433803754561146}
   - component: {fileID: 114475375377593024}
+  - component: {fileID: 114268430847047956}
   m_Layer: 0
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -139,7 +139,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114268430847047956
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1098017732048582}

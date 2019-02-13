@@ -33,6 +33,9 @@ public class BossTakesDamage : MonoBehaviour
          damageTime = 0;
          gameObject.GetComponent<SpriteRenderer>().color = Color.white;
       }
+      if(enemyHealth == 0){
+         GameController.instance.PlayerWins();
+      }
    }
    void OnTriggerEnter2D(Collider2D col)
    {
