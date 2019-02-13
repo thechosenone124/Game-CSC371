@@ -41,8 +41,6 @@ public class ShipWeaponController : MonoBehaviour {
         }
         else
         {
-            Debug.Log(reticle.transform.position.x);
-            Debug.Log(reticle.transform.position.y);
             //reticle.transform.position = Vector3.Slerp(reticle.transform.position, transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
             //reticle.transform.position = transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0);
             //Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, -stickInput.y) * 180 / Mathf.PI);
