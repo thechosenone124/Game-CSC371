@@ -7,8 +7,8 @@ public class ShipInformation : MonoBehaviour {
 
     public float maxHealth = 100f;
 
-    //public Image currentHealthBar;
-    //public Text ratioText;
+    public Image currentHealthBar;
+    public Text ratioText;
 
     private float currentHealth;
     private ShipMovementController moveCon;

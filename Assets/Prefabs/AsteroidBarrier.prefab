@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 4973043736353754}
   - component: {fileID: 50128180874214526}
   - component: {fileID: 61608740805925734}
+  - component: {fileID: 114038770264997070}
   m_Layer: 8
   m_Name: BarrierCollider
   m_TagString: SpaceDebris
@@ -534,6 +535,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 43.68, y: 11.458317}
   m_EdgeRadius: 0
+--- !u!114 &114038770264997070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964235062583652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63a91d7abf274e4f9c452539fcbb072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrierHealth: 5
+  whiteTime: 0.1
 --- !u!212 &212031547737639538
 SpriteRenderer:
   m_ObjectHideFlags: 1

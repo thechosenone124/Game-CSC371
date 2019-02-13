@@ -43,7 +43,6 @@ public class SpawnStartingShip : MonoBehaviour {
 		SpawnModuleAtLocation(3,3,NOAHGUN);
 		SpawnModuleAtLocation(2,2,COCKPIT);
 		SpawnModuleAtLocation(1,3,NOAHGUN);
-		SpawnModuleAtLocation(1,4,NOAHGUN);
 	}
 	void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
