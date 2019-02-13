@@ -15,6 +15,7 @@ TagManager:
   - SpaceDebris
   - MapBorder
   - EnemyProjectile
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Players
   - Ship
   - Room
-  - 
+  - GunModule
   - 
   - 
   - 
@@ -75,4 +76,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 437400225
+    locked: 0
+  - name: HUD
+    uniqueID: 2948734659
     locked: 0

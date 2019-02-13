@@ -7,6 +7,7 @@ public class ShipWeaponController : MonoBehaviour {
     private ArrayList guns = new ArrayList();
     public GameObject weaponAimControlCenter;
     public GameObject reticle;
+    public GameObject aimPoint;
     public float reticleDeadZone = 0.2f;
     public float reticleRotationSpeed = 5f;
 
@@ -55,7 +56,7 @@ public class ShipWeaponController : MonoBehaviour {
     {
         for (int i = 0; i < guns.Count; i++)
         {
-            ((GameObject)guns[i]).GetComponent<GunControl>().RotateAtReticle(reticle.transform.position);
+            ((GameObject)guns[i]).GetComponent<GunControl>().RotateAtReticle(aimPoint.transform.position);
         }
     }
 

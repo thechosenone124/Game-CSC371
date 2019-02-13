@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour{
     private Rigidbody2D rb2d;
     public GameObject projectile;
     private bool canShoot;
-    private int score;
+    //private int score;
     public bool navigationControls;
     public bool gunControls;
 
     void Start(){
-        score = 0;
+        //score = 0;
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.drag = drag;
         canShoot = false;

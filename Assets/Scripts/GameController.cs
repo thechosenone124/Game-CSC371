@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour {
 	}
 
     //Health manipulation
-    private void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
         float ratio = currentHealth / maxHealth;
         currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
@@ -59,5 +59,10 @@ public class GameController : MonoBehaviour {
     public float getCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public void setHealth(float newHealth)
+    {
+        currentHealth = newHealth;
     }
 }
