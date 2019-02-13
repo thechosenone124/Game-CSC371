@@ -24,13 +24,8 @@ public class BulletMovement : MonoBehaviour {
    }
 
    void OnTriggerEnter2D(Collider2D other){
-      if(other.CompareTag("SpaceDebris")){
-         Destroy(gameObject);
-      }
-      else if(other.CompareTag("MapBorder")){
-         Destroy(gameObject);
-      }
-      else if(other.CompareTag("Enemy")){
+      if(other.CompareTag("SpaceDebris") || other.CompareTag("MapBorder") || other.CompareTag("Enemy") || other.CompareTag("Boss"))
+      {
          Destroy(gameObject);
       }
    }

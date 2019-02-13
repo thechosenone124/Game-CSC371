@@ -46,12 +46,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1
-    dead: 0
+    dead: 0.2
     sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 3
     joyNum: 2
   - serializedVersion: 3
     m_Name: J2Vertical
@@ -62,12 +62,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1
-    dead: 0
+    dead: 0.2
     sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 1
+    axis: 4
     joyNum: 2
   - serializedVersion: 3
     m_Name: J1A

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ShipInformation : MonoBehaviour {
 
     public float maxHealth = 100f;
-
     private ShipMovementController moveCon;
     private ShipWeaponController weapCon;
     private GameObject pilot;

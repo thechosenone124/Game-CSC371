@@ -19,7 +19,7 @@ public class SpawnStartingShip : MonoBehaviour {
 	private GameObject weaponsRoom;
 	private GameObject gun1,gun2;
 
-	private int roomSwitch = 0;
+	//private int roomSwitch = 0;
 	void Start () {
 		int childNum = 0;
 		rooms = new GameObject[5,5];
@@ -42,7 +42,6 @@ public class SpawnStartingShip : MonoBehaviour {
 		SpawnModuleAtLocation(2,3,WEAPONSROOM);
 		SpawnModuleAtLocation(3,3,NOAHGUN);
 		SpawnModuleAtLocation(2,2,COCKPIT);
-		SpawnModuleAtLocation(1,3,NOAHGUN);
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);

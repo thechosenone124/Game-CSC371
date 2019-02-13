@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4248725959488376}
   - component: {fileID: 212038921049746970}
-  - component: {fileID: 114488926585840326}
   - component: {fileID: 50950413836882526}
-  - component: {fileID: 114213907790687558}
   - component: {fileID: 60586731372131208}
+  - component: {fileID: 114488926585840326}
+  - component: {fileID: 114213907790687558}
   - component: {fileID: 114181787652940648}
   m_Layer: 0
   m_Name: EnemyFighter
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332119849000982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.45, y: 1.53, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
