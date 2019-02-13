@@ -21,7 +21,7 @@ public class ShipInformation : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
 
-        maxHealth = GameController.instance.getCurrentHealth();
+        //maxHealth = GameController.instance.getCurrentHealth();
 
         if (pilot  != null) moveCon.MoveShip(pilot.GetComponent<PlayerInputContainer>());
         if (gunner != null)

@@ -17,11 +17,10 @@ public class CollisionCalculations : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             collision.gameObject.SetActive(false);
             GameController.instance.SendMessage("TakeDamage", 5);
-            Debug.Log("Sending request to take damage");
         }
     }
 }

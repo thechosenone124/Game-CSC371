@@ -21,9 +21,9 @@ public class EnemyControllerComplex : MonoBehaviour
     private float timer1 = 0;
     private float rand;
     private bool timerFlag;
-    private bool gotHit = false;
-    private int enemyHealth = 10;
-    private float damageTime = 0;
+    //private bool gotHit = false;
+    //private int enemyHealth = 10;
+    //private float damageTime = 0;
 
     void Awake(){
         rand = Random.Range(0,2f);
@@ -34,6 +34,7 @@ public class EnemyControllerComplex : MonoBehaviour
     }
     void Update()
     { 
+        /*
         if(gotHit){
             enemyHealth -= 1;
             gotHit = false;
@@ -43,6 +44,7 @@ public class EnemyControllerComplex : MonoBehaviour
         if(enemyHealth == 0){
             gameObject.SetActive(false);
         }
+        */
         timer += Time.deltaTime;
         timer1 += Time.deltaTime;
         if(timer1 >= rand){
@@ -78,6 +80,7 @@ public class EnemyControllerComplex : MonoBehaviour
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
             timer = 0;
         }
+        /*
         if(damageTime > 0){
             damageTime -= Time.deltaTime;
         }
@@ -85,13 +88,14 @@ public class EnemyControllerComplex : MonoBehaviour
             damageTime = 0;
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
-
+        */
     }
-
+/* 
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.CompareTag("Projectile"))
         {
             gotHit = true;
         }
     }
+*/
 }
