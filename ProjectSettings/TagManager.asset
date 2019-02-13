@@ -13,6 +13,8 @@ TagManager:
   - Cockpit
   - EngineRoom
   - SpaceDebris
+  - MapBorder
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -53,6 +55,9 @@ TagManager:
   - name: Background
     uniqueID: 742745511
     locked: 0
+  - name: Projectile
+    uniqueID: 937074289
+    locked: 0
   - name: Ship Background
     uniqueID: 235000981
     locked: 0
@@ -64,9 +69,6 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 2914737349
-    locked: 0
-  - name: Projectile
-    uniqueID: 937074289
     locked: 0
   - name: Ships
     uniqueID: 973497689

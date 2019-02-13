@@ -75,6 +75,4 @@ public class ShipInformation : MonoBehaviour {
         return false;
     }
 
-
-
 }

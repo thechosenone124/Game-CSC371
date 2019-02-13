@@ -27,7 +27,7 @@ public class NavigationControlsCollider : MonoBehaviour {
                     pcon.isOperatingStation = true;
                     //collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                     collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                    collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(false);
+                    //collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(false);
                 }
             }
             else if (pcon.GetBButton() && pcon.isOperatingStation)
@@ -38,7 +38,7 @@ public class NavigationControlsCollider : MonoBehaviour {
                     pcon.isOperatingStation = false;
                     //collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                    collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(true);
+                    //collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(true);
                 }
 
             }

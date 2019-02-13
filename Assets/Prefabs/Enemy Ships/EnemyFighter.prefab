@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114488926585840326}
   - component: {fileID: 50950413836882526}
   - component: {fileID: 114213907790687558}
+  - component: {fileID: 60586731372131208}
   m_Layer: 0
   m_Name: EnemyFighter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +64,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60586731372131208
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332119849000982}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.16, y: 4.16}
+    newSize: {x: 4.16, y: 4.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.7, y: -1.3199999}
+      - {x: 0.78, y: -1.29}
+      - {x: 0.79999995, y: -1.11}
+      - {x: 0.79999995, y: -0.26}
+      - {x: 0.69, y: 0.39999998}
+      - {x: 0.56, y: 1.05}
+      - {x: 0.41, y: 1.43}
+      - {x: 0.39, y: 1.4499999}
+      - {x: 0.29999998, y: 1.6999999}
+      - {x: 0.17, y: 1.8299999}
+      - {x: 0.13, y: 1.8399999}
+      - {x: -0.19, y: 1.8399999}
+      - {x: -0.29, y: 1.73}
+      - {x: -0.57, y: 1.05}
+      - {x: -0.79999995, y: -0.14999999}
+      - {x: -0.79999995, y: -0.78}
+      - {x: -0.78999996, y: -0.83}
+      - {x: -0.76, y: -1.23}
+      - {x: -0.55, y: -1.3199999}
+      - {x: -0.12, y: -1.3199999}
+      - {x: 0.089999996, y: -0.84}
+      - {x: 0.089999996, y: -1.18}
+      - {x: 0.14, y: -1.3199999}
 --- !u!114 &114213907790687558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,11 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 3
-  Radius: 7
+  speed: 8
+  Radius: 20
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 2
+  RotateSpeed: 1
 --- !u!114 &114488926585840326
 MonoBehaviour:
   m_ObjectHideFlags: 1
