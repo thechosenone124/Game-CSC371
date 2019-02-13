@@ -28,7 +28,6 @@ public class DestructableBarrier : MonoBehaviour {
 			damageTime -= Time.deltaTime;
 		}
 		if(damageTime < 0){
-			Debug.Log("I made it to here");
 			for(int i = 0; i < numOfAsteroids; i++){
 				transform.parent.GetChild(0).GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(.45f,.45f,.45f,1f);
 			}
