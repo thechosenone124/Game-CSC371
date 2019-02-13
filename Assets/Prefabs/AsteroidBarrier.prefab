@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 50128180874214526}
   - component: {fileID: 61608740805925734}
   - component: {fileID: 114038770264997070}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: BarrierCollider
   m_TagString: SpaceDebris
   m_Icon: {fileID: 0}
