@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95043241106707920}
   - component: {fileID: 114638473997554462}
   - component: {fileID: 114332558538779274}
+  - component: {fileID: 60433803754561146}
   m_Layer: 0
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -64,6 +65,58 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60433803754561146
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098017732048582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 1.12}
+    newSize: {x: 1.2, y: 1.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34, y: -0.47}
+      - {x: 0.35, y: -0.42999998}
+      - {x: 0.57, y: -0.42999998}
+      - {x: 0.59999996, y: -0.39999998}
+      - {x: 0.59999996, y: -0.19999999}
+      - {x: 0.59, y: -0.14999999}
+      - {x: 0.55, y: -0.07}
+      - {x: 0.47, y: 0.02}
+      - {x: 0.38, y: 0.02}
+      - {x: 0.38, y: 0.35999998}
+      - {x: 0.37, y: 0.39}
+      - {x: 0.19, y: 0.56}
+      - {x: -0.17999999, y: 0.56}
+      - {x: -0.38, y: 0.35999998}
+      - {x: -0.45999998, y: 0.03}
+      - {x: -0.48, y: -0.049999997}
+      - {x: -0.53, y: -0.049999997}
+      - {x: -0.59999996, y: -0.14}
+      - {x: -0.59999996, y: -0.38}
+      - {x: -0.56, y: -0.42}
+      - {x: -0.34, y: -0.42}
+      - {x: -0.35, y: -0.45}
+      - {x: -0.31, y: -0.53}
+      - {x: -0.28, y: -0.56}
+      - {x: -0.06, y: -0.56}
+      - {x: -0.02, y: -0.52}
+      - {x: 0.049999997, y: -0.56}
+      - {x: 0.26999998, y: -0.56}
 --- !u!95 &95043241106707920
 Animator:
   serializedVersion: 3
@@ -94,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  projectile: {fileID: 1199177490869764, guid: 6c4b3fbad48d6624398054ea9477479a, type: 2}
+  projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
   speed: 3
-  shootRange: 5
-  triggerRange: 10
+  shootRange: 30
+  triggerRange: 100
   bulletFreq: 1
 --- !u!114 &114638473997554462
 MonoBehaviour:
@@ -144,7 +197,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1380229947
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9486cb6e2181b0b48b07930254c3c15f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
