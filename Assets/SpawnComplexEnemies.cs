@@ -16,7 +16,7 @@ public class SpawnComplexEnemies : MonoBehaviour {
 	void Update(){
 		if(shouldSpawn && !hasSpawned){
 			for(int i = 0; i < numberOfEnemies; i++){
-				Instantiate(spawnable,transform.position,Quaternion.identity,transform);
+				Instantiate(spawnable,transform.position + new Vector3(Random.Range(-30f,30f),Random.Range(-30f,30f),0),Quaternion.identity);
 			}
 			shouldSpawn = false;
 			hasSpawned = true;

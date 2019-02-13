@@ -127,7 +127,7 @@ MonoBehaviour:
   Radius: 20
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 2
+  RotateSpeed: 1
 --- !u!114 &114488926585840326
 MonoBehaviour:
   m_ObjectHideFlags: 1
