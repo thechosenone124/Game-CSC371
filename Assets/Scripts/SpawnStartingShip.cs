@@ -44,7 +44,7 @@ public class SpawnStartingShip : MonoBehaviour {
 		SpawnModuleAtLocation(2,2,COCKPIT);
 		SpawnModuleAtLocation(1,3,NOAHGUN);
 	}
-	void SpawnModuleAtLocation(int x, int y, int moduleType){
+	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
 		GameObject shipPart = transform.GetChild(y*shipSize + x).gameObject;
 		shipPart.GetComponent<CreateRoom>().BuildRoom(modules[moduleType],HasNeighbors(x,y),moduleType);
