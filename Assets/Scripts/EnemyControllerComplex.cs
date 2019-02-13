@@ -21,13 +21,28 @@ public class EnemyControllerComplex : MonoBehaviour
     private float timer1 = 0;
     private float rand;
     private bool timerFlag;
+    private bool gotHit = false;
+    private int enemyHealth = 10;
+    private float damageTime = 0;
 
-    void start(){
+    void Awake(){
         rand = Random.Range(0,2f);
         timerFlag = false;
+        if(target == null){
+            target = GameObject.Find("Ship");
+        }
     }
     void Update()
     { 
+        if(gotHit){
+            enemyHealth -= 1;
+            gotHit = false;
+            damageTime += .1f;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        if(enemyHealth == 0){
+            gameObject.SetActive(false);
+        }
         timer += Time.deltaTime;
         timer1 += Time.deltaTime;
         if(timer1 >= rand){
@@ -58,20 +73,25 @@ public class EnemyControllerComplex : MonoBehaviour
             offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Radius;
             transform.position = center + offset;
         }
-        Debug.Log(timer);
         if (timer >= bulletFreq)
         {
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
             timer = 0;
         }
+        if(damageTime > 0){
+            damageTime -= Time.deltaTime;
+        }
+        else{
+            damageTime = 0;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.CompareTag("Projectile"))
         {
-            gameObject.SetActive(false);
-            col.gameObject.SetActive(false);
+            gotHit = true;
         }
-
     }
 }
