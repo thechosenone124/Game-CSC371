@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 58378954538830252}
   - component: {fileID: 114854206724830298}
   m_Layer: 0
-  m_Name: ComplexEnemySpawner
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
