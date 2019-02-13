@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 58378954538830252}
   - component: {fileID: 114854206724830298}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: ComplexEnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,3 +70,4 @@ MonoBehaviour:
   numberOfEnemies: 3
   spawnable: {fileID: 1332119849000982, guid: f88b28aed10d9f14f91a6aeff12ac4f0, type: 2}
   triggerRadius: 100
+  spawnRadiusRatio: 0.5
