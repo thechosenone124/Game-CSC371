@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114638473997554462}
   - component: {fileID: 114332558538779274}
   - component: {fileID: 60433803754561146}
+  - component: {fileID: 114475375377593024}
   m_Layer: 0
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -152,6 +153,18 @@ MonoBehaviour:
   shootRange: 30
   triggerRange: 100
   bulletFreq: 1
+--- !u!114 &114475375377593024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098017732048582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 5
 --- !u!114 &114638473997554462
 MonoBehaviour:
   m_ObjectHideFlags: 1
