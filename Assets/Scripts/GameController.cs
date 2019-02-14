@@ -11,7 +11,6 @@ public class GameController : MonoBehaviour {
     public float maxHealth = 100f;
     public Image currentHealthBar;
     public Text ratioText;
-    public Text gameStateText;
     private float currentHealth;
 
     void Awake()
@@ -32,8 +31,6 @@ public class GameController : MonoBehaviour {
         //healthbar initialization
         currentHealth = maxHealth;
         UpdateHealthBar();
-        //game state text initialization
-        gameStateText.text = "";
    }
 	
 	// Update is called once per frame
@@ -67,13 +64,5 @@ public class GameController : MonoBehaviour {
     public void setHealth(float newHealth)
     {
         currentHealth = newHealth;
-    }
-
-    public void PlayerWins(){
-        gameStateText.text = "You Win!";
-    }
-
-    public void PlayerLoses(){
-        gameStateText.text = "You Died!";
     }
 }

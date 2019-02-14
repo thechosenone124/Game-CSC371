@@ -70,4 +70,3 @@ MonoBehaviour:
   numberOfEnemies: 3
   spawnable: {fileID: 1332119849000982, guid: f88b28aed10d9f14f91a6aeff12ac4f0, type: 2}
   triggerRadius: 100
-  spawnRadiusRatio: 0.5
