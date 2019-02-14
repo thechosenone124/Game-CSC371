@@ -20,7 +20,7 @@ public class CollisionCalculations : MonoBehaviour {
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             collision.gameObject.SetActive(false);
-            GameController.instance.SendMessage("TakeDamage", 5);
+            GameController.instance.SendMessage("TakeDamage", 3);
         }
     }
 }
