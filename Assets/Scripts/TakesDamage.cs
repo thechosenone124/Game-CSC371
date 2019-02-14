@@ -21,7 +21,7 @@ public class TakesDamage : MonoBehaviour {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         if(enemyHealth == 0){
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 		if(damageTime > 0){
             damageTime -= Time.deltaTime;

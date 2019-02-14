@@ -1,29 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ShipInformation : MonoBehaviour {
+public class ShipInfoDavinTest : MonoBehaviour {
 
     public float maxHealth = 100f;
-    private ShipMovementController moveCon;
+    private ShipMovementDavinTest moveCon;
     private ShipWeaponController weapCon;
     private GameObject pilot;
     private GameObject gunner;
 
 	 // Use this for initialization
 	 void Start () {
-        //currentHealth = maxHealth;
-        moveCon = GetComponent<ShipMovementController>();
+        moveCon = GetComponent<ShipMovementDavinTest>();
         weapCon = GetComponent<ShipWeaponController>();
-        //UpdateHealthBar();
 	 }
 
     // Update is called once per frame
-    void FixedUpdate () {
-
-        //maxHealth = GameController.instance.getCurrentHealth();
-
+    void Update () {
+      
         if (pilot  != null) moveCon.MoveShip(pilot.GetComponent<PlayerInputContainer>());
         if (gunner != null)
         {
@@ -31,9 +26,14 @@ public class ShipInformation : MonoBehaviour {
             weapCon.MoveReticle(gunner.GetComponent<PlayerInputContainer>());
         }
 		
-	}
+	 }
 
-    public bool SetPilot(GameObject player)
+    private void FixedUpdate()
+    {
+        if (pilot  != null) moveCon.ApplyDrag();
+    }
+
+   public bool SetPilot(GameObject player)
     {
         if(pilot == null)
         {

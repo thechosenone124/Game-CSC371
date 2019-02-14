@@ -264,9 +264,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   speed: 8
   shootRange: 150
-  triggerRange: 150
+  triggerRange: 200
   bulletFreq: 0.75
-  maxHealth: 50
+  maxHealth: 0
 --- !u!114 &114584246767360678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1470611205402096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 198272739f9ebbb45a88f46d591c0d8f, type: 3}
+  m_Script: {fileID: 11500000, guid: d3e51409495f9cd45ace0d302811f4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 125
