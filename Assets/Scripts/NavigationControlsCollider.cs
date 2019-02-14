@@ -29,6 +29,7 @@ public class NavigationControlsCollider : MonoBehaviour {
                     collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                     //collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;    
                     //disabling box collider fixes awkward flying if player is colliding with control station while flying, but then player can't exit station
+                    collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;  
                     collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(false);
                 }
             }
@@ -41,6 +42,7 @@ public class NavigationControlsCollider : MonoBehaviour {
                     //collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
                     //collision.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                    collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;  
                     collision.gameObject.GetComponent<CameraHolder>().playerCamera.SetActive(true);
                 }
 

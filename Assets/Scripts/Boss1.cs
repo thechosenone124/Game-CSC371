@@ -15,8 +15,8 @@ public class Boss1 : MonoBehaviour
    public float shootRange;
    public float triggerRange;
    public float bulletFreq;
-   public float maxHealth;
 
+   private float maxHealth;
    private GameObject currentHealthBar;
    private GameObject ratioText;
    private GameObject healthBarBackground;

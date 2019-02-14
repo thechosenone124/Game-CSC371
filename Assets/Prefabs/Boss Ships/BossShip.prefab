@@ -264,9 +264,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   speed: 8
   shootRange: 150
-  triggerRange: 150
+  triggerRange: 200
   bulletFreq: 0.75
-  maxHealth: 50
 --- !u!114 &114584246767360678
 MonoBehaviour:
   m_ObjectHideFlags: 1
