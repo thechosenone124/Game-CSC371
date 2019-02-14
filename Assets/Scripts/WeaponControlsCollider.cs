@@ -22,7 +22,7 @@ public class WeaponControlsCollider : MonoBehaviour {
             //Debug.Log("Ship controls collided with a player");
             PlayerInputContainer pcon = collision.GetComponent<PlayerInputContainer>();
             Debug.Log(AButtonReleased);
-            if (pcon.GetAButton() && !pcon.isOperatingStation && AButtonReleased)
+            if (pcon.GetAButton() && !pcon.isOperatingStation)
             {
                 if (shipInfo.SetGunner(collision.gameObject)) // returns true when there is nobody controlling
                 {
@@ -37,7 +37,7 @@ public class WeaponControlsCollider : MonoBehaviour {
                 AButtonReleased = false;
             }
             
-            else if (pcon.GetAButton() && pcon.isOperatingStation && AButtonReleased)
+            else if (pcon.GetBButton() && pcon.isOperatingStation)
             {
                 Debug.Log("Attempting to remove gunner");
                 if (shipInfo.RemoveGunner(collision.gameObject)) // returns true if collision.gameObject is the player set as pilot
@@ -50,9 +50,7 @@ public class WeaponControlsCollider : MonoBehaviour {
                 }
                 AButtonReleased = false;
             }
-            else if(!pcon.GetAButton() && !AButtonReleased){
-                AButtonReleased = true;
-            }
+
             //if (pcon.GetBButton()) Debug.Log("B was pressed inside gunner collider");
             //if (pcon.GetAButton()) Debug.Log("A was pressed inside gunner collider");
         }
