@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
 	public GameObject followObject;
-   [Range(1f, 100f)]
+   [Range(0f, 100f)]
    public float followSpeed = 2.0f;
 
    private void Start()

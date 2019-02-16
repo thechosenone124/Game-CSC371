@@ -3,77 +3,82 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour
+{
 
-    public static GameController instance;
+   public static GameController instance;
 
-    //Health
-    public float maxHealth = 100f;
-    public Image currentHealthBar;
-    public Text ratioText;
-    public Text gameStateText;
-    private float currentHealth;
+   //Health
+   public float maxHealth = 100f;
+   public Image currentHealthBar;
+   public Text ratioText;
+   public Text gameStateText;
+   private float currentHealth;
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    // Use this for initialization
-    void Start () {
-
-        //healthbar initialization
-        currentHealth = maxHealth;
-        UpdateHealthBar();
-        //game state text initialization
-        gameStateText.text = "";
+   void Awake()
+   {
+      if (instance == null)
+      {
+         instance = this;
+      }
+      else if (instance != null)
+      {
+         Destroy(gameObject);
+      }
    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    //Health manipulation
-    public void UpdateHealthBar()
-    {
-        float ratio = currentHealth / maxHealth;
-        currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        ratioText.text = (ratio * 100).ToString("0") + "%";
-    }
+   // Use this for initialization
+   void Start()
+   {
 
-    private void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
-        }
-        UpdateHealthBar();
-    }
+      //healthbar initialization
+      currentHealth = maxHealth;
+      UpdateHealthBar();
+      //game state text initialization
+      gameStateText.text = "";
+   }
 
-    public float getCurrentHealth()
-    {
-        return currentHealth;
-    }
+   // Update is called once per frame
+   void Update()
+   {
 
-    public void setHealth(float newHealth)
-    {
-        currentHealth = newHealth;
-    }
+   }
 
-    public void PlayerWins(){
-        gameStateText.text = "You Win!";
-    }
+   //Health manipulation
+   public void UpdateHealthBar()
+   {
+      float ratio = currentHealth / maxHealth;
+      currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+      ratioText.text = (ratio * 100).ToString("0") + "%";
+   }
 
-    public void PlayerLoses(){
-        gameStateText.text = "You Died!";
-    }
+   private void TakeDamage(float damage)
+   {
+      currentHealth -= damage;
+      if (currentHealth <= 0)
+      {
+         currentHealth = 0;
+      }
+      UpdateHealthBar();
+   }
+
+   public float getCurrentHealth()
+   {
+      return currentHealth;
+   }
+
+   public void setHealth(float newHealth)
+   {
+      currentHealth = newHealth;
+   }
+
+   public void PlayerWins()
+   {
+      gameStateText.text = "You Win!";
+   }
+
+   public void PlayerLoses()
+   {
+      gameStateText.text = "You Died!";
+   }
 }
