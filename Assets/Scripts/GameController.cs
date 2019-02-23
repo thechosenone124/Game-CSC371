@@ -15,11 +15,11 @@ public class GameController : MonoBehaviour
    public Text gameStateText;
    private float currentHealth;
    public const int COCKPIT = 0;
-	 public const int WEAPONSROOM = 1;
-	 public const int ENGINEROOM = 2;
-	 public const int GUN = 3;
-	 public const int FOURWAYROOM = 4;
-	 public const int NOAHGUN = 5;
+	public const int WEAPONSROOM = 1;
+	public const int ENGINEROOM = 2;
+	public const int GUN = 3;
+	public const int FOURWAYROOM = 4;
+	public const int NOAHGUN = 5;
 
    void Awake()
    {
