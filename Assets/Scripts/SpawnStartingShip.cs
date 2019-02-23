@@ -11,30 +11,28 @@ public class SpawnStartingShip : MonoBehaviour {
 	private GameObject cockpit;
 	private GameObject weaponsRoom;
 	private GameObject gun1,gun2;
+	private int[,] shipLayout;
 
 	//private int roomSwitch = 0;
 	void Start () {
 		int childNum = 0;
 		rooms = new GameObject[5,5];
+		shipLayout = new int[5,5];
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				transform.GetChild(childNum).gameObject.GetComponent<CreateRoom>().InitializeRoom(childNum,j,i);
 				childNum++;
+				shipLayout[j,i] = -1;
 			}
 		}
 		SpawnStartShip();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void SpawnStartShip(){
-		SpawnModuleAtLocation(2,4,GameController.ENGINEROOM);
-		SpawnModuleAtLocation(2,3,GameController.WEAPONSROOM);
-		SpawnModuleAtLocation(3,3,GameController.NOAHGUN);
-		SpawnModuleAtLocation(2,2,GameController.COCKPIT);
+		shipLayout[2,4] = GameController.ENGINEROOM;
+		shipLayout[2,3] = GameController.WEAPONSROOM;
+		shipLayout[3,3] = GameController.NOAHGUN;
+		shipLayout[2,2] = GameController.COCKPIT;
+		buildShip();
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
@@ -166,5 +164,24 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(CheckRight(x,y)){
 			rooms[x+1,y].GetComponent<CreateRoom>().UpdateModule(HasNeighbors(x+1,y));
 		}	
+	}
+
+	int[,] getShipLayout(){
+		return shipLayout;
+	}
+
+	void setShipLayout(int[,] newShipLayout){
+		shipLayout = newShipLayout;
+		buildShip();
+	}
+
+	void buildShip(){
+		for(int i = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
+				if(shipLayout[j,i] != -1){
+					SpawnModuleAtLocation(j,i,shipLayout[j,i]);
+				}
+			}
+		}
 	}
 }
