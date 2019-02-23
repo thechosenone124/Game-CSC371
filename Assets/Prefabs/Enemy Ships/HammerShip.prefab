@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4557328275770220}
   - component: {fileID: 212002407832993212}
+  - component: {fileID: 60566019376467806}
   - component: {fileID: 114167138079121794}
   - component: {fileID: 114554499190883294}
-  - component: {fileID: 60566019376467806}
   m_Layer: 0
   m_Name: HammerShip
   m_TagString: Enemy
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897516076559044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.26, y: 1.16, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

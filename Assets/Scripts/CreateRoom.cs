@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreateRoom : MonoBehaviour {
-	const int COCKPIT = 0;
-	const int WEAPONSROOM = 1;
-	const int ENGINEROOM = 2;
-	const int GUN = 3;
-	const int FOURWAYROOM = 4;
-	const int NOAHGUN = 5;
 	private int x,y;
 	private int childNum;
 	private int flag = 0;
@@ -48,21 +42,21 @@ public class CreateRoom : MonoBehaviour {
 
 	public void UpdateModule(int neighbors){
 		switch(moduleType){
-			case COCKPIT:
+			case GameController.COCKPIT:
 				child.GetComponent<CockpitConfigurer>().Doors(neighbors);
 				break;
-			case WEAPONSROOM:
+			case GameController.WEAPONSROOM:
 				child.GetComponent<WeaponsRoomConfigurer>().Doors(neighbors);
 				break;
-			case ENGINEROOM:
+			case GameController.ENGINEROOM:
 				child.GetComponent<EngineConfigurer>().Doors(neighbors);
 				break;
-			case GUN:
+			case GameController.GUN:
 				break;
-			case FOURWAYROOM:
+			case GameController.FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
-			case NOAHGUN:
+			case GameController.NOAHGUN:
 				break;
 		}
 	}
@@ -73,22 +67,22 @@ public class CreateRoom : MonoBehaviour {
 
 	private void ModuleHandler(int moduleType, int neighbors){
 		switch(moduleType){
-			case COCKPIT:
+			case GameController.COCKPIT:
 				child.GetComponent<CockpitConfigurer>().Doors(neighbors);
 				break;
-			case WEAPONSROOM:
+			case GameController.WEAPONSROOM:
 				child.GetComponent<WeaponsRoomConfigurer>().Doors(neighbors);
 				break;
-			case ENGINEROOM:
+			case GameController.ENGINEROOM:
 				child.GetComponent<EngineConfigurer>().Doors(neighbors);
 				break;
-			case GUN:
+			case GameController.GUN:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				break;
-			case FOURWAYROOM:
+			case GameController.FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
-			case NOAHGUN:
+			case GameController.NOAHGUN:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;

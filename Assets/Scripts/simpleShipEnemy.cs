@@ -12,11 +12,12 @@ public class simpleShipEnemy : MonoBehaviour {
     public float bulletFreq;
 
     private float timer = 0;
-    private 
 
 	// Use this for initialization
-	void Start () {
-
+	void Awake () {
+        if(target == null){
+            target = GameObject.Find("Ship");
+        }
 	}
 	
 	// Update is called once per frame

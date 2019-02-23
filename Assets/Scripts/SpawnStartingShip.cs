@@ -6,43 +6,33 @@ public class SpawnStartingShip : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject[] modules;
-	const int COCKPIT = 0;
-	const int WEAPONSROOM = 1;
-	const int ENGINEROOM = 2;
-	const int GUN = 3;
-	const int FOURWAYROOM = 4;
-	const int NOAHGUN = 5;
-
 	private GameObject[,] rooms;
 	private GameObject engineRoom;
 	private GameObject cockpit;
 	private GameObject weaponsRoom;
 	private GameObject gun1,gun2;
+	private int[,] shipLayout;
 
-	private int roomSwitch = 0;
+	//private int roomSwitch = 0;
 	void Start () {
 		int childNum = 0;
 		rooms = new GameObject[5,5];
+		shipLayout = new int[5,5];
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				transform.GetChild(childNum).gameObject.GetComponent<CreateRoom>().InitializeRoom(childNum,j,i);
 				childNum++;
+				shipLayout[j,i] = -1;
 			}
 		}
 		SpawnStartShip();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void SpawnStartShip(){
-		SpawnModuleAtLocation(2,4,ENGINEROOM);
-		SpawnModuleAtLocation(2,3,WEAPONSROOM);
-		SpawnModuleAtLocation(3,3,NOAHGUN);
-		SpawnModuleAtLocation(2,2,COCKPIT);
-		SpawnModuleAtLocation(1,3,NOAHGUN);
+		shipLayout[2,4] = GameController.ENGINEROOM;
+		shipLayout[2,3] = GameController.WEAPONSROOM;
+		shipLayout[3,3] = GameController.NOAHGUN;
+		shipLayout[2,2] = GameController.COCKPIT;
+		buildShip();
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
@@ -62,7 +52,7 @@ public class SpawnStartingShip : MonoBehaviour {
 
 	public void RoomClicked(int x, int y, int childNum){
 		gun2 = transform.GetChild(18).gameObject;
-		gun2.GetComponent<CreateRoom>().BuildRoom(modules[NOAHGUN],HasNeighbors(3,3),NOAHGUN);
+		gun2.GetComponent<CreateRoom>().BuildRoom(modules[GameController.NOAHGUN],HasNeighbors(3,3),GameController.NOAHGUN);
 		rooms[3,3] = gun2;
 		UpdateNeighbors(3,3);
 	}
@@ -73,13 +63,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y+1] == null){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == COCKPIT){
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == GameController.COCKPIT){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == GUN){
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == GameController.GUN){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == GameController.NOAHGUN){
 			return false;
 		}
 		else{
@@ -93,10 +83,10 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y-1] == null){
 			return false;
 		}
-		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GUN){
+		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GameController.GUN){
 			return false;
 		}
-		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GameController.NOAHGUN){
 			return false;
 		}
 		else{
@@ -110,13 +100,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(rooms[x-1,y] == null){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == COCKPIT){
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.COCKPIT){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == GUN){
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.GUN){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.NOAHGUN){
 			return false;
 		}
 		else{
@@ -130,13 +120,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(rooms[x+1,y] == null){
 			return false;
 		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == COCKPIT){
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.COCKPIT){
 			return false;
 		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == GUN){
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.GUN){
 			return false;
 		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == NOAHGUN){
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == GameController.NOAHGUN){
 			return false;
 		}
 		else{
@@ -174,5 +164,24 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(CheckRight(x,y)){
 			rooms[x+1,y].GetComponent<CreateRoom>().UpdateModule(HasNeighbors(x+1,y));
 		}	
+	}
+
+	int[,] getShipLayout(){
+		return shipLayout;
+	}
+
+	void setShipLayout(int[,] newShipLayout){
+		shipLayout = newShipLayout;
+		buildShip();
+	}
+
+	void buildShip(){
+		for(int i = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
+				if(shipLayout[j,i] != -1){
+					SpawnModuleAtLocation(j,i,shipLayout[j,i]);
+				}
+			}
+		}
 	}
 }
