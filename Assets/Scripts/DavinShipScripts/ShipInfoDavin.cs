@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipInfoDavinTest : MonoBehaviour {
+public class ShipInfoDavin : MonoBehaviour {
 
     public float maxHealth = 100f;
-    private ShipMovementDavinTest moveCon;
+    private ShipMovementDavin moveCon;
     private ShipWeaponController weapCon;
     private GameObject pilot;
     private GameObject gunner;
 
 	 // Use this for initialization
 	 void Start () {
-        moveCon = GetComponent<ShipMovementDavinTest>();
+        moveCon = GetComponent<ShipMovementDavin>();
         weapCon = GetComponent<ShipWeaponController>();
 	 }
 

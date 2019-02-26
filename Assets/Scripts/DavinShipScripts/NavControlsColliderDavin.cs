@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NavControlsColliderDavinTest : MonoBehaviour
+public class NavControlsColliderDavin : MonoBehaviour
 {
 
    private GameObject ship;
 
-   private ShipInfoDavinTest shipInfo;
+   private ShipInfoDavin shipInfo;
    // Use this for initialization
    void Start()
    {
-      ship = GameObject.Find("Ship(DavinTest)");
-      shipInfo = ship.GetComponent<ShipInfoDavinTest>();
+      ship = GameObject.Find("Ship");
+      shipInfo = ship.GetComponent<ShipInfoDavin>();
    }
 
    private void OnTriggerStay2D(Collider2D collision)
