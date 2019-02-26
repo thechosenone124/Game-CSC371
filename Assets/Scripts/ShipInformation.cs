@@ -10,13 +10,14 @@ public class ShipInformation : MonoBehaviour {
     private ShipWeaponController weapCon;
     private GameObject pilot;
     private GameObject gunner;
-	// Use this for initialization
-	void Start () {
+
+	 // Use this for initialization
+	 void Start () {
         //currentHealth = maxHealth;
         moveCon = GetComponent<ShipMovementController>();
         weapCon = GetComponent<ShipWeaponController>();
         //UpdateHealthBar();
-	}
+	 }
 
     // Update is called once per frame
     void FixedUpdate () {
@@ -57,7 +58,7 @@ public class ShipInformation : MonoBehaviour {
         if (gunner == null)
         {
             gunner = player;
-            weapCon.reticle.GetComponent<SpriteRenderer>().enabled = true;
+            //weapCon.reticle.GetComponent<SpriteRenderer>().enabled = true;
             return true;
         }
         return false;
