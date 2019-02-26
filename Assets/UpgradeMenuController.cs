@@ -75,6 +75,11 @@ public class UpgradeMenuController : MonoBehaviour {
         selectedModule = modType;
         foreach (GameObject g in moduleSelectButtons)
         {
+            if (g.GetComponent<Image>() != null)
+            {
+                g.GetComponent<Image>().color = Color.white;
+                g.transform.localScale = Vector3.one;
+            }
             g.SetActive(false);
         }
         shipGrid.SetActive(true);
