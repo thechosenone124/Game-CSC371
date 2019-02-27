@@ -10,7 +10,7 @@ public class WeapControlsColliderDavinTest : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        ship = GameObject.Find("Ship(DavinTest)");
+        ship = GameObject.Find("Ship");
         shipInfo = ship.GetComponent<ShipInfoDavinTest>();
     }
 
