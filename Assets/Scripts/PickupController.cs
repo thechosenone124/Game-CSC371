@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 public class PickupController : MonoBehaviour {
 
@@ -21,7 +22,6 @@ public class PickupController : MonoBehaviour {
 
     private bool sizeDir = false;
     private bool alphaDir = false;
-    private float scaleConstant = 0.5f;
 
 
     private SpriteRenderer rend;
