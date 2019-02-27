@@ -12,8 +12,10 @@ public class ScrollingBackgroundV2 : MonoBehaviour {
 
    //Davin Code=================================
    public GameObject bg;
-   [Header("Transition Distance is the distance from origin where Bg will begin to fade."), Space(-10), Header("Bg will be fully transparent at Transition Distance x 2.")]
-   public float transitionDistance = 500;
+   [Space(-10), Header("Start Distance is the distance from origin where Bg will begin to fade.")]
+   public float startDistance = 500;
+   [Space(-10), Header("Max Distance is the distance at which Bg will be fully transparent")]
+   public float maxDistance = 1000;
    private float dist = 0;
    public bool doTransition = true;
    //===========================================
@@ -70,9 +72,9 @@ public class ScrollingBackgroundV2 : MonoBehaviour {
 
       dist = ship.transform.position.magnitude;
 
-      if (doTransition && dist >= transitionDistance)
+      if (doTransition && dist >= startDistance)
       {
-         bgAlpha = ((transitionDistance * 2) - dist) / transitionDistance;
+         bgAlpha = 1 - ((dist - startDistance) / (maxDistance - startDistance));
          bgAlpha = Mathf.Clamp01(bgAlpha);
          bg.GetComponent<SpriteRenderer>().sharedMaterial.color = new Color(1f, 1f, 1f, bgAlpha);
       }

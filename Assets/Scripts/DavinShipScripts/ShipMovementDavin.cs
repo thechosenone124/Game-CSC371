@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovementDavinTest : MonoBehaviour {
+public class ShipMovementDavin : MonoBehaviour {
    
     public float inputAcceleration = 1;
 
