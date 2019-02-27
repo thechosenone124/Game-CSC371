@@ -265,7 +265,7 @@ Prefab:
       propertyPath: ship
       value: 
       objectReference: {fileID: 1656807064}
-    - target: {fileID: 114283912991437132, guid: 8242c5005ea5aaa4991d4cbbd42891da,
+    - target: {fileID: 114701116163140114, guid: 8242c5005ea5aaa4991d4cbbd42891da,
         type: 2}
       propertyPath: ship
       value: 
@@ -275,7 +275,7 @@ Prefab:
       propertyPath: ship
       value: 
       objectReference: {fileID: 1656807064}
-    - target: {fileID: 114701116163140114, guid: 8242c5005ea5aaa4991d4cbbd42891da,
+    - target: {fileID: 114283912991437132, guid: 8242c5005ea5aaa4991d4cbbd42891da,
         type: 2}
       propertyPath: ship
       value: 

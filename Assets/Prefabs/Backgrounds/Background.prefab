@@ -171,7 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 1188052680863102, guid: 969a22cdd6450994d8b234744e86370c, type: 2}
-  transitionDistance: 400
+  startDistance: 600
+  maxDistance: 800
   doTransition: 1
   ship: {fileID: 0}
 --- !u!114 &114349738603849968
@@ -186,7 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 1317416663575702, guid: 86c0f50dfc1b715458014dd433f87761, type: 2}
-  transitionDistance: 200
+  startDistance: 500
+  maxDistance: 1000
   doTransition: 0
   ship: {fileID: 0}
 --- !u!114 &114701116163140114
@@ -201,7 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 1118233260287734, guid: 7a4d9128ba5c777409b8bf39dfe01b9e, type: 2}
-  transitionDistance: 1000
+  startDistance: 1400
+  maxDistance: 1600
   doTransition: 1
   ship: {fileID: 0}
 --- !u!114 &114920468152211116
@@ -216,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 1546560121191974, guid: 6ffd3f3d10f26fa4dadb6dedf8771c98, type: 2}
-  transitionDistance: 200
+  startDistance: 100
+  maxDistance: 500
   doTransition: 0
   ship: {fileID: 0}
