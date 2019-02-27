@@ -7,8 +7,7 @@ public class Inventory : MonoBehaviour {
 
     [Range(8, 32)]
     public int MaxItemsPerType = 16;
-    public enum ItemTypes {COCKPIT, WEAPONSROOM, ENGINEROOM, GUN, FOURWAYROOM, NOAHGUN, NUMBEROFTYPES};
-
+    public enum ItemTypes {COCKPIT, WEAPONSROOM, ENGINEROOM, GUN, FOURWAYROOM, NOAHGUN, NUMBEROFTYPES}; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
     private int[] items = new int[(int)ItemTypes.NUMBEROFTYPES];
 
     public bool AddItem(int itemCode)
