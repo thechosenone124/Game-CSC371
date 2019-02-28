@@ -16,6 +16,7 @@ TagManager:
   - MapBorder
   - EnemyProjectile
   - Boss
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Ship
   - Room
   - GunModule
-  - 
+  - Pickups
   - 
   - 
   - 
@@ -56,6 +57,12 @@ TagManager:
   - name: Background
     uniqueID: 742745511
     locked: 0
+  - name: Particles
+    uniqueID: 1361791245
+    locked: 0
+  - name: Pickups
+    uniqueID: 2041589587
+    locked: 0
   - name: Projectile
     uniqueID: 937074289
     locked: 0
@@ -68,14 +75,14 @@ TagManager:
   - name: Ship Foreground
     uniqueID: 2074784289
     locked: 0
+  - name: Players
+    uniqueID: 437400225
+    locked: 0
   - name: Enemies
     uniqueID: 2914737349
     locked: 0
   - name: Ships
     uniqueID: 973497689
-    locked: 0
-  - name: Players
-    uniqueID: 437400225
     locked: 0
   - name: HUD
     uniqueID: 2948734659
