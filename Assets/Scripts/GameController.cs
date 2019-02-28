@@ -14,7 +14,14 @@ public class GameController : MonoBehaviour
    public Text ratioText;
    public Text gameStateText;
    private float currentHealth;
-   public const int COCKPIT = 0;
+
+    //boost
+    public float maxBoost = 100f;
+    public Image currentBoostBar;
+    public Text boostRatioText;
+    private float currentBoost;
+
+    public const int COCKPIT = 0;
 	public const int WEAPONSROOM = 1;
 	public const int ENGINEROOM = 2;
 	public const int GUN = 3;
@@ -37,11 +44,15 @@ public class GameController : MonoBehaviour
    void Start()
    {
 
-      //healthbar initialization
-      currentHealth = maxHealth;
-      UpdateHealthBar();
-      //game state text initialization
-      gameStateText.text = "";
+        //healthbar initialization
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+
+        //boost initialization
+        currentBoost = maxBoost;
+
+        //game state text initialization
+        gameStateText.text = "";
    }
 
    // Update is called once per frame
@@ -58,7 +69,45 @@ public class GameController : MonoBehaviour
       ratioText.text = (ratio * 100).ToString("0") + "%";
    }
 
-   private void TakeDamage(float damage)
+    //boost manipulation
+    public void UpdateBoost()
+    {
+        float ratio = currentBoost / maxBoost;
+        currentBoostBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        boostRatioText.text = (ratio * 100).ToString("0") + "%";
+    }
+
+    private void UseBoost(float boostAmt)
+    {
+        currentBoost -= boostAmt;
+        if (currentBoost <= 0)
+        {
+            currentBoost = 0;
+        }
+        UpdateBoost();
+    }
+
+    private void RegenerateBoost(float boostAmt)
+    {
+        currentBoost += boostAmt;
+        if (currentBoost >= maxBoost)
+        {
+            currentBoost = maxBoost;
+        }
+        UpdateBoost();
+    }
+
+    public float GetCurrentBoost()
+    {
+        return currentBoost;
+    }
+
+    public void SetBoost(float newBoost)
+    {
+        currentBoost = newBoost;
+    }
+
+    private void TakeDamage(float damage)
    {
       currentHealth -= damage;
       if (currentHealth <= 0)

@@ -2013,7 +2013,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAcceleration: 40
-  maxSpeed: 25
+  maxSpeed: 10
+  speedIncrease: 20
+  accelIncrease: 0.5
+  dragDecrease: 0.5
+  coolDownPeriod: 2
+  usageAmt: 0.2
+  regenAmt: 0.1
   rotationSpeed: 1.5
   velocityDrag: 1
 --- !u!114 &114432767384971266
@@ -2222,6 +2228,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAcceleration: 40
   maxSpeed: 25
+  speedIncrease: 100
+  accelIncrease: 100
+  dragDecrease: 0.9
+  coolDownPeriod: 2
+  usageAmt: 0.5
+  regenAmt: 0.1
   rotationSpeed: 1.5
   velocityDrag: 1
 --- !u!114 &114870686769149480
