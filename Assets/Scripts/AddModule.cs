@@ -5,12 +5,19 @@ using UnityEngine;
 public class AddModule : MonoBehaviour {
 	private const int NOAHGUN = 5;
 	private bool partSpawned = false;
+
+	public GameObject ShipConfigurer;
 	public int x = 1, y = 4;
-	void OnTriggerEnter2D(Collider2D other){
+	private bool tog = false;
+	void OnTriggerStay2D(Collider2D other){
 		if(other.CompareTag("Cockpit")){
-			if(!partSpawned){
-				other.transform.parent.parent.gameObject.GetComponent<SpawnStartingShip>().SpawnModuleAtLocation(x,y,NOAHGUN);
-				partSpawned = true;
+			if(Input.GetButtonDown("Y") && !tog){
+				ShipConfigurer.GetComponent<UpgradeCanvasManager>().enableUI();
+				tog = !tog;
+			}
+			if(Input.GetButtonDown("Y") && tog){
+				ShipConfigurer.GetComponent<UpgradeCanvasManager>().disableUI();
+				tog = !tog;
 			}
 		}
 	}
