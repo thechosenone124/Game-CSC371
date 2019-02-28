@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
    public void UpdateHealthBar()
    {
       float ratio = currentHealth / maxHealth;
-      currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+      currentHealthBar.rectTransform.localScale = new Vector3(ratio * .6f, .6f, 1);
       ratioText.text = (ratio * 100).ToString("0") + "%";
    }
 
