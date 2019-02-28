@@ -11,8 +11,8 @@ public class AddModule : MonoBehaviour {
 	private bool tog = false;
 
         
-	void OnTriggerStay2D(Collider2D other){
-		if(other.CompareTag("Cockpit")){
+	void OnTriggerEnter2D(Collider2D other){
+		/*if(other.CompareTag("Cockpit")){
 			if(Input.GetButtonDown("Y") && !tog){
 				ShipConfigurer.GetComponent<UpgradeCanvasManager>().enableUI();
 				tog = !tog;
@@ -21,6 +21,10 @@ public class AddModule : MonoBehaviour {
 				ShipConfigurer.GetComponent<UpgradeCanvasManager>().disableUI();
 				tog = !tog;
 			}
+		}*/
+		if(other.CompareTag("Cockpit")){
+			GameController.instance.setHealth(100);
+			GameController.instance.UpdateHealthBar();
 		}
 	}
 }
