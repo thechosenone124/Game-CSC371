@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 9cba2d4e37a4987419cb51b3a3794959
+guid: 4c4bb807fdb504257914e4e94798564d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: New Piskel (4)_0
-    21300002: New Piskel (4)_1
+    21300000: Boost Sprite White_0
+    21300002: Boost Sprite White_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -86,13 +86,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (4)_0
+      name: Boost Sprite White_0
       rect:
         serializedVersion: 2
-        x: 552
-        y: 1168
-        width: 824
-        height: 72
+        x: 276
+        y: 584
+        width: 412
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +100,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7b4dc3cef523847aefc39d3cc1dae9
+      spriteID: f881db12682244ea79f07f1719cf163c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (4)_1
+      name: Boost Sprite White_1
       rect:
         serializedVersion: 2
-        x: 472
-        y: 944
-        width: 944
-        height: 120
+        x: 236
+        y: 472
+        width: 472
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0debc7ebb37640e4c9f9c4fc60c758e6
+      spriteID: 28007342b6b3e4877a756ea2ba26065d
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: db8d13161deb2d440a23ee6e25da794b
+    spriteID: 2bad8c8d888af42f58313b98c9161ef3
     vertices: []
     indices: 
     edges: []
