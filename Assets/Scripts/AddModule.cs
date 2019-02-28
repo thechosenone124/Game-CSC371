@@ -9,6 +9,8 @@ public class AddModule : MonoBehaviour {
 	public GameObject ShipConfigurer;
 	public int x = 1, y = 4;
 	private bool tog = false;
+
+        
 	void OnTriggerStay2D(Collider2D other){
 		if(other.CompareTag("Cockpit")){
 			if(Input.GetButtonDown("Y") && !tog){
