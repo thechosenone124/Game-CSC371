@@ -30,7 +30,7 @@ public class TestControlScript : MonoBehaviour
     void Update()
 
     {
-        if(Input.GetButton("X") && GameController2.instance.GetCurrentBoost() > 0)
+        if(Input.GetKey(KeyCode.Space) && GameController2.instance.GetCurrentBoost() > 0)
         {
             Debug.Log("pressing X");
             
@@ -43,9 +43,9 @@ public class TestControlScript : MonoBehaviour
         {
             GameController2.instance.SendMessage("RegenerateBoost", regenAmt);
         }
-        movementVector.x = Input.GetAxis("LeftJoystickX") * movementSpeed;
+        movementVector.x = Input.GetAxis("Horizontal") * movementSpeed;
 
-        movementVector.y = -1*Input.GetAxis("LeftJoystickY") * movementSpeed;
+        movementVector.y = Input.GetAxis("Vertical") * movementSpeed;
 
         characterController.Move(movementVector * Time.deltaTime);
 
