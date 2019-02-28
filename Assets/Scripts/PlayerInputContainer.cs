@@ -15,12 +15,14 @@ public class PlayerInputContainer : MonoBehaviour {
     private bool yButton = false;
 
 
-    public void SetInput(float hori, float vert, bool aBut, bool bBut, float rtBut)
+    public void SetInput(float hori, float vert, bool aBut, bool bBut, bool xBut, bool yBut, float rtBut)
     {
         horizontal = hori;
         vertical = vert;
         aButton = aBut;
         bButton = bBut;
+        xButton = xBut;
+        yButton = yBut;
         rtButton = rtBut;
     }
 
