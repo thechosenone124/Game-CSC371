@@ -50,6 +50,8 @@ public class ShipMovementDavin : MonoBehaviour {
                 Debug.Log(maxSpeed);
             }
 
+            GameController.instance.isBoosting = false;
+
             if (Time.time >= timeStamp)
             {
                 GameController.instance.SendMessage("RegenerateBoost", regenAmt);

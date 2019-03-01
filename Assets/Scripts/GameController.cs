@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public Image currentBoostBar;
     public Text boostRatioText;
     private float currentBoost;
+    public bool isBoosting;
 
     public const int COCKPIT = 0;
 	public const int WEAPONSROOM = 1;
@@ -85,6 +86,7 @@ public class GameController : MonoBehaviour
             currentBoost = 0;
         }
         UpdateBoost();
+        isBoosting = true;
     }
 
     private void RegenerateBoost(float boostAmt)
