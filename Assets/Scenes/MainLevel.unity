@@ -275,12 +275,57 @@ Prefab:
     - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
         type: 2}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
         type: 2}
       propertyPath: ShapeModule.m_Scale.x
-      value: 0.8
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.m_Rotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198071393581958860, guid: c9f273f35bf70ad48863f9d55351f25d,
+        type: 2}
+      propertyPath: ShapeModule.randomPositionAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9f273f35bf70ad48863f9d55351f25d, type: 2}
