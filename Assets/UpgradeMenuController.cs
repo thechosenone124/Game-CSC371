@@ -18,7 +18,7 @@ public class UpgradeMenuController : MonoBehaviour {
     private int selectedModule;
   
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
         shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
@@ -39,6 +39,7 @@ public class UpgradeMenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void ActivateUpgrade () {
+
         shipSample = shipData.GetShipLayout();
         for (int i = 0; i < 5; i++)
         {
@@ -48,7 +49,6 @@ public class UpgradeMenuController : MonoBehaviour {
                 buttonGrid[i, j].GetComponentInChildren<Text>().text = "" + x;
                 if (x > -1)
                 {
-                    Debug.Log("" + x);
                     Sprite s = moduleSprites[x];
                     buttonGrid[i, j].GetComponentsInChildren<Image>()[1].sprite = s;
                 }
@@ -57,6 +57,7 @@ public class UpgradeMenuController : MonoBehaviour {
             }
         }
         shipGrid.SetActive(false);
+        eventSystem.SetSelectedGameObject(moduleSelectButtons[0]);
     }
 
     void updateShip(int x, int y)
