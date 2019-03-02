@@ -26,13 +26,14 @@ public class SpawnStartingShip : MonoBehaviour {
 			}
 		}
 		SpawnStartShip();
-	}
+        GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
+    }
 	void SpawnStartShip(){
 		shipLayout[2,4] = GameController.ENGINEROOM;
 		shipLayout[2,3] = GameController.WEAPONSROOM;
 		shipLayout[3,3] = GameController.NOAHGUN;
 		shipLayout[2,2] = GameController.COCKPIT;
-		buildShip();
+		BuildShip();
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
@@ -166,16 +167,16 @@ public class SpawnStartingShip : MonoBehaviour {
 		}	
 	}
 
-	int[,] getShipLayout(){
+	public int[,] GetShipLayout(){
 		return shipLayout;
 	}
 
-	void setShipLayout(int[,] newShipLayout){
+    public void SetShipLayout(int[,] newShipLayout){
 		shipLayout = newShipLayout;
-		buildShip();
+		BuildShip();
 	}
 
-	void buildShip(){
+	void BuildShip(){
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				if(shipLayout[j,i] != -1){

@@ -13,47 +13,54 @@ public class UpgradeMenuController : MonoBehaviour {
     public Sprite[] moduleSprites;
 
     private SpawnStartingShip shipData;
-    private int[,] shipBlueprint;
     private int[,] shipSample;
     private GameObject[,] buttonGrid;
     private int selectedModule;
   
     // Use this for initialization
-    void Start () {
-        shipSample = new int[5, 5];
+    void Start ()
+    {
+        shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
             {
-                shipSample[i, j] = -1; //FOR DEBUGGING ONLY
                 GameObject newObj = Instantiate(buttonPrefab);
                 newObj.transform.SetParent(shipGrid.transform, false);
                 int newI = i; //Thank you compiler
                 int newJ = j;
                 newObj.GetComponent<Button>().onClick.AddListener(() => updateShip(newI, newJ));
-                int x = shipSample[i, j];
-                newObj.GetComponentInChildren<Text>().text = "" + x;
-                if (x > -1)
-                    newObj.GetComponentsInChildren<Image>()[1].sprite = moduleSprites[shipSample[i, j]];
-                else
-                    newObj.GetComponentsInChildren<Image>()[1].enabled = false;
                 buttonGrid[i, j] = newObj;
             }
         }
         shipGrid.SetActive(false);
-        //ship = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
-        //shipBlueprint = shipData.getLayout();
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void ActivateUpgrade () {
+        shipSample = shipData.GetShipLayout();
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                int x = shipSample[i, j];
+                buttonGrid[i, j].GetComponentInChildren<Text>().text = "" + x;
+                if (x > -1)
+                {
+                    Debug.Log("" + x);
+                    Sprite s = moduleSprites[x];
+                    buttonGrid[i, j].GetComponentsInChildren<Image>()[1].sprite = s;
+                }
+                else
+                    buttonGrid[i, j].GetComponentsInChildren<Image>()[1].enabled = false;
+            }
+        }
+        shipGrid.SetActive(false);
+    }
 
     void updateShip(int x, int y)
     {
-        Debug.Log("X: " + x + " Y: " + y);
         shipSample[x, y] = selectedModule;
         buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
         if (selectedModule > -1)
@@ -88,6 +95,6 @@ public class UpgradeMenuController : MonoBehaviour {
 
     public void commitUpgrade()
     {
-        //shipBlueprint = shipData.setLayout(shipBlueprint);
+        shipData.SetShipLayout(shipSample);
     }
 }
