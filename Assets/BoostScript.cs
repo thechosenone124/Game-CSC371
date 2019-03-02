@@ -17,10 +17,12 @@ public class BoostScript : MonoBehaviour {
         if (GameController.instance.isBoosting)
         {
             ps.Play();
+            Debug.Log("in play");
         }
         else
         {
             ps.Stop();
+            Debug.Log("out of play");
         }
     }
 }
