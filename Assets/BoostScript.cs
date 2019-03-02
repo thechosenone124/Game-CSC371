@@ -9,14 +9,18 @@ public class BoostScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ps = GetComponent<ParticleSystem>();
-        ps.enableEmission = false;
+        ps.Stop();
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (GameController.instance.isBoosting)
         {
-            ps.enableEmission = true;
+            ps.Play();
         }
-	}
+        else
+        {
+            ps.Stop();
+        }
+    }
 }
