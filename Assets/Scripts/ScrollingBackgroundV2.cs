@@ -79,7 +79,7 @@ public class ScrollingBackgroundV2 : MonoBehaviour {
          bg.GetComponent<SpriteRenderer>().sharedMaterial.color = new Color(1f, 1f, 1f, bgAlpha);
       }
 
-      Debug.Log(dist + ", " + bgAlpha);
+      //Debug.Log(dist + ", " + bgAlpha);
       //===========================================
 
       //Scroll right
