@@ -151,6 +151,15 @@ public class SpawnStartingShip : MonoBehaviour {
 		return neighbors;
 	}
 
+	public bool ValidPlacement(int x, int y){
+		if(HasNeighbors(x,y) > 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
 	void UpdateNeighbors(int x, int y){
 		if(CheckUp(x,y)){
 			rooms[x,y-1].GetComponent<CreateRoom>().UpdateModule(HasNeighbors(x,y-1));
