@@ -22,9 +22,9 @@ public class UpgradeMenuController : MonoBehaviour {
     {
         shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
-        for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int i = 0; i < 5; i++)
             {
                 GameObject newObj = Instantiate(buttonPrefab);
                 newObj.transform.SetParent(shipGrid.transform, false);
