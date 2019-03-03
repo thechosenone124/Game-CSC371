@@ -54,6 +54,9 @@ public class ShipWeaponController : MonoBehaviour {
 
     void RotateGunsTowardsReticle()
     {
+        if(GameController.instance.pause == true){
+            return;
+        }
         for (int i = 0; i < guns.Count; i++)
         {
             ((GameObject)guns[i]).GetComponent<GunControl>().RotateAtReticle(aimPoint.transform.position);
@@ -64,4 +67,8 @@ public class ShipWeaponController : MonoBehaviour {
         guns.Add(gun);
     }
     
+    public void RemoveGun(GameObject gun){
+        Debug.Log(guns.Count);
+        guns.Remove(gun.transform.GetChild(1).gameObject);
+    }
 }

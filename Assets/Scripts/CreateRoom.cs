@@ -17,6 +17,9 @@ public class CreateRoom : MonoBehaviour {
 
 	public void BuildRoom(GameObject module, int neighbors, int moduleType){
 		if(hasChild == 1){
+			if(moduleType == GameController.GUN || moduleType == GameController.NOAHGUN){
+				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
+			}
 			Destroy(transform.GetChild(0).gameObject);
 			hasChild = 0;
 			if(switchCount == 0){

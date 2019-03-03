@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
 	public const int FOURWAYROOM = 4;
 	public const int NOAHGUN = 3;
 
+   public bool pause = false;
+
    void Awake()
    {
       if (instance == null)
