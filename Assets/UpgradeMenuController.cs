@@ -97,5 +97,6 @@ public class UpgradeMenuController : MonoBehaviour {
     public void commitUpgrade()
     {
         shipData.SetShipLayout(shipSample);
+        GameController.instance.DisableUpgradeMenu();
     }
 }

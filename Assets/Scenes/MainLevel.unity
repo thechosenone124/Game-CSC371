@@ -6411,7 +6411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &849485678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10644,6 +10644,11 @@ Prefab:
       propertyPath: currentHealthBar
       value: 
       objectReference: {fileID: 1186885050}
+    - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
+        type: 2}
+      propertyPath: UpgradeMenu
+      value: 
+      objectReference: {fileID: 849485677}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becdfa3fa27cb3c42a358859be771b03, type: 2}
   m_IsPrefabAsset: 0

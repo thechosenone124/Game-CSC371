@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 	public const int GUN = 5;
 	public const int FOURWAYROOM = 4;
 	public const int NOAHGUN = 3;
+   public GameObject UpgradeMenu;
 
    public bool pause = false;
 
@@ -88,5 +89,14 @@ public class GameController : MonoBehaviour
    public void PlayerLoses()
    {
       gameStateText.text = "You Died!";
+   }
+
+   public void DisableUpgradeMenu(){
+      UpgradeMenu.SetActive(false);
+   }
+
+   public void EnableUpgradeMenu(){
+      UpgradeMenu.SetActive(true);
+      GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
    }
 }
