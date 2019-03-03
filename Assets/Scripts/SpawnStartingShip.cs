@@ -89,6 +89,9 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GameController.NOAHGUN){
 			return false;
 		}
+		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == GameController.ENGINEROOM){
+			return false;
+		}
 		else{
 			return true;
 		}
