@@ -24,8 +24,8 @@ public class NavControlsColliderDavin : MonoBehaviour
          {
             if (shipInfo.SetPilot(collision.gameObject)) // returns true when there is nobody controlling
             {
-               Debug.Log("Name on pilot collision: " + collision.gameObject.name);
-               Debug.Log(collision.gameObject.name + "'s a button: " + pcon.GetAButton());
+               //Debug.Log("Name on pilot collision: " + collision.gameObject.name);
+               //Debug.Log(collision.gameObject.name + "'s a button: " + pcon.GetAButton());
                pcon.isOperatingStation = true;
                collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
