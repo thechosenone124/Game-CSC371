@@ -41,12 +41,12 @@ public class UpgradeMenuController : MonoBehaviour {
 	public void ActivateUpgrade () {
 
         shipSample = shipData.GetShipLayout();
-        for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int i = 0; i < 5; i++)
             {
                 int x = shipSample[i, j];
-                buttonGrid[i, j].GetComponentInChildren<Text>().text = "" + x;
+                //buttonGrid[i, j].GetComponentInChildren<Text>().text = "" + x;
                 if (x > -1)
                 {
                     Sprite s = moduleSprites[x];
@@ -63,7 +63,7 @@ public class UpgradeMenuController : MonoBehaviour {
     void updateShip(int x, int y)
     {
         shipSample[x, y] = selectedModule;
-        buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
+        //buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
         if (selectedModule > -1)
         {
             buttonGrid[x, y].GetComponentsInChildren<Image>()[1].enabled = true;
