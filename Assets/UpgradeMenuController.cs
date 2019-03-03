@@ -46,6 +46,14 @@ public class UpgradeMenuController : MonoBehaviour {
             for (int i = 0; i < 5; i++)
             {
                 int x = shipSample[i, j];
+                if (shipData.ValidPlacement(i, j))
+                {
+                    buttonGrid[i, j].GetComponent<Button>().interactable = true;
+                }
+                else
+                {
+                    buttonGrid[i, j].GetComponent<Button>().interactable = false;
+                }
                 //buttonGrid[i, j].GetComponentInChildren<Text>().text = "" + x;
                 if (x > -1)
                 {
@@ -59,10 +67,29 @@ public class UpgradeMenuController : MonoBehaviour {
         shipGrid.SetActive(false);
         eventSystem.SetSelectedGameObject(moduleSelectButtons[0]);
     }
+    void disableUnreachable()
+    {
 
+        for (int j = 0; j < 5; j++)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (shipData.ValidPlacement(i, j))
+                {
+                    buttonGrid[i, j].GetComponent<Button>().interactable = true;
+                }
+                else
+                {
+                    buttonGrid[i, j].GetComponent<Button>().interactable = false;
+                }
+            }
+        }
+    }
     void updateShip(int x, int y)
     {
         shipSample[x, y] = selectedModule;
+        shipData.SetShipLayout(shipSample);
+        disableUnreachable();
         //buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
         if (selectedModule > -1)
         {
@@ -96,7 +123,6 @@ public class UpgradeMenuController : MonoBehaviour {
 
     public void commitUpgrade()
     {
-        shipData.SetShipLayout(shipSample);
         GameController.instance.DisableUpgradeMenu();
     }
 }
