@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	void OnCollisionEnter2D(Collision2D other){
+		if(GameObject.Find("Player1").GetComponent<PlayerInputContainer>().isOperatingStation)
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
