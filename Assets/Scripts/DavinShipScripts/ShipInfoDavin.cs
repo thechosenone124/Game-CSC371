@@ -9,6 +9,7 @@ public class ShipInfoDavin : MonoBehaviour {
     private ShipWeaponController weapCon;
     private GameObject pilot;
     private GameObject gunner;
+    private bool isDeflecting = false;
 
 	 // Use this for initialization
 	 void Start () {
@@ -30,7 +31,7 @@ public class ShipInfoDavin : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (pilot  != null) moveCon.ApplyDrag();
+        moveCon.ApplyDrag();
     }
 
    public bool SetPilot(GameObject player)
@@ -69,10 +70,20 @@ public class ShipInfoDavin : MonoBehaviour {
         if (gunner == player)
         {
             gunner = null;
-            weapCon.reticle.GetComponent<SpriteRenderer>().enabled = false;
+            //weapCon.reticle.GetComponent<SpriteRenderer>().enabled = false;
             return true;
         }
         return false;
+    }
+
+    public void freezePlayer(GameObject player)
+    {
+        player.GetComponent<PlayerInputContainer>().isFrozen = true;
+    }
+
+    public void unfreezePlayer(GameObject player)
+    {
+        player.GetComponent<PlayerInputContainer>().isFrozen = false;
     }
 
 }

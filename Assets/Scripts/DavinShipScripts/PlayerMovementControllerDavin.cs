@@ -4,33 +4,39 @@ using UnityEngine;
 
 public class PlayerMovementControllerDavin : MonoBehaviour {
 
-   [Range(0.1f, 1.5f)]
-   public float MovementSpeed = 2f;
-   public Rigidbody2D shipRB;
+    [Range(0.1f, 1.5f)]
+    public float MovementSpeed = 1f;
 
-   private PlayerInputContainer pic;
-   private Vector2 prevShipPos;
-   private Vector2 offset;
+    private PlayerInputContainer pic;
+    private GameObject ship;
+    private Vector3 playerCurPos;
 
-   // Use this for initialization
-   void Start()
-   {
-      pic = GetComponent<PlayerInputContainer>();
-      prevShipPos = shipRB.position;
-   }
+    // Use this for initialization
+    void Start()
+    {
+        pic = GetComponent<PlayerInputContainer>();
+        ship = GameObject.Find("Ship");
+    }
 
-   // Update is called once per frame
-   void FixedUpdate()
-   {
-      //offset = shipRB.position - GetComponent<Rigidbody2D>().position;
-      //GetComponent<Rigidbody2D>().position = shipRB.position + offset;
-      if (!pic.isOperatingStation)  //If player is not controlling a station.
-      {
-         transform.localPosition += new Vector3(pic.GetHorizontal(), pic.GetVertical(), 0f) * MovementSpeed * 0.1f;
-         //GetComponent<Rigidbody2D>().position += new Vector2(pic.GetHorizontal(), pic.GetVertical()) * MovementSpeed * 0.1f;
-         /*Vector2 curShipPos = shipRB.position;
-         GetComponent<Rigidbody2D>().position += curShipPos - prevShipPos;
-         prevShipPos = curShipPos; */
-      }
-   }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        transform.localRotation = Quaternion.Euler(Vector3.zero);   //always keep player oriented with ship direction.
+        if (!pic.isOperatingStation)    //Player is not controlling a station.
+        {
+            if (!pic.isFrozen)  //If player is not currently frozen.
+            {
+                transform.localPosition += new Vector3(pic.GetHorizontal(), pic.GetVertical(), 0f) * MovementSpeed * 0.1f;
+                playerCurPos = transform.localPosition;
+            }
+            else    //Player is currently frozen.
+            {
+                transform.localPosition = playerCurPos;     //freeze player position
+            }
+        }
+        else    //Player is controlling a station
+        {
+            transform.localPosition = playerCurPos;     //freeze player position
+        }
+    }
 }

@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4607147482127914}
   - component: {fileID: 20762056819825390}
   - component: {fileID: 114517673624561602}
+  - component: {fileID: 114520558756643308}
   m_Layer: 14
   m_Name: Player1Camera
   m_TagString: Untagged
@@ -207,7 +208,7 @@ GameObject:
   - component: {fileID: 4216230774403456}
   - component: {fileID: 114876354193196704}
   m_Layer: 0
-  m_Name: GameControl
+  m_Name: InputControlller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,6 +501,7 @@ GameObject:
   - component: {fileID: 4860254800702226}
   - component: {fileID: 20940668295022306}
   - component: {fileID: 114589914853877970}
+  - component: {fileID: 114236542464378858}
   m_Layer: 14
   m_Name: Player2Camera
   m_TagString: Untagged
@@ -1152,9 +1154,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1929,6 +1931,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bec66f8f787aeb44b4c6a29a3a4b98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114236542464378858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858696973659322}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa435b400cc61849854d72f23a045ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 1
+  shakeMagnitude: 2
+  dampingSpeed: 1
 --- !u!114 &114279561057133038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2053,6 +2069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOperatingStation: 0
+  isFrozen: 0
 --- !u!114 &114496682299351802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2077,6 +2094,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followObject: {fileID: 1602775467575250}
   followSpeed: 100
+--- !u!114 &114520558756643308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159541142888154}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa435b400cc61849854d72f23a045ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 1
+  shakeMagnitude: 2
+  dampingSpeed: 1
 --- !u!114 &114533091652456048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2212,11 +2243,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebe26056b4651844abb9c5a7125101e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 0}
   inputAcceleration: 40
   maxSpeed: 25
   rotationSpeed: 1.5
   velocityDrag: 1
+  velocity: {x: 0, y: 0, z: 0}
+  deflectLength: 1
+  player1: {fileID: 1602775467575250}
+  player2: {fileID: 1860133779069648}
+  player1PIP: {fileID: 0}
+  player2PIP: {fileID: 0}
 --- !u!114 &114870686769149480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2323,6 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOperatingStation: 0
+  isFrozen: 0
 --- !u!212 &212625275137517836
 SpriteRenderer:
   m_ObjectHideFlags: 1
