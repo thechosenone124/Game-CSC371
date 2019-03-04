@@ -327,6 +327,10 @@ Prefab:
       propertyPath: ShapeModule.randomPositionAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1653225362011242, guid: c9f273f35bf70ad48863f9d55351f25d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9f273f35bf70ad48863f9d55351f25d, type: 2}
   m_IsPrefabAsset: 0
@@ -1397,22 +1401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTime: 0.5
---- !u!1 &734314235 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1594868199245410, guid: c9f273f35bf70ad48863f9d55351f25d,
-    type: 2}
-  m_PrefabInternal: {fileID: 148039180}
---- !u!114 &734314239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 734314235}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f655f646c31254f8f9637a9fff0e7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &735424348
 Prefab:
   m_ObjectHideFlags: 0
