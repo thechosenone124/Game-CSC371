@@ -17,6 +17,9 @@ public class CreateRoom : MonoBehaviour {
 
 	public void BuildRoom(GameObject module, int neighbors, int moduleType){
 		if(hasChild == 1){
+			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN){
+				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
+			}
 			Destroy(transform.GetChild(0).gameObject);
 			hasChild = 0;
 			if(switchCount == 0){
@@ -42,21 +45,21 @@ public class CreateRoom : MonoBehaviour {
 
 	public void UpdateModule(int neighbors){
 		switch(moduleType){
-			case GameController.COCKPIT:
+			case (int)GameController.ItemTypes.COCKPIT:
 				child.GetComponent<CockpitConfigurer>().Doors(neighbors);
 				break;
-			case GameController.WEAPONSROOM:
+			case (int)GameController.ItemTypes.WEAPONSROOM:
 				child.GetComponent<WeaponsRoomConfigurer>().Doors(neighbors);
 				break;
-			case GameController.ENGINEROOM:
+			case (int)GameController.ItemTypes.ENGINEROOM:
 				child.GetComponent<EngineConfigurer>().Doors(neighbors);
 				break;
-			case GameController.GUN:
+			case (int)GameController.ItemTypes.GUN:
 				break;
-			case GameController.FOURWAYROOM:
+			case (int)GameController.ItemTypes.FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
-			case GameController.NOAHGUN:
+			case (int)GameController.ItemTypes.NOAHGUN:
 				break;
 		}
 	}
@@ -67,22 +70,22 @@ public class CreateRoom : MonoBehaviour {
 
 	private void ModuleHandler(int moduleType, int neighbors){
 		switch(moduleType){
-			case GameController.COCKPIT:
+			case (int)GameController.ItemTypes.COCKPIT:
 				child.GetComponent<CockpitConfigurer>().Doors(neighbors);
 				break;
-			case GameController.WEAPONSROOM:
+			case (int)GameController.ItemTypes.WEAPONSROOM:
 				child.GetComponent<WeaponsRoomConfigurer>().Doors(neighbors);
 				break;
-			case GameController.ENGINEROOM:
+			case (int)GameController.ItemTypes.ENGINEROOM:
 				child.GetComponent<EngineConfigurer>().Doors(neighbors);
 				break;
-			case GameController.GUN:
+			case (int)GameController.ItemTypes.GUN:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				break;
-			case GameController.FOURWAYROOM:
+			case (int)GameController.ItemTypes.FOURWAYROOM:
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
-			case GameController.NOAHGUN:
+			case (int)GameController.ItemTypes.NOAHGUN:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;

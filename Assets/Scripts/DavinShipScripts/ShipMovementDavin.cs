@@ -11,7 +11,7 @@ public class ShipMovementDavin : MonoBehaviour {
 
     public float velocityDrag = 1;
 
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Vector3 acceleration;
 
     public void MoveShip(PlayerInputContainer pic)
