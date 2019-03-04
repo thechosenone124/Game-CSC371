@@ -37,24 +37,18 @@ public class ShipWeaponController : MonoBehaviour {
             stickInput.y = 0;
         }
 
-        if (stickInput.x == 0 && stickInput.y == 0)
-        {
-        }
+        if (stickInput.x == 0 && stickInput.y == 0) { }
         else
         {
-            //reticle.transform.position = Vector3.Slerp(reticle.transform.position, transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0), Time.deltaTime * reticleRotationSpeed);
-            //reticle.transform.position = transform.position + new Vector3(reticleDistance * stickInput.x, reticleDistance * stickInput.y, 0);
-            //Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, -stickInput.y) * 180 / Mathf.PI);
-            //reticle.transform.rotation = Quaternion.Slerp(reticle.transform.rotation, eulerRot, Time.deltaTime * reticleRotationSpeed);
             Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-stickInput.x, stickInput.y) * 180 / Mathf.PI);
             weaponAimControlCenter.transform.rotation = Quaternion.Slerp(weaponAimControlCenter.transform.rotation, eulerRot, Time.deltaTime * reticleRotationSpeed);
 
-      }
+        }
     }
 
     void RotateGunsTowardsReticle()
     {
-        if(GameController.instance.pause == true){
+        if(GameController.instance.State == (int)GameController.GameStates.MODIFYINGSHIP){
             return;
         }
         for (int i = 0; i < guns.Count; i++)

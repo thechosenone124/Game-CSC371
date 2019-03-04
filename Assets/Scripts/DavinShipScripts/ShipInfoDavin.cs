@@ -19,8 +19,8 @@ public class ShipInfoDavin : MonoBehaviour {
     // Update is called once per frame
     void Update () {
       
-        if (pilot  != null) moveCon.MoveShip(pilot.GetComponent<PlayerInputContainer>());
-        if (gunner != null)
+        if (pilot  != null && GameController.instance.State == (int)GameController.GameStates.FREEROAM) moveCon.MoveShip(pilot.GetComponent<PlayerInputContainer>());
+        if (gunner != null && GameController.instance.State == (int)GameController.GameStates.FREEROAM)
         {
             weapCon.TryShoot(gunner.GetComponent<PlayerInputContainer>());
             weapCon.MoveReticle(gunner.GetComponent<PlayerInputContainer>());

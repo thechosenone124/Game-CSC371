@@ -28,6 +28,7 @@ public class AddModule : MonoBehaviour {
 			GameController.instance.EnableUpgradeMenu();
 			GameObject.Find("Ship").transform.rotation = Quaternion.identity;
 			GameObject.Find("Ship").GetComponent<ShipMovementDavin>().velocity = Vector3.zero;
+            GameController.instance.State = (int)GameController.GameStates.MODIFYINGSHIP;
 		}
 	}
 }

@@ -16,9 +16,6 @@ public class ShipMovementDavin : MonoBehaviour {
 
     public void MoveShip(PlayerInputContainer pic)
     {
-        if(GameController.instance.pause){
-            return;
-        }
         if (pic.isOperatingStation)
         {
          // apply forward input

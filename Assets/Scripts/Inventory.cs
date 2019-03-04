@@ -7,24 +7,26 @@ public class Inventory : MonoBehaviour {
 
     [Range(8, 32)]
     public int MaxItemsPerType = 16;
-    public enum ItemTypes {COCKPIT, WEAPONSROOM, ENGINEROOM, GUN, FOURWAYROOM, NOAHGUN, NUMBEROFTYPES}; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
-    private int[] items = new int[(int)ItemTypes.NUMBEROFTYPES];
+    private int[] items = new int[(int)GameController.ItemTypes.NUMBEROFTYPES];
 
     public bool AddItem(int itemCode)
     {
-        if (itemCode >= (int)ItemTypes.NUMBEROFTYPES) return false; // if index of item type doesn't exist
-        else if(itemCode == (int)ItemTypes.COCKPIT || itemCode == (int)ItemTypes.WEAPONSROOM || itemCode == (int)ItemTypes.ENGINEROOM) //cockpit, weaponsroom, and engineroom can only be 0 or 1
+        if (itemCode >= (int)GameController.ItemTypes.NUMBEROFTYPES) return false; // if index of item type doesn't exist
+        else if (itemCode == (int)GameController.ItemTypes.COCKPIT || itemCode == (int)GameController.ItemTypes.WEAPONSROOM || itemCode == (int)GameController.ItemTypes.ENGINEROOM) //cockpit, weaponsroom, and engineroom can only be 0 or 1
         {
             if (items[(int)itemCode] > 0) return false; // don't add another if 1 is already there
         }
         items[(int)itemCode] = (int)Mathf.Min(items[(int)itemCode] + 1, MaxItemsPerType); // try to add the item. If I am already holding the max amount, do not add another.
         return true;
     }
-    
+
     public bool RemoveItem(int itemCode)
     {
-        if (itemCode >= (int)ItemTypes.NUMBEROFTYPES) return false; // if index of item type doesn't exist
+        if (itemCode >= (int)GameController.ItemTypes.NUMBEROFTYPES) return false;  // return false if index of item type doesn't exist
+        else if (items[itemCode] == 0) return false;                                //return false if there is nothing to remove
         items[(int)itemCode] = (int)Mathf.Max(items[(int)itemCode] - 1, 0);
         return true;
     }
+
+    public int[] GetInventory() { return items; }
 }
