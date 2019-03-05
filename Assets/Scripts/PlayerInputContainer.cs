@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInputContainer : MonoBehaviour {
 
     public bool isOperatingStation = false;
+    public bool isFrozen = false;
 
     private float horizontal = 0f;
     private float vertical = 0f;

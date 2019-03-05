@@ -10643,12 +10643,16 @@ Prefab:
         type: 2}
       propertyPath: currentHealthBar
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 963222791}
+=======
+      objectReference: {fileID: 1186885050}
     - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
         type: 2}
       propertyPath: UpgradeMenu
       value: 
       objectReference: {fileID: 849485677}
+>>>>>>> master
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becdfa3fa27cb3c42a358859be771b03, type: 2}
   m_IsPrefabAsset: 0
@@ -13134,8 +13138,8 @@ Prefab:
       propertyPath: m_Radius
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 60206928578221408, guid: 368cad92524f76d4fb25f9c5c3b243cb,
-        type: 2}]
+    m_RemovedComponents:
+    - {fileID: 60206928578221408, guid: 368cad92524f76d4fb25f9c5c3b243cb, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 368cad92524f76d4fb25f9c5c3b243cb, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1740658573
