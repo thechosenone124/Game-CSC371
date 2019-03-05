@@ -46,7 +46,7 @@ public class UpgradeMenuController : MonoBehaviour {
             for (int i = 0; i < 5; i++)
             {
                 int x = shipSample[i, j];
-                if (shipData.ValidPlacement(i, j))
+                if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i,j))
                 {
                     buttonGrid[i, j].GetComponent<Button>().interactable = true;
                 }
@@ -74,7 +74,7 @@ public class UpgradeMenuController : MonoBehaviour {
         {
             for (int i = 0; i < 5; i++)
             {
-                if (shipData.ValidPlacement(i, j))
+                if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i,j))
                 {
                     buttonGrid[i, j].GetComponent<Button>().interactable = true;
                 }

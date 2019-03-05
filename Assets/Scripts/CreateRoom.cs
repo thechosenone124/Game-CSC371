@@ -39,6 +39,18 @@ public class CreateRoom : MonoBehaviour {
 		this.y = y;
 	}
 
+	public void RemoveRoom(){
+		if(hasChild == 1){
+			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN){
+				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
+			}
+			Destroy(transform.GetChild(0).gameObject);
+			this.child = null;
+			this.moduleType = -1;
+			this.hasChild = 0;
+		}
+	}
+
 	public int GetChildNum(){
 		return childNum;
 	}

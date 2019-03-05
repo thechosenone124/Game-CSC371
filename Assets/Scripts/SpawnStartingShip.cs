@@ -13,6 +13,11 @@ public class SpawnStartingShip : MonoBehaviour {
 	private GameObject gun1,gun2;
 	private int[,] shipLayout;
 
+    private const uint NOTONE = 4294967294;
+    private const uint NOTTWO = 4294967293;
+    private const uint NOTFOUR = 4294967291;
+    private const uint NOTEIGHT = 4294967287;
+
 	//private int roomSwitch = 0;
 	void Start () {
 		int childNum = 0;
@@ -28,10 +33,10 @@ public class SpawnStartingShip : MonoBehaviour {
 		SpawnStartShip();
     }
 	void SpawnStartShip(){
-        shipLayout[2, 4] = (int)GameController.ItemTypes.ENGINEROOM;
-        shipLayout[2, 3] = (int)GameController.ItemTypes.WEAPONSROOM;
-        shipLayout[3, 3] = (int)GameController.ItemTypes.NOAHGUN;
-        shipLayout[2,2] = (int)GameController.ItemTypes.COCKPIT;
+		shipLayout[2,4] = (int)GameController.ItemTypes.ENGINEROOM;
+		shipLayout[2,3] = (int)GameController.ItemTypes.WEAPONSROOM;
+		shipLayout[3,3] = (int)GameController.ItemTypes.NOAHGUN;
+		shipLayout[2,2] = (int)GameController.ItemTypes.COCKPIT;
 		BuildShip();
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
@@ -39,6 +44,14 @@ public class SpawnStartingShip : MonoBehaviour {
 		GameObject shipPart = transform.GetChild(y*shipSize + x).gameObject;
 		shipPart.GetComponent<CreateRoom>().BuildRoom(modules[moduleType],HasNeighbors(x,y),moduleType);
 		rooms[x,y] = shipPart;
+		UpdateNeighbors(x,y);
+	}
+
+	public void RemoveModuleAtLocation(int x, int y){
+		int shipSize = rooms.GetLength(0);
+		GameObject shipPart = transform.GetChild(y*shipSize + x).gameObject;
+		shipPart.GetComponent<CreateRoom>().RemoveRoom();
+		rooms[x,y] = null;
 		UpdateNeighbors(x,y);
 	}
 	void SpawnModule(int child, GameObject module, int x, int y, int moduleType){
@@ -52,7 +65,7 @@ public class SpawnStartingShip : MonoBehaviour {
 
 	public void RoomClicked(int x, int y, int childNum){
 		gun2 = transform.GetChild(18).gameObject;
-		gun2.GetComponent<CreateRoom>().BuildRoom(modules[(int)GameController.ItemTypes.NOAHGUN],HasNeighbors(3,3), (int)GameController.ItemTypes.NOAHGUN);
+		gun2.GetComponent<CreateRoom>().BuildRoom(modules[(int)GameController.ItemTypes.NOAHGUN],HasNeighbors(3,3),(int)GameController.ItemTypes.NOAHGUN);
 		rooms[3,3] = gun2;
 		UpdateNeighbors(3,3);
 	}
@@ -63,16 +76,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y+1] == null){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT)
-        {
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.GUN)
-        {
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.GUN){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN)
-        {
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
 			return false;
 		}
 		else{
@@ -106,15 +116,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(rooms[x-1,y] == null){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT)
-        {
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT){
 			return false;
 		}
 		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.GUN){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN)
-        {
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
 			return false;
 		}
 		else{
@@ -128,15 +136,13 @@ public class SpawnStartingShip : MonoBehaviour {
 		if(rooms[x+1,y] == null){
 			return false;
 		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT)
-        {
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.COCKPIT){
 			return false;
 		}
 		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.GUN){
 			return false;
 		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN)
-        {
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
 			return false;
 		}
 		else{
@@ -168,6 +174,28 @@ public class SpawnStartingShip : MonoBehaviour {
 		else{
 			return false;
 		}
+	}
+
+    /*The code below determines if a locatio is a valid location to remove.
+    It does this by first checking that it is not an empty space, because those are fine to remove.
+    It check to see if any of its neighbors would be left without a valid neighbor if they were to disappear.
+    And it check to make sure that it is the only neighbor of a the rooms around it. */
+	public bool ValidRemoval(int x, int y){
+        if((y+1) != rooms.GetLength(1) && (HasNeighbors(x,y+1) & NOTONE) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x,y+1) != 0 && shipLayout[x,y+1] != -1){
+            return false;
+        }
+		else if((y-1) != -1 && (HasNeighbors(x,y-1) & NOTTWO) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x,y-1) != 0 && shipLayout[x,y-1] != -1) {
+			return false;
+		}
+        else if((x+1) != rooms.GetLength(0) && (HasNeighbors(x+1,y) & NOTFOUR) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x+1,y) != 0 && shipLayout[x+1,y] != -1){
+            return false;
+        }
+		else if((x-1) != -1 && (HasNeighbors(x-1,y) & NOTEIGHT) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x-1,y) != 0 && shipLayout[x-1,y] != -1){
+            return false;
+        }
+        else{
+            return true;
+        }
 	}
 
 	void UpdateNeighbors(int x, int y){
