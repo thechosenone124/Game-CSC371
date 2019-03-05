@@ -27,7 +27,9 @@ public class GameController : MonoBehaviour
                             NUMBEROFTYPES }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
 
     public enum GameStates { FREEROAM,
-                             MODIFYINGSHIP}; 
+                             MODIFYINGSHIP,
+                             PLAYERWON,
+                             NUMBEROFSTATES}; // make sure the last element is NUMBEROFSTATES. this serves as the length of the list
 
     //boost
     public float maxBoost = 100f;
