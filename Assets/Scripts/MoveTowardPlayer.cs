@@ -12,7 +12,9 @@ public class MoveTowardPlayer : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("Ship");
-        firingDir = Vector3.Normalize(target.transform.position - transform.position);
+        if(target != null){
+            firingDir = Vector3.Normalize(target.transform.position - transform.position);
+        }
         vel = new Vector3(firingDir.x, firingDir.y, 0);
     }
     // Update is called once per frame
