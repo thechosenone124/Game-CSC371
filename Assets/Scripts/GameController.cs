@@ -122,6 +122,7 @@ public class GameController : MonoBehaviour
       if (currentHealth <= 0)
       {
          currentHealth = 0;
+         PlayerLoses();
       }
       UpdateHealthBar();
    }
