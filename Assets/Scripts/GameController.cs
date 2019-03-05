@@ -14,6 +14,20 @@ public class GameController : MonoBehaviour
    public Text ratioText;
    public Text gameStateText;
    private float currentHealth;
+   public GameObject UpgradeMenu;
+   public int State;
+
+    // Enums are better because they guarantee we don't set two const equal to the same number
+    public enum ItemTypes { COCKPIT,
+                            WEAPONSROOM,
+                            ENGINEROOM,
+                            NOAHGUN,
+                            FOURWAYROOM,
+                            GUN,
+                            NUMBEROFTYPES }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
+
+    public enum GameStates { FREEROAM,
+                             MODIFYINGSHIP}; 
 
     //boost
     public float maxBoost = 100f;
@@ -21,13 +35,6 @@ public class GameController : MonoBehaviour
     public Text boostRatioText;
     private float currentBoost;
     public bool isBoosting;
-
-    public const int COCKPIT = 0;
-	public const int WEAPONSROOM = 1;
-	public const int ENGINEROOM = 2;
-	public const int GUN = 3;
-	public const int FOURWAYROOM = 4;
-	public const int NOAHGUN = 5;
 
    void Awake()
    {
@@ -44,7 +51,7 @@ public class GameController : MonoBehaviour
    // Use this for initialization
    void Start()
    {
-
+        State = (int)GameStates.FREEROAM;
         //healthbar initialization
         currentHealth = maxHealth;
         UpdateHealthBar();
@@ -66,7 +73,7 @@ public class GameController : MonoBehaviour
    public void UpdateHealthBar()
    {
       float ratio = currentHealth / maxHealth;
-      currentHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+      currentHealthBar.rectTransform.localScale = new Vector3(ratio * .6f, .6f, 1);
       ratioText.text = (ratio * 100).ToString("0") + "%";
    }
 
@@ -138,4 +145,16 @@ public class GameController : MonoBehaviour
    {
       gameStateText.text = "You Died!";
    }
+
+   public void DisableUpgradeMenu(){
+      UpgradeMenu.SetActive(false);
+   }
+
+   public void EnableUpgradeMenu(){
+      UpgradeMenu.SetActive(true);
+      GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
+   }
+
+    public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }
+    public void SetStateToModifyingShip() { State = (int)GameStates.MODIFYINGSHIP; }
 }

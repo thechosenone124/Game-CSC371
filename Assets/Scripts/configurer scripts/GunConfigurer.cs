@@ -22,4 +22,9 @@ public class GunConfigurer : MonoBehaviour {
 		GameObject ship = transform.parent.transform.parent.transform.parent.gameObject;
 		ship.GetComponent<ShipWeaponController>().AddGun(transform.GetChild(1).gameObject);
 	}
+
+	public void RemoveSelfFromGuns(){
+		GameObject ship = transform.parent.transform.parent.transform.parent.gameObject;
+		ship.GetComponent<ShipWeaponController>().RemoveGun(transform.GetChild(1).gameObject);
+	}
 }

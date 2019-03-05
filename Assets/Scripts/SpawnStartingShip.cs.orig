@@ -26,6 +26,10 @@ public class SpawnStartingShip : MonoBehaviour {
 			}
 		}
 		SpawnStartShip();
+<<<<<<< HEAD
+        //GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
+=======
+>>>>>>> master
     }
 	void SpawnStartShip(){
         shipLayout[2, 4] = (int)GameController.ItemTypes.ENGINEROOM;

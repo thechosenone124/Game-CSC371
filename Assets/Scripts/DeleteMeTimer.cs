@@ -7,7 +7,7 @@ public class DeleteMeTimer : MonoBehaviour {
 	
 	void Update () {
 		timer += Time.deltaTime;
-		if(timer >= .5f){
+		if(timer >= 1.5f){
 			Destroy(gameObject);
 			timer = 0;
 		}

@@ -6,14 +6,14 @@ using UnityEditor;
 
 public class PickupController : MonoBehaviour {
 
-    string[] types = Enum.GetNames(typeof(Inventory.ItemTypes));
+    string[] types = Enum.GetNames(typeof(GameController.ItemTypes));
     
 
     [Header("See item types in Inventory.cs")]
     public int itemType;
-    [Range(20f, 100f)]   public float rotationOverTime = 50f;
-    [Range(0.01f, 5f)]   public float sizeOverTime     = 5f;
-    [Range(0.5f, 2f)]    public float alphaOverTime    = 1f;
+    [Range(20f, 100f)] public float rotationOverTime = 50f;
+    [Range(0.01f, 5f)] public float sizeOverTime     = 5f;
+    [Range(0.5f, 2f)]  public float alphaOverTime    = 1f;
 
     [Range(0.01f, 1f)] public float minSize  = 0.1f;
     [Range(0.01f, 2f)] public float maxSize  = 2f;
