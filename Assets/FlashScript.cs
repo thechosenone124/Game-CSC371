@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashScript : MonoBehaviour {
 
     public double flashTime = 0.5;
-    private SpriteRenderer sprite;
+    private Image sprite;
     private double timeStamp;
     private bool toggle = true;
 
 	// Use this for initialization
 	void Start () {
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<Image>();
         sprite.enabled = true;
 	}
 	
