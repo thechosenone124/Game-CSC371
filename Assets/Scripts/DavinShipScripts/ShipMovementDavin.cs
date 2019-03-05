@@ -10,12 +10,22 @@ public class ShipMovementDavin : MonoBehaviour {
     public float velocityDrag = 1;
     public Vector3 velocity;
     public float deflectLength = 1;
+    public float speedIncrease = 20f;
+    public float accelIncrease = 0.5f;
+    public float dragDecrease = 0.5f;
+    public float coolDownPeriod = 2;
+    public float usageAmt = 0.5f;
+    public float regenAmt = 0.1f;
 
     public GameObject player1;
     public GameObject player2;
     public GameObject player1PIP;
     public GameObject player2PIP;
 
+    private float timeStamp;
+    private float baseDrag;
+    private float baseAccel;
+    private float baseSpeed;
     private Vector3 acceleration;
     private float timer = 0;
     private bool isDeflecting = false;
@@ -24,6 +34,9 @@ public class ShipMovementDavin : MonoBehaviour {
     private void Start()
     {
         shipInfo = GetComponent<ShipInfoDavin>();
+        baseDrag = velocityDrag;
+        baseAccel = inputAcceleration;
+        baseSpeed = maxSpeed;
     }
 
     private void Update()
@@ -44,13 +57,6 @@ public class ShipMovementDavin : MonoBehaviour {
                 shipInfo.unfreezePlayer(player2);
             }
         }
-    }
-
-    public void Start()
-    {
-        baseDrag = velocityDrag;
-        baseAccel = inputAcceleration;
-        baseSpeed = maxSpeed;
     }
 
     public void MoveShip(PlayerInputContainer pic)
