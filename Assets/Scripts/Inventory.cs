@@ -28,5 +28,10 @@ public class Inventory : MonoBehaviour {
         return true;
     }
 
+    public int GetAmountOfType(int itemCode)
+    {
+        return items[itemCode];
+    }
+
     public int[] GetInventory() { return items; }
 }
