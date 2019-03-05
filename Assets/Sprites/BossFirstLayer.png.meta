@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: ac1b6e2d9bb8b0d4e809307b8b0e125f
+guid: 09ce4a7c8f17b9f4ea8ce449b0d75268
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: WarningSymbol_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,44 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: WarningSymbol_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 256
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e89cf578b7a2b34d95229373cc3e309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4fd0766dd5aceee45a3928d5ea6e51f5
+    spriteID: dde94458d6922dd4ea0f98232c052162
     vertices: []
     indices: 
     edges: []

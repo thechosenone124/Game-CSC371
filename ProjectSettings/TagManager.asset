@@ -17,6 +17,7 @@ TagManager:
   - EnemyProjectile
   - Boss
   - Pickup
+  - SpaceStation
   layers:
   - Default
   - TransparentFX

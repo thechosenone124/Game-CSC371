@@ -15,12 +15,16 @@ public class SpawnComplexEnemies : MonoBehaviour {
 	void Start(){
 		gameObject.GetComponent<CircleCollider2D>().radius = triggerRadius;
       spawnRadius = triggerRadius * spawnRadiusRatio;
+		for(int i = 0; i < numberOfEnemies; i++){
+				Instantiate(spawnable,transform.position + new Vector3(Random.Range(-spawnRadius,spawnRadius),Random.Range(-spawnRadius,spawnRadius),0),Quaternion.identity,transform);
+				transform.GetChild(i).gameObject.SetActive(false);
+		}
 	}
 
 	void Update(){
 		if(shouldSpawn && !hasSpawned){
 			for(int i = 0; i < numberOfEnemies; i++){
-				Instantiate(spawnable,transform.position + new Vector3(Random.Range(-spawnRadius,spawnRadius),Random.Range(-spawnRadius,spawnRadius),0),Quaternion.identity);
+				transform.GetChild(i).gameObject.SetActive(true);
 			}
 			shouldSpawn = false;
 			hasSpawned = true;

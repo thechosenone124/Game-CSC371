@@ -19,6 +19,7 @@ public class TakesDamage : MonoBehaviour {
             gotHit = false;
             damageTime += .1f;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            //SendMessage("IncreaseLayerIndex");
         }
         if(enemyHealth == 0){
             Destroy(gameObject);
