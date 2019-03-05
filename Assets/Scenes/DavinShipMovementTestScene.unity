@@ -213,6 +213,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a27846c4e187dc47bac99280e0160b4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &69508462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114974328840093964, guid: 4a27846c4e187dc47bac99280e0160b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 67830529}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &125604226
 GameObject:
   m_ObjectHideFlags: 3
@@ -968,6 +974,31 @@ Prefab:
       propertyPath: player2PIP
       value: 
       objectReference: {fileID: 1621365437}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: accelIncrease
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: maxSpeedIncrease
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: usageAmt
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: regenAmt
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: coolDownPeriod
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
   m_IsPrefabAsset: 0
@@ -1399,6 +1430,16 @@ Prefab:
       propertyPath: gameStateText
       value: 
       objectReference: {fileID: 1623660404}
+    - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
+        type: 2}
+      propertyPath: currentBoostBar
+      value: 
+      objectReference: {fileID: 69508462}
+    - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
+        type: 2}
+      propertyPath: boostRatioText
+      value: 
+      objectReference: {fileID: 1726084755}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becdfa3fa27cb3c42a358859be771b03, type: 2}
   m_IsPrefabAsset: 0
@@ -1458,6 +1499,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
     type: 2}
   m_PrefabInternal: {fileID: 901979350}
+--- !u!114 &1726084755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114005119605697366, guid: 4a27846c4e187dc47bac99280e0160b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 67830529}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1749090282
 GameObject:
   m_ObjectHideFlags: 0

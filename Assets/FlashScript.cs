@@ -8,13 +8,13 @@ public class FlashScript : MonoBehaviour {
     public double flashTime = 0.5;
     private Image sprite;
     private double timeStamp;
-    private bool toggle = true;
+    private bool toggle = false;
     private bool stampSet;
 
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<Image>();
-        sprite.enabled = true;
+        sprite.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -32,6 +32,10 @@ public class FlashScript : MonoBehaviour {
                 stampSet = false;
             }
                 
+        }
+        else
+        {
+            sprite.enabled = false;
         }
 	}
 
