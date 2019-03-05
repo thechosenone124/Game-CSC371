@@ -3,27 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipMovementDavin : MonoBehaviour {
-   
+
+    [Header("Base Speed Settings:")]
     public float inputAcceleration = 1;
     public float maxSpeed = 10;
-    public float rotationSpeed = 5;
     public float velocityDrag = 1;
-    public Vector3 velocity;
+    public float rotationSpeed = 5;
     public float deflectLength = 1;
 
+    [Header("Boost Speed Settings:")]
+    public float accelIncrease;
+    public float maxSpeedIncrease;
+    public float dragDecrease;
+    public float usageAmt;
+    public float regenAmt;
+    public float coolDownPeriod;
+
+    [Header("Player GameObjects")]
     public GameObject player1;
     public GameObject player2;
     public GameObject player1PIP;
     public GameObject player2PIP;
 
+    [Space(15)]
+    public Vector3 velocity;
+
     private Vector3 acceleration;
     private float timer = 0;
     private bool isDeflecting = false;
     private ShipInfoDavin shipInfo;
+    private float baseDrag;
+    private float baseAccel;
+    private float baseSpeed;
+    private float timeStamp;
 
     private void Start()
     {
         shipInfo = GetComponent<ShipInfoDavin>();
+        baseDrag = velocityDrag;
+        baseAccel = inputAcceleration;
+        baseSpeed = maxSpeed;
     }
 
     private void Update()
@@ -46,27 +65,24 @@ public class ShipMovementDavin : MonoBehaviour {
         }
     }
 
-    public void Start()
-    {
-        baseDrag = velocityDrag;
-        baseAccel = inputAcceleration;
-        baseSpeed = maxSpeed;
-    }
-
     public void MoveShip(PlayerInputContainer pic)
     {
         if (pic.isOperatingStation && !isDeflecting)
         {
-            if (pic.GetXButton() && GameController.instance.GetCurrentBoost() > 0)
+            if (pic.GetRTButton() == 1 && GameController.instance.GetCurrentBoost() > 0)
             {
-                Debug.Log("pressing X");
-
                 GameController.instance.SendMessage("UseBoost", usageAmt);
                 timeStamp = Time.time + coolDownPeriod;
-                inputAcceleration = inputAcceleration + accelIncrease;
-                velocityDrag = velocityDrag - dragDecrease;
-                maxSpeed = maxSpeed + speedIncrease;
-                Debug.Log(maxSpeed);
+                inputAcceleration = baseAccel + accelIncrease;
+                velocityDrag = baseDrag - dragDecrease;
+                maxSpeed = baseSpeed + maxSpeedIncrease;
+                //Debug.Log("pressing RT, max speed: " + maxSpeed);
+            }
+            else
+            {
+                //velocityDrag = baseDrag;
+                inputAcceleration = baseAccel;
+                maxSpeed = baseSpeed;
             }
 
             GameController.instance.isBoosting = false;
@@ -79,10 +95,8 @@ public class ShipMovementDavin : MonoBehaviour {
             acceleration = new Vector3 (pic.GetHorizontal() * inputAcceleration, pic.GetVertical() * inputAcceleration, 0f);
             velocity += acceleration * Time.deltaTime;
         }
-
         velocityDrag = baseDrag;
         inputAcceleration = baseAccel;
-        
 
     }
 
@@ -93,6 +107,7 @@ public class ShipMovementDavin : MonoBehaviour {
           
         // clamp to maxSpeed
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+        Debug.Log("Current speed: " + velocity.magnitude);
                  
         // update transform
         transform.position += velocity * Time.deltaTime;
@@ -108,7 +123,7 @@ public class ShipMovementDavin : MonoBehaviour {
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("SpaceDebris")) {     //ship collided with space debris, etc.
+        if (collision.collider.CompareTag("SpaceDebris") || collision.collider.CompareTag("SpaceStation")) {     //ship collided with space debris, etc.
             
             velocity = -velocity;   //reverse ship velocitytemporarily
             isDeflecting = true;    //tell the ship it's being deflected

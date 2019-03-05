@@ -57,7 +57,7 @@ public class PIPShakeBehavior : MonoBehaviour {
 
     public void TriggerShake()
     {
-        Debug.Log("ShakeBehavior.TriggerShake -- SHAKING");
+        //Debug.Log("ShakeBehavior.TriggerShake -- SHAKING");
         currentShakeDuration = shakeDuration;
     }
 }
