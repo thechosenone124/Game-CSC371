@@ -144,6 +144,7 @@ public class GameController : MonoBehaviour
 
    public void PlayerLoses()
    {
+        GameObject.Find("Ship").SetActive(false);
       gameStateText.text = "You Died!";
    }
 
