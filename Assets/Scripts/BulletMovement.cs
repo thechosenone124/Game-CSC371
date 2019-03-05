@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour {
 
-   public float spawnLength = 0.5f;
+   public float spawnLength = 2f;
    public float speed = 10f;
    public Rigidbody2D rb;
 
