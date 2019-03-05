@@ -14,7 +14,7 @@ public class FlashScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<Image>();
-        sprite.enabled = false;
+        sprite.enabled = true;
 	}
 	
 	// Update is called once per frame
