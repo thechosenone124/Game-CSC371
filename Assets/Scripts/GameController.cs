@@ -29,6 +29,13 @@ public class GameController : MonoBehaviour
     public enum GameStates { FREEROAM,
                              MODIFYINGSHIP}; 
 
+    //boost
+    public float maxBoost = 100f;
+    public Image currentBoostBar;
+    public Text boostRatioText;
+    private float currentBoost;
+    public bool isBoosting;
+
    void Awake()
    {
       if (instance == null)
@@ -45,11 +52,15 @@ public class GameController : MonoBehaviour
    void Start()
    {
         State = (int)GameStates.FREEROAM;
-      //healthbar initialization
-      currentHealth = maxHealth;
-      UpdateHealthBar();
-      //game state text initialization
-      gameStateText.text = "";
+        //healthbar initialization
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+
+        //boost initialization
+        currentBoost = maxBoost;
+
+        //game state text initialization
+        gameStateText.text = "";
    }
 
    // Update is called once per frame
@@ -66,7 +77,46 @@ public class GameController : MonoBehaviour
       ratioText.text = (ratio * 100).ToString("0") + "%";
    }
 
-   private void TakeDamage(float damage)
+    //boost manipulation
+    public void UpdateBoost()
+    {
+        float ratio = currentBoost / maxBoost;
+        currentBoostBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        boostRatioText.text = (ratio * 100).ToString("0") + "%";
+    }
+
+    private void UseBoost(float boostAmt)
+    {
+        currentBoost -= boostAmt;
+        if (currentBoost <= 0)
+        {
+            currentBoost = 0;
+        }
+        UpdateBoost();
+        isBoosting = true;
+    }
+
+    private void RegenerateBoost(float boostAmt)
+    {
+        currentBoost += boostAmt;
+        if (currentBoost >= maxBoost)
+        {
+            currentBoost = maxBoost;
+        }
+        UpdateBoost();
+    }
+
+    public float GetCurrentBoost()
+    {
+        return currentBoost;
+    }
+
+    public void SetBoost(float newBoost)
+    {
+        currentBoost = newBoost;
+    }
+
+    private void TakeDamage(float damage)
    {
       currentHealth -= damage;
       if (currentHealth <= 0)

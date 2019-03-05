@@ -46,14 +46,44 @@ public class ShipMovementDavin : MonoBehaviour {
         }
     }
 
+    public void Start()
+    {
+        baseDrag = velocityDrag;
+        baseAccel = inputAcceleration;
+        baseSpeed = maxSpeed;
+    }
+
     public void MoveShip(PlayerInputContainer pic)
     {
         if (pic.isOperatingStation && !isDeflecting)
         {
-         // apply forward input
-         acceleration = new Vector3 (pic.GetHorizontal() * inputAcceleration, pic.GetVertical() * inputAcceleration, 0f);
-         velocity += acceleration * Time.deltaTime;
-      }
+            if (pic.GetXButton() && GameController.instance.GetCurrentBoost() > 0)
+            {
+                Debug.Log("pressing X");
+
+                GameController.instance.SendMessage("UseBoost", usageAmt);
+                timeStamp = Time.time + coolDownPeriod;
+                inputAcceleration = inputAcceleration + accelIncrease;
+                velocityDrag = velocityDrag - dragDecrease;
+                maxSpeed = maxSpeed + speedIncrease;
+                Debug.Log(maxSpeed);
+            }
+
+            GameController.instance.isBoosting = false;
+
+            if (Time.time >= timeStamp)
+            {
+                GameController.instance.SendMessage("RegenerateBoost", regenAmt);
+            }
+            // apply forward input
+            acceleration = new Vector3 (pic.GetHorizontal() * inputAcceleration, pic.GetVertical() * inputAcceleration, 0f);
+            velocity += acceleration * Time.deltaTime;
+        }
+
+        velocityDrag = baseDrag;
+        inputAcceleration = baseAccel;
+        
+
     }
 
     public void ApplyDrag()

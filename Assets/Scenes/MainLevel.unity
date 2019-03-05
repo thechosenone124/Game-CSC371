@@ -901,6 +901,10 @@ Prefab:
       propertyPath: triggerRadius
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1256084380662638, guid: e478f950e4e834708ae44d122644636d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
   m_IsPrefabAsset: 0
@@ -3095,6 +3099,14 @@ Prefab:
     - target: {fileID: 1157635689861700, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
       propertyPath: m_Name
       value: ComplexEnemySpawner (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610842815808966, guid: e478f950e4e834708ae44d122644636d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256084380662638, guid: e478f950e4e834708ae44d122644636d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}

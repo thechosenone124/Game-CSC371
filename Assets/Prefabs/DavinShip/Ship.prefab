@@ -2245,6 +2245,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputAcceleration: 40
   maxSpeed: 25
+  speedIncrease: 100
+  accelIncrease: 100
+  dragDecrease: 0.9
+  coolDownPeriod: 2
+  usageAmt: 0.5
+  regenAmt: 0.1
   rotationSpeed: 1.5
   velocityDrag: 1
   velocity: {x: 0, y: 0, z: 0}
