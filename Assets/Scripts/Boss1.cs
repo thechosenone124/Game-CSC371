@@ -32,6 +32,7 @@ public class Boss1 : MonoBehaviour
       {
          target = GameObject.Find("Ship");
       }
+
       if (healthBar == null)
       {
          healthBar = GameObject.Find("BossHealthBar");                                          //Find BossHealthBar gameObject
@@ -44,6 +45,20 @@ public class Boss1 : MonoBehaviour
          healthBarBorder = healthBar.transform.Find("HealthBarBorder").gameObject;              //Set HealthBarBorder to active
          healthBarBorder.SetActive(true);
       }
+   }
+
+   void OnDisable(){
+      currentHealthBar.SetActive(false);
+      ratioText.SetActive(false);
+      healthBarBackground.SetActive(false);
+      healthBarBorder.SetActive(false);
+   }
+
+   void OnEnable(){
+      currentHealthBar.SetActive(true);
+      ratioText.SetActive(true);
+      healthBarBackground.SetActive(true);
+      healthBarBorder.SetActive(true);
    }
 
    void Start()
