@@ -228,6 +228,9 @@ public class SpawnStartingShip : MonoBehaviour {
 				if(shipLayout[j,i] != -1){
 					SpawnModuleAtLocation(j,i,shipLayout[j,i]);
 				}
+				else if(shipLayout[j,i] == -1){
+					RemoveModuleAtLocation(j,i);
+				}
 			}
 		}
 	}
