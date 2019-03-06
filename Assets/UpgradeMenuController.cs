@@ -7,21 +7,28 @@ using UnityEngine;
 public class UpgradeMenuController : MonoBehaviour {
     public static UpgradeMenuController instance;
     public List<GameObject> moduleSelectButtons;
+    private int[] numModules;
     public GameObject shipGrid;
+    public GameObject InventoryTextContainer;
     public GameObject buttonPrefab;
+    public GameObject InventoryTextPrefab;
     public EventSystem eventSystem;
     public Sprite[] moduleSprites;
 
     private SpawnStartingShip shipData;
     private int[,] shipSample;
     private GameObject[,] buttonGrid;
+    private GameObject[] InventoryTextObjects;
     private int selectedModule;
+    private Inventory inventory;
   
     // Use this for initialization
     void Awake ()
     {
         shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
+        inventory = GameObject.Find("GameController").GetComponent<Inventory>();
+        InventoryTextObjects = new GameObject[(int)GameController.ItemTypes.NUMBEROFTYPES];
         for (int j = 0; j < 5; j++)
         {
             for (int i = 0; i < 5; i++)
@@ -34,13 +41,21 @@ public class UpgradeMenuController : MonoBehaviour {
                 buttonGrid[i, j] = newObj;
             }
         }
+        for (int i = 0; i < InventoryTextObjects.Length; i++)
+        {
+            GameObject newObj = Instantiate(InventoryTextPrefab);
+            newObj.transform.SetParent(InventoryTextContainer.transform, false);
+            InventoryTextObjects[i] = newObj;
+        }
         shipGrid.SetActive(false);
     }
 	
-	// Update is called once per frame
 	public void ActivateUpgrade () {
 
+        numModules = inventory.GetInventory();
         shipSample = shipData.GetShipLayout();
+        InventoryTextUpdate();
+
         for (int j = 0; j < 5; j++)
         {
             for (int i = 0; i < 5; i++)
@@ -67,9 +82,15 @@ public class UpgradeMenuController : MonoBehaviour {
         shipGrid.SetActive(false);
         eventSystem.SetSelectedGameObject(moduleSelectButtons[0]);
     }
+    void InventoryTextUpdate()
+    {
+        for (int i = 0; i < InventoryTextObjects.Length; i++)
+        {
+            InventoryTextObjects[i].GetComponent<Text>().text = "" + numModules[i];
+        }
+    }
     void disableUnreachable()
     {
-
         for (int j = 0; j < 5; j++)
         {
             for (int i = 0; i < 5; i++)
@@ -88,6 +109,8 @@ public class UpgradeMenuController : MonoBehaviour {
     void updateShip(int x, int y)
     {
         shipSample[x, y] = selectedModule;
+        inventory.RemoveItem(selectedModule);
+        InventoryTextUpdate();
         shipData.SetShipLayout(shipSample);
         disableUnreachable();
         //buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
