@@ -121,9 +121,15 @@ public class UpgradeMenuController : MonoBehaviour {
             buttonGrid[x, y].GetComponentsInChildren<Image>()[1].sprite = moduleSprites[selectedModule];
         }
         else
+        {
             buttonGrid[x, y].GetComponentInChildren<Image>().enabled = false;
+        }
         shipGrid.SetActive(false);
         foreach (GameObject g in moduleSelectButtons)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in InventoryTextObjects)
         {
             g.SetActive(true);
         }
@@ -141,6 +147,11 @@ public class UpgradeMenuController : MonoBehaviour {
             }
             g.SetActive(false);
         }
+        foreach (GameObject g InventoryTextObjects)
+        {
+            g.SetActive(false);
+        }
+        
         shipGrid.SetActive(true);
         eventSystem.SetSelectedGameObject(buttonGrid[0,0]);
     }
