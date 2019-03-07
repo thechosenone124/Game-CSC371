@@ -91,7 +91,7 @@ public class ShipMovementDavin : MonoBehaviour {
             Debug.Log(GameController.instance.getTimeToBreak());
             if(Time.time > GameController.instance.getTimeToBreak() /*&& GameController.instance.isBoosting */&& GameController.instance.GetCurrentBoost() == 0)
             {
-                GameController.instance.boostBroken = true;
+                //GameController.instance.boostBroken = true;
             }
 
             GameController.instance.isBoosting = false;
