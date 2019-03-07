@@ -147,7 +147,7 @@ public class UpgradeMenuController : MonoBehaviour {
             }
             g.SetActive(false);
         }
-        foreach (GameObject g InventoryTextObjects)
+        foreach (GameObject g in InventoryTextObjects)
         {
             g.SetActive(false);
         }
