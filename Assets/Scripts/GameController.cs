@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
    private float currentHealth;
    public GameObject UpgradeMenu;
    public int State;
-
+    
     // Enums are better because they guarantee we don't set two const equal to the same number
     public enum ItemTypes { COCKPIT,
                             WEAPONSROOM,
@@ -37,8 +37,17 @@ public class GameController : MonoBehaviour
     public Text boostRatioText;
     private float currentBoost;
     public bool isBoosting;
+    public bool boostBroken;
+    private float timeToBreak;
 
-   void Awake()
+    //shield
+    public float maxShield = 100f;
+    public Image currentShieldBar;
+    public Text shieldRatioText;
+    private float currentShield;
+    public bool shieldBroken = false;
+
+    void Awake()
    {
       if (instance == null)
       {
@@ -60,6 +69,9 @@ public class GameController : MonoBehaviour
 
         //boost initialization
         currentBoost = maxBoost;
+
+        //shield initialization
+        currentShield = maxShield;
 
         //game state text initialization
         gameStateText.text = "";
@@ -87,12 +99,22 @@ public class GameController : MonoBehaviour
         boostRatioText.text = (ratio * 100).ToString("0") + "%";
     }
 
+    //shield manipulation
+    public void UpdateShield()
+    {
+        float ratio = currentShield / maxShield;
+        currentShieldBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        shieldRatioText.text = (ratio * 100).ToString("0") + "%";
+    }
+
     private void UseBoost(float boostAmt)
     {
         currentBoost -= boostAmt;
         if (currentBoost <= 0)
         {
             currentBoost = 0;
+            if(timeToBreak == 0)
+                timeToBreak = CalculateRandomChance();
         }
         UpdateBoost();
         isBoosting = true;
@@ -120,13 +142,26 @@ public class GameController : MonoBehaviour
 
     private void TakeDamage(float damage)
    {
-      currentHealth -= damage;
-      if (currentHealth <= 0)
-      {
-         currentHealth = 0;
-         PlayerLoses();
-      }
-      UpdateHealthBar();
+        if (shieldBroken)
+        {
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                PlayerLoses();
+            }
+        }
+        else
+        {
+            currentShield -= damage;
+            if(currentShield <= 0)
+            {
+                currentShield = 0;
+                shieldBroken = true;
+            }
+        }
+        UpdateHealthBar();
+        UpdateShield();
    }
 
    public float getCurrentHealth()
@@ -134,7 +169,12 @@ public class GameController : MonoBehaviour
       return currentHealth;
    }
 
-   public void setHealth(float newHealth)
+    public float getCurrentShield()
+    {
+        return currentShield;
+    }
+
+    public void setHealth(float newHealth)
    {
       currentHealth = newHealth;
    }
@@ -158,6 +198,19 @@ public class GameController : MonoBehaviour
       UpgradeMenu.SetActive(true);
       GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
    }
+
+    private float CalculateRandomChance()
+    {
+        float timeToBreak;
+        timeToBreak = Random.Range(3.5f, 7.0f);
+        Debug.Log(timeToBreak);
+        return timeToBreak;       
+    }
+
+    public float getTimeToBreak()
+    {
+        return timeToBreak;
+    }
 
     public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }
     public void SetStateToModifyingShip() { State = (int)GameStates.MODIFYINGSHIP; }

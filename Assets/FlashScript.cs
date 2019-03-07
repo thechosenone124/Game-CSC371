@@ -7,6 +7,7 @@ public class FlashScript : MonoBehaviour {
 
     public double flashTime = 0.5;
     private Image sprite;
+    public Sprite repairSprite;
     private double timeStamp;
     private bool toggle = false;
     private bool stampSet;
@@ -21,6 +22,14 @@ public class FlashScript : MonoBehaviour {
 	void Update () {
         if(GameController.instance.GetCurrentBoost() == 0)
         {
+            if (GameController.instance.boostBroken)
+            {
+                sprite.sprite = repairSprite;
+            }
+            else
+            {
+                sprite = GetComponent<Image>();
+            }
             if (!stampSet)
             {
                 timeStamp = Time.time + flashTime;

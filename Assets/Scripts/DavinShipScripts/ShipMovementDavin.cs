@@ -36,6 +36,7 @@ public class ShipMovementDavin : MonoBehaviour {
     private float baseAccel;
     private float baseSpeed;
     private float timeStamp;
+    private float boostTimeStamp;
 
     private void Start()
     {
@@ -67,12 +68,14 @@ public class ShipMovementDavin : MonoBehaviour {
 
     public void MoveShip(PlayerInputContainer pic)
     {
+        Debug.Log(GameController.instance.boostBroken);
         if (pic.isOperatingStation && !isDeflecting)
         {
-            if (pic.GetRTButton() == 1 && GameController.instance.GetCurrentBoost() > 0)
+            if (pic.GetRTButton() == 1 && !GameController.instance.boostBroken)
             {
                 GameController.instance.SendMessage("UseBoost", usageAmt);
                 timeStamp = Time.time + coolDownPeriod;
+                boostTimeStamp = Time.time + GameController.instance.getTimeToBreak();
                 inputAcceleration = baseAccel + accelIncrease;
                 velocityDrag = baseDrag - dragDecrease;
                 maxSpeed = baseSpeed + maxSpeedIncrease;
@@ -85,9 +88,15 @@ public class ShipMovementDavin : MonoBehaviour {
                 maxSpeed = baseSpeed;
             }
 
+            Debug.Log(GameController.instance.getTimeToBreak());
+            if(Time.time > GameController.instance.getTimeToBreak() && GameController.instance.isBoosting && GameController.instance.GetCurrentBoost() == 0)
+            {
+                GameController.instance.boostBroken = true;
+            }
+
             GameController.instance.isBoosting = false;
 
-            if (Time.time >= timeStamp)
+            if (Time.time >= timeStamp && !GameController.instance.boostBroken)
             {
                 GameController.instance.SendMessage("RegenerateBoost", regenAmt);
             }
@@ -107,7 +116,7 @@ public class ShipMovementDavin : MonoBehaviour {
           
         // clamp to maxSpeed
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
-        Debug.Log("Current speed: " + velocity.magnitude);
+        //Debug.Log("Current speed: " + velocity.magnitude);
                  
         // update transform
         transform.position += velocity * Time.deltaTime;
