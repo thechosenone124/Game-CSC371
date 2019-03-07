@@ -21,6 +21,14 @@ public class FlashScript : MonoBehaviour {
 	void Update () {
         if(GameController.instance.GetCurrentBoost() == 0)
         {
+            /*if (GameController.instance.boostBroken)
+            {
+                sprite.sprite = Resources.Load("ball") as Sprite;
+            }
+            else
+            {
+                sprite.sprite = Resources.Load("WarningSymbol") as Sprite;
+            }*/
             if (!stampSet)
             {
                 timeStamp = Time.time + flashTime;

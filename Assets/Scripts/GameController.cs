@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
    private float currentHealth;
    public GameObject UpgradeMenu;
    public int State;
+    public float timeToBreak;
+    public bool boostBroken;
 
     // Enums are better because they guarantee we don't set two const equal to the same number
     public enum ItemTypes { COCKPIT,
@@ -93,6 +95,8 @@ public class GameController : MonoBehaviour
         if (currentBoost <= 0)
         {
             currentBoost = 0;
+            if(timeToBreak == 0)
+                timeToBreak = CalculateRandomChance();
         }
         UpdateBoost();
         isBoosting = true;
@@ -158,6 +162,14 @@ public class GameController : MonoBehaviour
       UpgradeMenu.SetActive(true);
       GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
    }
+
+    private float CalculateRandomChance()
+    {
+        float timeToBreak;
+        timeToBreak = Random.Range(3.5f, 7.0f);
+        Debug.Log(timeToBreak);
+        return timeToBreak;       
+    }
 
     public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }
     public void SetStateToModifyingShip() { State = (int)GameStates.MODIFYINGSHIP; }
