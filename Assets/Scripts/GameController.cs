@@ -167,7 +167,7 @@ public class GameController : MonoBehaviour
             if(currentShield <= 0)
             {
                 currentShield = 0;
-                //shieldBroken = true;
+                shieldBroken = true;
             }
         }
         UpdateHealthBar();
