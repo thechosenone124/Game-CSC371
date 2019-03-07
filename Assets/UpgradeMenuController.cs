@@ -86,7 +86,7 @@ public class UpgradeMenuController : MonoBehaviour {
     {
         for (int i = 0; i < InventoryTextObjects.Length; i++)
         {
-            InventoryTextObjects[i].GetComponent<Text>().text = "" + numModules[i];
+            InventoryTextObjects[i].GetComponent<Text>().text = "" + /*numModules[i]*/;
         }
     }
     void disableUnreachable()
