@@ -23,10 +23,10 @@ public class CollisionCalculations : MonoBehaviour {
             timeStamp = Time.time + coolDownPeriod;
             Destroy(collision.gameObject);
             GameController.instance.SendMessage("TakeDamage", 3);
-            if(Time.time > timeStamp && !GameController.instance.shieldBroken)
-            {
-                GameController.instance.SendMessage("RegenerateShield");
-            }
+        }
+        if (Time.time > timeStamp && !GameController.instance.shieldBroken)
+        {
+            GameController.instance.SendMessage("RegenerateShield");
         }
     }
 }
