@@ -10,14 +10,16 @@ public class ShipMovementDavin : MonoBehaviour {
     public float velocityDrag = 1;
     public float rotationSpeed = 5;
     public float deflectLength = 1;
+    public float speedIncrease = 20f;
+    public float accelIncrease = 0.5f;
+    public float dragDecrease = 0.5f;
+    public float coolDownPeriod = 2;
+    public float usageAmt = 0.5f;
+    public float regenAmt = 0.1f;
 
     [Header("Boost Speed Settings:")]
-    public float accelIncrease;
+
     public float maxSpeedIncrease;
-    public float dragDecrease;
-    public float usageAmt;
-    public float regenAmt;
-    public float coolDownPeriod;
 
     [Header("Player GameObjects")]
     public GameObject player1;
@@ -28,14 +30,14 @@ public class ShipMovementDavin : MonoBehaviour {
     [Space(15)]
     public Vector3 velocity;
 
+    private float timeStamp;
+    private float baseDrag;
+    private float baseAccel;
+    private float baseSpeed;
     private Vector3 acceleration;
     private float timer = 0;
     private bool isDeflecting = false;
     private ShipInfoDavin shipInfo;
-    private float baseDrag;
-    private float baseAccel;
-    private float baseSpeed;
-    private float timeStamp;
     private float boostTimeStamp;
 
     private void Start()
