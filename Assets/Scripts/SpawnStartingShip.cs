@@ -150,6 +150,21 @@ public class SpawnStartingShip : MonoBehaviour {
 		}
 	}
 
+	public bool ValidShip(){
+		bool HasCockpit = false, HasEngineRoom = false;
+		for(int i = 0; i < shipLayout.GetLength(0); i++){
+			for(int j = 0; j < shipLayout.GetLength(1); j++){
+				if(shipLayout[i,j] == (int)GameController.ItemTypes.COCKPIT){
+					HasCockpit = true;
+				}
+				if(shipLayout[i,j] == (int)GameController.ItemTypes.ENGINEROOM){
+					HasEngineRoom = true;
+				}
+			}
+		}
+		return HasCockpit && HasEngineRoom;
+	}
+
 	int HasNeighbors(int x, int y){
 		int neighbors = 0;
 		if(CheckUp(x,y)){
@@ -176,7 +191,7 @@ public class SpawnStartingShip : MonoBehaviour {
 		}
 	}
 
-    /*The code below determines if a locatio is a valid location to remove.
+    /*The code below determines if a location is a valid location to remove.
     It does this by first checking that it is not an empty space, because those are fine to remove.
     It check to see if any of its neighbors would be left without a valid neighbor if they were to disappear.
     And it check to make sure that it is the only neighbor of a the rooms around it. */
