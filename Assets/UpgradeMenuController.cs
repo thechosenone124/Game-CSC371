@@ -10,6 +10,7 @@ public class UpgradeMenuController : MonoBehaviour {
     private int[] numModules;
     public GameObject shipGrid;
     public GameObject InventoryTextContainer;
+    public GameObject ImageContainer;
     public GameObject buttonPrefab;
     public GameObject InventoryTextPrefab;
     public EventSystem eventSystem;
@@ -28,7 +29,7 @@ public class UpgradeMenuController : MonoBehaviour {
         shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
         inventory = GameObject.Find("GameController").GetComponent<Inventory>();
-        InventoryTextObjects = new GameObject[(int)GameController.ItemTypes.NUMBEROFTYPES];
+        InventoryTextObjects = new GameObject[moduleSelectButtons.Count];
         for (int j = 0; j < 5; j++)
         {
             for (int i = 0; i < 5; i++)
@@ -47,6 +48,14 @@ public class UpgradeMenuController : MonoBehaviour {
             newObj.transform.SetParent(InventoryTextContainer.transform, false);
             InventoryTextObjects[i] = newObj;
         }
+        for (int i = 0; i < moduleSelectButtons.Count - 2; i++)
+        {
+            int newI = i;
+            moduleSelectButtons[i].GetComponent<Button>().onClick.AddListener(() => addModule(newI));
+        }
+        moduleSelectButtons[moduleSelectButtons.Count - 2].GetComponent<Button>().onClick.AddListener(() => addModule(-1));
+        moduleSelectButtons[moduleSelectButtons.Count - 1].GetComponent<Button>().onClick.AddListener(() => commitUpgrade());
+
         shipGrid.SetActive(false);
     }
 	
@@ -84,10 +93,10 @@ public class UpgradeMenuController : MonoBehaviour {
     }
     void InventoryTextUpdate()
     {
-        for (int i = 0; i < InventoryTextObjects.Length; i++)
+        for (int i = 0; i < InventoryTextObjects.Length - 2; i++)
         {
             InventoryTextObjects[i].GetComponent<Text>().text = "" + numModules[i];
-            moduleSelectButtons[i].GetComponent<Button>().interactable = numModules[i] < 1;
+            //moduleSelectButtons[i].GetComponent<Button>().interactable = numModules[i] > 1;
         }
     }
     void disableUnreachable()
@@ -96,25 +105,38 @@ public class UpgradeMenuController : MonoBehaviour {
         {
             for (int i = 0; i < 5; i++)
             {
-                if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i,j))
-                {
-                    buttonGrid[i, j].GetComponent<Button>().interactable = true;
-                }
+                if (selectedModule < 0)
+                    buttonGrid[i, j].GetComponent<Button>().interactable = shipData.ValidRemoval(i, j);
                 else
                 {
-                    buttonGrid[i, j].GetComponent<Button>().interactable = false;
+                    if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i, j))
+                    {
+                        buttonGrid[i, j].GetComponent<Button>().interactable = true;
+                    }
+                    else
+                    {
+                        buttonGrid[i, j].GetComponent<Button>().interactable = false;
+                    }
                 }
             }
         }
     }
     void updateShip(int x, int y)
     {
+        int removedModule = shipSample[x, y];
         shipSample[x, y] = selectedModule;
-        inventory.RemoveItem(selectedModule);
+        if (selectedModule > -1)
+        {
+            inventory.RemoveItem(selectedModule);
+        }
+        if (removedModule > -1)
+        {
+            inventory.AddItem(removedModule);
+        }
         InventoryTextUpdate();
         shipData.SetShipLayout(shipSample);
         disableUnreachable();
-        //buttonGrid[x, y].GetComponentInChildren<Text>().text = "" + selectedModule;
+        //Update ship grid sprites before we leave
         if (selectedModule > -1)
         {
             buttonGrid[x, y].GetComponentsInChildren<Image>()[1].enabled = true;
@@ -122,22 +144,21 @@ public class UpgradeMenuController : MonoBehaviour {
         }
         else
         {
-            buttonGrid[x, y].GetComponentInChildren<Image>().enabled = false;
+            buttonGrid[x, y].GetComponentsInChildren<Image>()[1].enabled = false;
         }
         shipGrid.SetActive(false);
         foreach (GameObject g in moduleSelectButtons)
         {
             g.SetActive(true);
         }
-        foreach (GameObject g in InventoryTextObjects)
-        {
-            g.SetActive(true);
-        }
+        InventoryTextContainer.SetActive(true);
+        ImageContainer.SetActive(true);
         eventSystem.SetSelectedGameObject(moduleSelectButtons[0]);
     }
     public void addModule(int modType)
     {
         selectedModule = modType;
+        //Remove artifacts of animation
         foreach (GameObject g in moduleSelectButtons)
         {
             if (g.GetComponent<Image>() != null)
@@ -147,17 +168,17 @@ public class UpgradeMenuController : MonoBehaviour {
             }
             g.SetActive(false);
         }
-        foreach (GameObject g in InventoryTextObjects)
-        {
-            g.SetActive(false);
-        }
+        //Hide inventory numbers and images linked to the module select buttons
+        InventoryTextContainer.SetActive(false);
+        ImageContainer.SetActive(false);
         
         shipGrid.SetActive(true);
-        eventSystem.SetSelectedGameObject(buttonGrid[0,0]);
+        eventSystem.SetSelectedGameObject(buttonGrid[2,2]);
     }
-
+    
     public void commitUpgrade()
     {
-        GameController.instance.DisableUpgradeMenu();
+        //if (shipData.ValidShip())
+            GameController.instance.DisableUpgradeMenu();
     }
 }
