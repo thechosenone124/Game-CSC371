@@ -181,6 +181,9 @@ public class SpawnStartingShip : MonoBehaviour {
     It check to see if any of its neighbors would be left without a valid neighbor if they were to disappear.
     And it check to make sure that it is the only neighbor of a the rooms around it. */
 	public bool ValidRemoval(int x, int y){
+		if(x == 2 && y == 2){
+			return false;
+		}
         if((y+1) != rooms.GetLength(1) && (HasNeighbors(x,y+1) & NOTONE) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x,y+1) != 0 && shipLayout[x,y+1] != -1){
             return false;
         }

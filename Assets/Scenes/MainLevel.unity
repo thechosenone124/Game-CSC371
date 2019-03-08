@@ -3725,7 +3725,7 @@ MonoBehaviour:
   - {fileID: 1689076679}
   shipGrid: {fileID: 1753437117}
   InventoryTextContainer: {fileID: 1627733036}
-  ImageContainer: {fileID: 0}
+  ImageContainer: {fileID: 1249407159}
   buttonPrefab: {fileID: 1244011140713318, guid: a22925f6a45fe674cb5700045cb2cf69,
     type: 2}
   InventoryTextPrefab: {fileID: 1103326212842956, guid: 3e00e6aa667d9264da2201a09efaf673,
