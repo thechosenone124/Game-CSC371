@@ -66,18 +66,24 @@ public class ShipMovementDavin : MonoBehaviour {
                 shipInfo.unfreezePlayer(player2);
             }
         }
+        if(GameController.instance.GetCurrentBoost() == 100){
+            boostTimeStamp = 0;
+        }
     }
 
     public void MoveShip(PlayerInputContainer pic)
     {
         Debug.Log(GameController.instance.boostBroken);
+        Debug.Log("Time: " + Time.time);
         if (pic.isOperatingStation && !isDeflecting)
         {
             if (pic.GetRTButton() == 1 && !GameController.instance.boostBroken)
             {
                 GameController.instance.SendMessage("UseBoost", usageAmt);
                 timeStamp = Time.time + coolDownPeriod;
-                boostTimeStamp = Time.time + GameController.instance.getTimeToBreak();
+                if(boostTimeStamp == 0){
+                    boostTimeStamp = Time.time + GameController.instance.getTimeToBreak();
+                }
                 inputAcceleration = baseAccel + accelIncrease;
                 velocityDrag = baseDrag - dragDecrease;
                 maxSpeed = baseSpeed + maxSpeedIncrease;
@@ -90,8 +96,9 @@ public class ShipMovementDavin : MonoBehaviour {
                 maxSpeed = baseSpeed;
             }
 
-            Debug.Log(GameController.instance.getTimeToBreak());
-            if(Time.time > GameController.instance.getTimeToBreak() && GameController.instance.isBoosting && GameController.instance.GetCurrentBoost() == 0)
+            Debug.Log("timestamp: " + boostTimeStamp);
+            Debug.Log("Time: " + Time.time);
+            if(Time.time > boostTimeStamp && GameController.instance.isBoosting && GameController.instance.GetCurrentBoost() == 0)
             {
                 GameController.instance.boostBroken = true;
             }

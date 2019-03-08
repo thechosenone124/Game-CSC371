@@ -211,7 +211,7 @@ public class GameController : MonoBehaviour
 
     public float getTimeToBreak()
     {
-        return timeToBreak;
+        return CalculateRandomChance();
     }
 
     public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }
