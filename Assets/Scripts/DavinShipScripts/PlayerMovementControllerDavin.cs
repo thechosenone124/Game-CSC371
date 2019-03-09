@@ -39,4 +39,9 @@ public class PlayerMovementControllerDavin : MonoBehaviour {
             transform.localPosition = playerCurPos;     //freeze player position
         }
     }
+
+    public void SetPlayerCurrentPosition(Vector3 newPos){
+        playerCurPos = newPos;
+    }
+    
 }

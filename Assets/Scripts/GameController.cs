@@ -191,7 +191,9 @@ public class GameController : MonoBehaviour
    }
 
    public void DisableUpgradeMenu(){
-      UpgradeMenu.SetActive(false);
+       GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
+	   GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
+       UpgradeMenu.SetActive(false);
    }
 
    public void EnableUpgradeMenu(){
@@ -209,7 +211,7 @@ public class GameController : MonoBehaviour
 
     public float getTimeToBreak()
     {
-        return timeToBreak;
+        return CalculateRandomChance();
     }
 
     public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }

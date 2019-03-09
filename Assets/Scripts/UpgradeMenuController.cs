@@ -179,6 +179,10 @@ public class UpgradeMenuController : MonoBehaviour {
     public void commitUpgrade()
     {
         //if (shipData.ValidShip())
-            GameController.instance.DisableUpgradeMenu();
+        GameController.instance.DisableUpgradeMenu();
+        GameObject.Find("Player 1").GetComponent<CameraHolder>().playerCamera.SetActive(true);
+		GameObject.Find("Player 2").GetComponent<CameraHolder>().playerCamera.SetActive(true);
+        GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
+        GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
     }
 }
