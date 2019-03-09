@@ -8,6 +8,7 @@ public class FlashScript : MonoBehaviour {
     public double flashTime = 0.5;
     private Image sprite;
     public Sprite repairSprite;
+    public Sprite warningSprite;
     private double timeStamp;
     private bool toggle = false;
     private bool stampSet;
@@ -28,7 +29,7 @@ public class FlashScript : MonoBehaviour {
             }
             else
             {
-                sprite = GetComponent<Image>();
+                sprite.sprite = warningSprite;
             }
             if (!stampSet)
             {

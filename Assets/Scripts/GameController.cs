@@ -191,8 +191,6 @@ public class GameController : MonoBehaviour
    }
 
    public void DisableUpgradeMenu(){
-       GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
-	   GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
        UpgradeMenu.SetActive(false);
    }
 
@@ -205,7 +203,6 @@ public class GameController : MonoBehaviour
     {
         float timeToBreak;
         timeToBreak = Random.Range(3.5f, 7.0f);
-        Debug.Log(timeToBreak);
         return timeToBreak;       
     }
 
