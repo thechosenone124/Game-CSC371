@@ -11,7 +11,6 @@ public class ShipRepairController : MonoBehaviour {
 	public void TryRepair(PlayerInputContainer pcon){
 		if(pcon.GetRTButton() == 1 && GameController.instance.boostBroken){
 			timer += (float).25f;
-			Debug.Log("timer: " + timer);
 			GameController.instance.SetBoost(timer);
 			GameController.instance.UpdateBoost();
 			if(timer >= coolDownTime){
