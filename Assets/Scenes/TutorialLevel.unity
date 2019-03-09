@@ -12738,10 +12738,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1702584023798198, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
-      propertyPath: m_Name
-      value: Ship
-      objectReference: {fileID: 0}
+    - target: {fileID: 114210543817574240, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 482723928}
+    - target: {fileID: 114708107136514026, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 482723929}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: player1PIP
+      value: 
+      objectReference: {fileID: 482723929}
+    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: player2PIP
+      value: 
+      objectReference: {fileID: 482723928}
     - target: {fileID: 114888249621079882, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
         type: 2}
       propertyPath: weaponAimControlCenter
@@ -12757,61 +12773,6 @@ Prefab:
       propertyPath: aimPoint
       value: 
       objectReference: {fileID: 1866609500}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: player1PIP
-      value: 
-      objectReference: {fileID: 482723929}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: player2PIP
-      value: 
-      objectReference: {fileID: 482723928}
-    - target: {fileID: 114708107136514026, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 482723929}
-    - target: {fileID: 114210543817574240, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 482723928}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: coolDownPeriod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: accelIncrease
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: dragDecrease
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: speedIncrease
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: usageAmt
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: regenAmt
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114840442984289896, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
-        type: 2}
-      propertyPath: maxSpeedIncrease
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
   m_IsPrefabAsset: 0
@@ -12825,17 +12786,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
     type: 2}
   m_PrefabInternal: {fileID: 640334416}
---- !u!114 &640334419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 640334417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0262089e3f1c50d46b8f3ab37f5309c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &642412586
 GameObject:
   m_ObjectHideFlags: 0
@@ -13088,6 +13038,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1805436913}
+    - target: {fileID: 1848945557469564, guid: bfc63ace28a471842ab520ef4d488a0a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc63ace28a471842ab520ef4d488a0a, type: 2}
   m_IsPrefabAsset: 0
@@ -38473,7 +38427,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 524087
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

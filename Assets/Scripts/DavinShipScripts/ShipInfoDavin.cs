@@ -8,9 +8,9 @@ public class ShipInfoDavin : MonoBehaviour {
     private ShipMovementDavin moveCon;
     private ShipWeaponController weapCon;
     private ShipRepairController repairCon;
-    private GameObject pilot;
-    private GameObject gunner;
-    private GameObject fixer;
+    private GameObject pilot = null;
+    private GameObject gunner = null;
+    private GameObject fixer = null;
     private bool isDeflecting = false;
 
 
@@ -64,6 +64,14 @@ public class ShipInfoDavin : MonoBehaviour {
         return false;
     }
 
+    public bool hasPilot()
+    {
+        if (pilot != null)
+            return true;
+        else
+            return false;
+    }
+
     public bool SetFixer(GameObject player)
     {
         if(fixer == null)
@@ -82,6 +90,14 @@ public class ShipInfoDavin : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public bool hasFixer()
+    {
+        if (fixer != null)
+            return true;
+        else
+            return false;
     }
 
     public bool SetGunner(GameObject player)
@@ -104,6 +120,14 @@ public class ShipInfoDavin : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public bool hasGunner()
+    {
+        if (gunner != null)
+            return true;
+        else
+            return false;
     }
 
     public void freezePlayer(GameObject player)

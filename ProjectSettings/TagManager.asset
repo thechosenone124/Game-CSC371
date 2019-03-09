@@ -18,6 +18,9 @@ TagManager:
   - Boss
   - Pickup
   - SpaceStation
+  - CockpitControls
+  - WeaponControls
+  - EngineStation
   layers:
   - Default
   - TransparentFX
@@ -38,7 +41,7 @@ TagManager:
   - Room
   - GunModule
   - Pickups
-  - 
+  - PlayerToolTips
   - 
   - 
   - 
