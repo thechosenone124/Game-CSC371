@@ -24,7 +24,7 @@ public class AddModule : MonoBehaviour {
 				tog = !tog;
 			}
 		}*/
-		if(other.CompareTag("Cockpit") && (Input.GetButtonDown("J1X") || Input.GetButtonDown("J2X"))){
+		if(other.CompareTag("EngineRoom") && (Input.GetButtonDown("J1X") || Input.GetButtonDown("J2X"))){
 			GameController.instance.setHealth(100);
 			GameController.instance.UpdateHealthBar();
 			GameController.instance.EnableUpgradeMenu();
