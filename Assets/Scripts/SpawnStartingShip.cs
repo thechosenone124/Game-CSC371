@@ -37,7 +37,8 @@ public class SpawnStartingShip : MonoBehaviour {
 		shipLayout[2,3] = (int)GameController.ItemTypes.WEAPONSROOM;
 		shipLayout[3,3] = (int)GameController.ItemTypes.NOAHGUN;
 		shipLayout[2,2] = (int)GameController.ItemTypes.COCKPIT;
-		BuildShip();
+        shipLayout[1, 3] = (int)GameController.ItemTypes.NOAHGUN;
+        BuildShip();
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
