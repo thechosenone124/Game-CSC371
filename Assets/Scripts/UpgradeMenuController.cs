@@ -15,6 +15,7 @@ public class UpgradeMenuController : MonoBehaviour {
     public GameObject InventoryTextPrefab;
     public EventSystem eventSystem;
     public Sprite[] moduleSprites;
+    private AudioSource audio;
 
     private SpawnStartingShip shipData;
     private int[,] shipSample;
@@ -26,6 +27,7 @@ public class UpgradeMenuController : MonoBehaviour {
     // Use this for initialization
     void Awake ()
     {
+        audio = GetComponentInChildren<AudioSource>(); //Audio source must be in child
         shipData = GameObject.Find("BuildController").GetComponent<SpawnStartingShip>();
         buttonGrid = new GameObject[5, 5];
         inventory = GameObject.Find("GameController").GetComponent<Inventory>();
@@ -105,18 +107,13 @@ public class UpgradeMenuController : MonoBehaviour {
         {
             for (int i = 0; i < 5; i++)
             {
-                if (selectedModule < 0)
-                    buttonGrid[i, j].GetComponent<Button>().interactable = shipData.ValidRemoval(i, j);
+                if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i, j))
+                {
+                    buttonGrid[i, j].GetComponent<Button>().interactable = true;
+                }
                 else
                 {
-                    if (shipData.ValidPlacement(i, j) && shipData.ValidRemoval(i, j))
-                    {
-                        buttonGrid[i, j].GetComponent<Button>().interactable = true;
-                    }
-                    else
-                    {
-                        buttonGrid[i, j].GetComponent<Button>().interactable = false;
-                    }
+                    buttonGrid[i, j].GetComponent<Button>().interactable = false;
                 }
             }
         }
@@ -158,6 +155,7 @@ public class UpgradeMenuController : MonoBehaviour {
     public void addModule(int modType)
     {
         selectedModule = modType;
+        audio.Play();
         //Remove artifacts of animation
         foreach (GameObject g in moduleSelectButtons)
         {
