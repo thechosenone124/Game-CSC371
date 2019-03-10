@@ -21,6 +21,8 @@ TagManager:
   - CockpitControls
   - WeaponControls
   - EngineStation
+  - EnemyMissile
+  - EnemyPlasma
   layers:
   - Default
   - TransparentFX

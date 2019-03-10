@@ -5,8 +5,6 @@ using UnityEngine;
 public class AddModule : MonoBehaviour {
 	private const int NOAHGUN = 5;
 	private bool partSpawned = false;
-
-	public GameObject ShipConfigurer;
 	private GameObject players;
 	private GameObject player1;
 	private GameObject player2;
@@ -30,7 +28,7 @@ public class AddModule : MonoBehaviour {
 			GameController.instance.EnableUpgradeMenu();
 			GameObject.Find("Ship").transform.rotation = Quaternion.identity;
 			GameObject.Find("Ship").GetComponent<ShipMovementDavin>().velocity = Vector3.zero;
-            GameController.instance.State = (int)GameController.GameStates.MODIFYINGSHIP;
+            GameController.instance.SetStateToModifyingShip();
 
 			players = GameObject.Find("Players");
 			player1 = players.transform.GetChild(0).gameObject;
@@ -44,13 +42,21 @@ public class AddModule : MonoBehaviour {
 			{
 				player1.GetComponent<PlayerInputContainer>().isOperatingStation = false;
 			}
-			if (ship.GetComponent<ShipInfoDavin>().RemoveGunner(player2))
+			if (ship.GetComponent<ShipInfoDavin>().RemoveFixer(player1))
 			{
 				player1.GetComponent<PlayerInputContainer>().isOperatingStation = false;
 			}
+			if (ship.GetComponent<ShipInfoDavin>().RemoveGunner(player2))
+			{
+				player2.GetComponent<PlayerInputContainer>().isOperatingStation = false;
+			}
 			if (ship.GetComponent<ShipInfoDavin>().RemovePilot(player2))
 			{
-				player1.GetComponent<PlayerInputContainer>().isOperatingStation = false;
+				player2.GetComponent<PlayerInputContainer>().isOperatingStation = false;
+			}
+			if (ship.GetComponent<ShipInfoDavin>().RemoveFixer(player2))
+			{
+				player2.GetComponent<PlayerInputContainer>().isOperatingStation = false;
 			}
 			player1.GetComponent<CameraHolder>().playerCamera.SetActive(false);
 			player2.GetComponent<CameraHolder>().playerCamera.SetActive(false);

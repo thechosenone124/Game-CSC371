@@ -73,8 +73,6 @@ public class ShipMovementDavin : MonoBehaviour {
 
     public void MoveShip(PlayerInputContainer pic)
     {
-        Debug.Log(GameController.instance.boostBroken);
-        Debug.Log("Time: " + Time.time);
         if (pic.isOperatingStation && !isDeflecting)
         {
             if (pic.GetRTButton() == 1 && !GameController.instance.boostBroken)

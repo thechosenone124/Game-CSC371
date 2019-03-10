@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 8
-  Radius: 40
+  Radius: 80
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
   RotateSpeed: 1

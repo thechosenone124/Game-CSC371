@@ -22,5 +22,15 @@ public class CollisionCalculations : MonoBehaviour {
             Destroy(collision.gameObject);
             GameController.instance.SendMessage("TakeDamage", 3);
         }
+        if (collision.gameObject.CompareTag("EnemyMissile"))
+        {
+            Destroy(collision.gameObject);
+            GameController.instance.SendMessage("TakeDamage", 10);
+        }
+        if (collision.gameObject.CompareTag("EnemyPlasma"))
+        {
+            Destroy(collision.gameObject);
+            GameController.instance.SendMessage("TakeDamage", 5);
+        }
     }
 }

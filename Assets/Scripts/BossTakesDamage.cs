@@ -9,6 +9,7 @@ public class BossTakesDamage : MonoBehaviour
    private bool gotHit = false;
    public int enemyHealth = 200;
    private float damageTime = 0;
+   public float redTime;
    void Start()
    {
 
@@ -21,7 +22,7 @@ public class BossTakesDamage : MonoBehaviour
       {
          enemyHealth -= 1;
          gotHit = false;
-         damageTime += .1f;
+         damageTime += redTime;
          gameObject.GetComponent<SpriteRenderer>().color = Color.red;
       }
       if (damageTime > 0)
