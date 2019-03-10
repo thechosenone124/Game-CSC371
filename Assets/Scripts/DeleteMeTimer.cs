@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DeleteMeTimer : MonoBehaviour {
 	private float timer = 0; 
-	
+	public float timeTilDeletion;
 	void Update () {
 		timer += Time.deltaTime;
-		if(timer >= 1.5f){
+		if(timer >= timeTilDeletion){
 			Destroy(gameObject);
 			timer = 0;
 		}

@@ -6,10 +6,14 @@ public class TakesDamage : MonoBehaviour {
 
 	// Use this for initialization
 	private bool gotHit = false;
-	public int enemyHealth = 5;
+	public int enemyHealth;
 	private float damageTime = 0;
+
+    private LootDrop loot;
+    private MakeBarriersInvulnerable barrier;
 	void Start () {
-		
+		loot = GetComponent<LootDrop>();
+        barrier = GetComponent<MakeBarriersInvulnerable>();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +26,12 @@ public class TakesDamage : MonoBehaviour {
             //SendMessage("IncreaseLayerIndex");
         }
         if(enemyHealth == 0){
+            if(loot != null){
+                loot.DropLoot();
+            }
+            if(barrier != null){
+                barrier.WeakenBarrier();
+            }
             Destroy(gameObject);
         }
 		if(damageTime > 0){
@@ -37,5 +47,9 @@ public class TakesDamage : MonoBehaviour {
         {
             gotHit = true;
         }
+    }
+
+    public int GetCurrentHealth(){
+        return enemyHealth;
     }
 }

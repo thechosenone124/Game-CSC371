@@ -40,12 +40,34 @@ public class GameController : MonoBehaviour
     public bool boostBroken;
     private float timeToBreak;
 
+    private bool tutorialBossDefeated = false;
+    private bool boss1Defeated = false;
+    private bool boss2Defeated = false;
+    private bool boss3Defeated = false;
+    private bool boss4Defeated = false;
+
     //shield
     public float maxShield = 100f;
     public Image currentShieldBar;
     public Text shieldRatioText;
     private float currentShield;
     public bool shieldBroken = false;
+
+    private ShipInfoDavin shipInfo;
+
+    public Text tutorialText;
+    private int tutorialTextNumber = 0;
+    public bool isTutorial;
+
+    private int BarrierDestroyed = 0;
+
+    private int changedState;
+
+    private int inventoryCount = 0;
+
+    public GameObject capitolShip;
+
+    public GameObject AsteroidBarrier;
 
     void Awake()
    {
@@ -75,12 +97,23 @@ public class GameController : MonoBehaviour
 
         //game state text initialization
         gameStateText.text = "";
+
+        shipInfo = GameObject.Find("Ship").GetComponent<ShipInfoDavin>();
    }
 
    // Update is called once per frame
    void Update()
    {
+       if(isTutorial){
+            TutorialState();
+            changedState = State;
+            if(tutorialBossDefeated == true){
+                capitolShip.SetActive(true);
+                AsteroidBarrier.SetActive(true);
+                AsteroidBarrier.transform.GetChild(1).GetComponent<DestructableBarrier>().barrierHealth = 1000000;
 
+            }
+       }
    }
 
    //Health manipulation
@@ -191,7 +224,7 @@ public class GameController : MonoBehaviour
    }
 
    public void DisableUpgradeMenu(){
-      UpgradeMenu.SetActive(false);
+       UpgradeMenu.SetActive(false);
    }
 
    public void EnableUpgradeMenu(){
@@ -203,15 +236,102 @@ public class GameController : MonoBehaviour
     {
         float timeToBreak;
         timeToBreak = Random.Range(3.5f, 7.0f);
-        Debug.Log(timeToBreak);
         return timeToBreak;       
     }
 
     public float getTimeToBreak()
     {
-        return timeToBreak;
+        return CalculateRandomChance();
     }
 
     public void SetStateToFreeRoam()      { State = (int)GameStates.FREEROAM;      }
     public void SetStateToModifyingShip() { State = (int)GameStates.MODIFYINGSHIP; }
+
+    private void AdvanceText(){
+        if(tutorialTextNumber == 0){
+            tutorialText.text = "The cockpit controls the ships movement, use the left stick to fly the ship and right trigger to boost. "+
+                                "The weapons station controls the guns, use the left stick to aim and right trigger to fire. "+
+                                "The engine room must be repaired if the boost breaks, this is done by interacting with it and holding right trigger until boost is fixed.";
+        }
+        else if(tutorialTextNumber == 1){
+            tutorialText.text = "There are Federation scout ships ahead. Destroy them with your guns! When an enemy is destroyed there is a chance it will drop a new ship component. "+
+                                "You can dodge enemy fire by moving around and careful use of the boost.";
+        }
+        else if(tutorialTextNumber == 2){
+            tutorialText.text = "Good job! You got a new ship component. Continue onward!";
+        }
+        else if(tutorialTextNumber == 3){
+            tutorialText.text =  "If you fly to a space station and hit \"X\" you will open the ship upgrade menu.";
+        }
+        else if(tutorialTextNumber == 4){
+            tutorialText.text = "This is the upgrade menu for the ship. Select a component from the menu that you have picked up from looting. "+
+                                "Find a valid spot in the menu to place the item and hit \"A\" to place the item. "+
+                                "When finished select the finish upgrade button.";
+        }
+        else if(tutorialTextNumber == 5){
+            tutorialText.text = "Oh no! A Federation flag ship is approaching from above! It will destroy the space station! You must try to defend it!";
+        }
+        else if(tutorialTextNumber == 6){
+            tutorialText.text = "You did it! You destroyed the flag ship! But wait something is coming on the scanners!";
+        }
+        else if (tutorialTextNumber > 6){
+            tutorialText.text = "";
+        }
+    }
+    private void TutorialState(){
+        if((shipInfo.hasFixer() || shipInfo.hasGunner() || shipInfo.hasPilot()) && tutorialTextNumber == 0){
+            AdvanceText();
+            tutorialTextNumber++;
+
+        }
+        else if(BarrierDestroyed == 1 && tutorialTextNumber == 1){
+            AdvanceText();
+            tutorialTextNumber++;
+
+        }
+        else if(inventoryCount == 1 && tutorialTextNumber == 2){
+            AdvanceText();
+            tutorialTextNumber++;
+
+        }
+        else if(BarrierDestroyed == 2 && tutorialTextNumber == 3){
+            AdvanceText();
+            tutorialTextNumber++;
+        }
+        else if(State == (int)GameStates.MODIFYINGSHIP && tutorialTextNumber == 4){
+            AdvanceText();
+            tutorialTextNumber++;
+        }
+        else if(changedState == (int)GameStates.MODIFYINGSHIP && State == (int)GameStates.FREEROAM && tutorialTextNumber == 5){
+            AdvanceText();
+            tutorialTextNumber++;
+        }
+        else if(tutorialBossDefeated && tutorialTextNumber == 6){
+            AdvanceText();
+            tutorialTextNumber++;
+        }
+    }
+
+    public void DestroyBarrier(){
+        BarrierDestroyed++;
+    }
+
+    public void AddToInventory(){
+        inventoryCount++;
+    }
+    public void TutorialBossIsDead(){
+        tutorialBossDefeated = true;
+    }
+    public void Boss1IsDead(){
+        boss1Defeated = true;
+    }
+    public void Boss2IsDead(){
+        boss2Defeated = true;
+    }
+    public void Boss3IsDead(){
+        boss3Defeated = true;
+    }
+    public void Boss4IsDead(){
+        boss4Defeated = true;
+    }
 }

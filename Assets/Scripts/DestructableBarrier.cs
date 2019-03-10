@@ -14,6 +14,7 @@ public class DestructableBarrier : MonoBehaviour {
 		if(gotHit){
 			barrierHealth--;
 			if(barrierHealth == 0){
+				GameController.instance.DestroyBarrier();
 				transform.parent.gameObject.SetActive(false);
 			}
 			
@@ -22,12 +23,14 @@ public class DestructableBarrier : MonoBehaviour {
 			}
 			
 			gotHit = false;
-			damageTime += whiteTime;
+			if(barrierHealth < 20){
+				damageTime += whiteTime;
+			}
 		}
 		if(damageTime > 0){
 			damageTime -= Time.deltaTime;
 		}
-		if(damageTime < 0){
+		if(damageTime <= 0){
 			for(int i = 0; i < numOfAsteroids; i++){
 				transform.parent.GetChild(0).GetChild(i).gameObject.GetComponent<SpriteRenderer>().color = new Color(.45f,.45f,.45f,1f);
 			}

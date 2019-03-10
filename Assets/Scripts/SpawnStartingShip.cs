@@ -37,7 +37,12 @@ public class SpawnStartingShip : MonoBehaviour {
 		shipLayout[2,3] = (int)GameController.ItemTypes.WEAPONSROOM;
 		shipLayout[3,3] = (int)GameController.ItemTypes.NOAHGUN;
 		shipLayout[2,2] = (int)GameController.ItemTypes.COCKPIT;
-		BuildShip();
+        shipLayout[1,3] = (int)GameController.ItemTypes.NOAHGUN;
+        SpawnModuleAtLocation(2,4,shipLayout[2,4]);
+		SpawnModuleAtLocation(2,3,shipLayout[2,3]);
+		SpawnModuleAtLocation(3,3,shipLayout[3,3]);
+		SpawnModuleAtLocation(2,2,shipLayout[2,2]);
+		SpawnModuleAtLocation(1,3,shipLayout[1,3]);
 	}
 	public void SpawnModuleAtLocation(int x, int y, int moduleType){
 		int shipSize = rooms.GetLength(0);
@@ -181,6 +186,9 @@ public class SpawnStartingShip : MonoBehaviour {
     It check to see if any of its neighbors would be left without a valid neighbor if they were to disappear.
     And it check to make sure that it is the only neighbor of a the rooms around it. */
 	public bool ValidRemoval(int x, int y){
+		if(x == 2 && y == 4){
+			return false;
+		}
         if((y+1) != rooms.GetLength(1) && (HasNeighbors(x,y+1) & NOTONE) == 0 && shipLayout[x,y] != -1 && HasNeighbors(x,y+1) != 0 && shipLayout[x,y+1] != -1){
             return false;
         }

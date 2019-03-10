@@ -9,34 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1148599001648236}
+  m_RootGameObject: {fileID: 1688147458681718}
   m_IsPrefabAsset: 1
---- !u!1 &1148599001648236
+--- !u!1 &1118381833465496
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4095455783882128}
-  - component: {fileID: 114083901002443102}
+  - component: {fileID: 4952706413555590}
+  - component: {fileID: 114085274952375540}
   m_Layer: 0
-  m_Name: WeaponAim
+  m_Name: AimPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1764309765069676
+--- !u!1 &1162965589566248
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4131865608722560}
-  - component: {fileID: 212227943012701670}
-  - component: {fileID: 114065346001266120}
+  - component: {fileID: 4549196436502548}
+  - component: {fileID: 212658849147022590}
+  - component: {fileID: 114839600950685438}
   m_Layer: 0
   m_Name: Reticle
   m_TagString: Untagged
@@ -44,68 +44,108 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4095455783882128
+--- !u!1 &1688147458681718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4494715688211396}
+  - component: {fileID: 114214430957620732}
+  m_Layer: 0
+  m_Name: WeaponAimCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4494715688211396
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148599001648236}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1688147458681718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4131865608722560}
+  - {fileID: 4549196436502548}
+  - {fileID: 4952706413555590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4131865608722560
+--- !u!4 &4549196436502548
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764309765069676}
+  m_GameObject: {fileID: 1162965589566248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 4095455783882128}
+  m_Father: {fileID: 4494715688211396}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114065346001266120
+--- !u!4 &4952706413555590
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118381833465496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4494715688211396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114085274952375540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764309765069676}
+  m_GameObject: {fileID: 1118381833465496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca775568185dd47448101c9a709ea044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reticleDistance: 2.8
-  reticleOrigin: {fileID: 1148599001648236}
---- !u!114 &114083901002443102
+  reticleOrigin: {fileID: 1688147458681718}
+  reticleDistance: 100
+--- !u!114 &114214430957620732
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148599001648236}
+  m_GameObject: {fileID: 1688147458681718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d8af0b13cf6a56438b12a7f40de899d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d9600b10408741419783a6bc3618eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reticleDeadZone: 0.2
-  reticleRotationSpeed: 5
-  inputXAxis: RightJoystickX
-  inputYAxis: RightJoystickY
---- !u!212 &212227943012701670
+  ship: {fileID: 0}
+--- !u!114 &114839600950685438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162965589566248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca775568185dd47448101c9a709ea044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticleOrigin: {fileID: 1688147458681718}
+  reticleDistance: 40
+--- !u!212 &212658849147022590
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764309765069676}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1162965589566248}
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

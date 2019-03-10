@@ -62,7 +62,6 @@ public class ShipWeaponController : MonoBehaviour {
     }
     
     public void RemoveGun(GameObject gun){
-        Debug.Log(guns.Count);
         guns.Remove(gun.transform.GetChild(1).gameObject);
     }
 }
