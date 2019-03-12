@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPercentage: 100
+  spawnPercentage: 25
   pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!212 &212374620370146432
 SpriteRenderer:
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1380229947
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9486cb6e2181b0b48b07930254c3c15f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

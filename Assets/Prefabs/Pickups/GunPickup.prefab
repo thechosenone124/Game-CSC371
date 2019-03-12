@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f5768cdca4a2146acabd535f5fb65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 6
   rotationOverTime: 100
   sizeOverTime: 0.98
   alphaOverTime: 1.115

@@ -117,6 +117,7 @@ public class UpgradeMenuController : MonoBehaviour {
     }
     void InventoryTextUpdate()
     {
+        numModules = inventory.GetInventory();
         for (int i = 0; i < InventoryTextObjects.Length - 2; i++)
         {
             InventoryTextObjects[i].GetComponent<Text>().text = "" + numModules[i];
@@ -205,6 +206,7 @@ public class UpgradeMenuController : MonoBehaviour {
             GameObject.Find("Player 2").GetComponent<CameraHolder>().playerCamera.SetActive(true);
             GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
             GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
+            GameObject.Find("Ship").GetComponent<Rigidbody2D>().freezeRotation = false; // unfreeze rotation
         }
         else
         {

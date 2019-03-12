@@ -27,7 +27,8 @@ public class AddModule : MonoBehaviour {
 			GameController.instance.UpdateHealthBar();
 			GameController.instance.EnableUpgradeMenu();
 			GameObject.Find("Ship").transform.rotation = Quaternion.identity;
-			GameObject.Find("Ship").GetComponent<ShipMovementDavin>().velocity = Vector3.zero;
+            GameObject.Find("Ship").GetComponent<Rigidbody2D>().freezeRotation = true;
+            GameObject.Find("Ship").GetComponent<ShipMovementDavin>().velocity = Vector3.zero;
             GameController.instance.SetStateToModifyingShip();
 
 			players = GameObject.Find("Players");
