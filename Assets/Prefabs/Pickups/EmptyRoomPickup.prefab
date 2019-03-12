@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114185180889836160}
   - component: {fileID: 198646119843619110}
   - component: {fileID: 199653292811915928}
+  - component: {fileID: 58306610999522802}
   m_Layer: 18
   m_Name: EmptyRoomPickup
   m_TagString: Pickup
@@ -37,12 +38,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686658299335348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.01, y: 3.62, z: 0}
+  m_LocalPosition: {x: 25.206268, y: 0.044323444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58306610999522802
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686658299335348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.56
 --- !u!114 &114185180889836160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +326,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4634,7 +4650,7 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 3
-  m_MinParticleSize: 0.01
+  m_MinParticleSize: 0.08
   m_MaxParticleSize: 0.2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
