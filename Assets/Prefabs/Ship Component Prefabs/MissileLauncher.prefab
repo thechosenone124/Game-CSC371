@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4399385785444864}
   - component: {fileID: 212057102831562296}
-  - component: {fileID: 95525390662312318}
   - component: {fileID: 114161135813363374}
   m_Layer: 9
   m_Name: MissileLaunch
@@ -264,24 +263,6 @@ PolygonCollider2D:
       - {x: 0.42999998, y: -1.39}
       - {x: 0.65, y: -1.39}
       - {x: 0.69, y: -1.3299999}
---- !u!95 &95525390662312318
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157804378453706}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c9c22d02f206e54d941116b5927daac, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114059237208991444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5452364d6beb8fa46b280cb33054a605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootFrequency: 0.25
+  shootFrequency: 1
   fireButton: RT
   projectilesFiredPerPress: 1
   projectile: {fileID: 1466842927848642, guid: c490c5d89618ea54ba1819f577c84170, type: 2}
