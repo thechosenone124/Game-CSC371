@@ -3,7 +3,14 @@ guid: 23299fb9e77fbf941aacef6396b42c72
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - shipGrid: {instanceID: 0}
+  - InventoryTextContainer: {instanceID: 0}
+  - ImageContainer: {instanceID: 0}
+  - buttonPrefab: {instanceID: 0}
+  - InventoryTextPrefab: {instanceID: 0}
+  - eventSystem: {instanceID: 0}
+  - press: {fileID: 8300000, guid: 734d73f8e712a4c408d287cd48843d8c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
