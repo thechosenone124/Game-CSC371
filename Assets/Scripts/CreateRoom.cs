@@ -17,7 +17,7 @@ public class CreateRoom : MonoBehaviour {
 
 	public void BuildRoom(GameObject module, int neighbors, int moduleType){
 		if(hasChild == 1){
-			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN){
+			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN || moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
 				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
 			}
 			Destroy(transform.GetChild(0).gameObject);
@@ -41,7 +41,7 @@ public class CreateRoom : MonoBehaviour {
 
 	public void RemoveRoom(){
 		if(hasChild == 1){
-			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN){
+			if(moduleType == (int)GameController.ItemTypes.GUN || moduleType == (int)GameController.ItemTypes.NOAHGUN || moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
 				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
 			}
 			Destroy(transform.GetChild(0).gameObject);
@@ -73,6 +73,8 @@ public class CreateRoom : MonoBehaviour {
 				break;
 			case (int)GameController.ItemTypes.NOAHGUN:
 				break;
+			case (int)GameController.ItemTypes.MISSILELAUNCHER:
+				break;
 		}
 	}
 
@@ -98,6 +100,10 @@ public class CreateRoom : MonoBehaviour {
 				child.GetComponent<RoomConfigurer>().Doors(neighbors);
 				break;
 			case (int)GameController.ItemTypes.NOAHGUN:
+				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
+				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
+				break;
+			case (int)GameController.ItemTypes.MISSILELAUNCHER:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;

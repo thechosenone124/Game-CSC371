@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
                             ENGINEROOM,
                             NOAHGUN,
                             FOURWAYROOM,
+                            MISSILELAUNCHER,
                             GUN,
                             NUMBEROFTYPES }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
 

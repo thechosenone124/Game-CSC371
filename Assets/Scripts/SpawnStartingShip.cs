@@ -37,7 +37,7 @@ public class SpawnStartingShip : MonoBehaviour {
 		shipLayout[2,3] = (int)GameController.ItemTypes.WEAPONSROOM;
 		shipLayout[3,3] = (int)GameController.ItemTypes.NOAHGUN;
 		shipLayout[2,2] = (int)GameController.ItemTypes.COCKPIT;
-        shipLayout[1,3] = (int)GameController.ItemTypes.NOAHGUN;
+        shipLayout[1,3] = (int)GameController.ItemTypes.MISSILELAUNCHER;
         SpawnModuleAtLocation(2,4,shipLayout[2,4]);
 		SpawnModuleAtLocation(2,3,shipLayout[2,3]);
 		SpawnModuleAtLocation(3,3,shipLayout[3,3]);
@@ -90,6 +90,9 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
 			return false;
 		}
+		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
+			return false;
+		}
 		else{
 			return true;
 		}
@@ -105,6 +108,9 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
+			return false;
+		}
+		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
 			return false;
 		}
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.ENGINEROOM){
@@ -130,6 +136,9 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
 			return false;
 		}
+		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
+			return false;
+		}
 		else{
 			return true;
 		}
@@ -148,6 +157,9 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.NOAHGUN){
+			return false;
+		}
+		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
 			return false;
 		}
 		else{
