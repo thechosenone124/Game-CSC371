@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1666035164382982}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -1879.6646, y: 903.85046, z: 0}
+  m_LocalPosition: {x: -1838.7185, y: 887.0306, z: 0}
   m_LocalScale: {x: 20, y: -20, z: 1}
   m_Children:
   - {fileID: 4191344651446312}
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b6f69357d053f498b1bf5302a0e313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponPoints: {fileID: 0}
+  WeaponPoints: {fileID: 1513518453188572}
 --- !u!114 &114599210370446268
 MonoBehaviour:
   m_ObjectHideFlags: 1
