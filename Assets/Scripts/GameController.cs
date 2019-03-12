@@ -154,6 +154,16 @@ public class GameController : MonoBehaviour
         isBoosting = true;
     }
 
+    private void RegenerateShield(float shieldAmt)
+    {
+        currentShield += shieldAmt;
+        if (currentShield >= maxShield)
+        {
+            currentShield = maxShield;
+        }
+        UpdateShield();
+    }
+
     private void RegenerateBoost(float boostAmt)
     {
         currentBoost += boostAmt;

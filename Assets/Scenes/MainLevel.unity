@@ -992,6 +992,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 1445337941}
+--- !u!1001 &360792111
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1838.7185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 887.0306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434394479659886, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599210370446268, guid: 27d52c72f65184bd0a42b84451b681de,
+        type: 2}
+      propertyPath: path.Array.data[0]
+      value: 
+      objectReference: {fileID: 2006689519}
+    - target: {fileID: 114599210370446268, guid: 27d52c72f65184bd0a42b84451b681de,
+        type: 2}
+      propertyPath: path.Array.data[1]
+      value: 
+      objectReference: {fileID: 988209597}
+    - target: {fileID: 114599210370446268, guid: 27d52c72f65184bd0a42b84451b681de,
+        type: 2}
+      propertyPath: path.Array.data[2]
+      value: 
+      objectReference: {fileID: 1919395319}
+    - target: {fileID: 114599210370446268, guid: 27d52c72f65184bd0a42b84451b681de,
+        type: 2}
+      propertyPath: path.Array.data[3]
+      value: 
+      objectReference: {fileID: 1353851800}
+    - target: {fileID: 60195965193449180, guid: 27d52c72f65184bd0a42b84451b681de,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27d52c72f65184bd0a42b84451b681de, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &360792112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666035164382982, guid: 27d52c72f65184bd0a42b84451b681de,
+    type: 2}
+  m_PrefabInternal: {fileID: 360792111}
 --- !u!1001 &376806946
 Prefab:
   m_ObjectHideFlags: 0
@@ -1001,11 +1073,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -1491
       objectReference: {fileID: 0}
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 697
       objectReference: {fileID: 0}
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2354,6 +2426,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4872706868041190, guid: 589ca5e9a2c452b4dac6e270ce839910,
     type: 2}
   m_PrefabInternal: {fileID: 691264433}
+--- !u!1 &773169703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1157635689861700, guid: 8f1e781c36aa65f4aab6717e1587fc55,
+    type: 2}
+  m_PrefabInternal: {fileID: 1628781461}
+--- !u!114 &773169704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773169703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f048cd1ed39ac248b6af87d9ce55257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnable: {fileID: 360792112}
+  triggerRadius: 150
+  spawnRadiusRatio: 0.5
 --- !u!4 &788533097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
@@ -2964,6 +3055,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &988209597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988209598}
+  m_Layer: 0
+  m_Name: StarTrekBossPath1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988209598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988209597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1775, y: 846, z: 8.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1437798511}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015098947
 Prefab:
   m_ObjectHideFlags: 0
@@ -3776,6 +3895,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1243451648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1730872075460484, guid: 2adb7b4dfd56cf34a9217f6cbf1de170,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923812172}
+--- !u!114 &1243451649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243451648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cf7ac848d36a4499909c709b414f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfEnemies: 1
+  spawnable: {fileID: 1470611205402096, guid: f528d3e9c0189ca4bb48dea53b26660b, type: 2}
+  triggerRadius: 150
+  spawnRadiusRatio: 0.5
 --- !u!1001 &1272035054
 Prefab:
   m_ObjectHideFlags: 0
@@ -4015,6 +4154,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 640246414}
+--- !u!1 &1353851800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353851801}
+  m_Layer: 0
+  m_Name: StarTrekBossPath1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353851801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353851800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1942, y: 812, z: 8.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1437798511}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1397925087
 Prefab:
   m_ObjectHideFlags: 0
@@ -4082,11 +4249,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 970150263}
---- !u!1 &1442747496 stripped
+--- !u!1 &1437798510
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1587512851438654, guid: f3e7b32f344ca444d93613ab3c67902c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1478113254}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437798511}
+  m_Layer: 0
+  m_Name: StarTrekBossPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437798511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437798510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2006689520}
+  - {fileID: 988209598}
+  - {fileID: 1919395320}
+  - {fileID: 1353851801}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1445337941
 Prefab:
   m_ObjectHideFlags: 0
@@ -4769,6 +4963,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 1597787934}
+--- !u!1001 &1628781461
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1813.741
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 855.66174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55,
+        type: 2}
+      propertyPath: numberOfEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157635689861700, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+      propertyPath: m_Name
+      value: StarTrekBossSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55,
+        type: 2}
+      propertyPath: spawnable
+      value: 
+      objectReference: {fileID: 360792112}
+    m_RemovedComponents:
+    - {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1644202599
 Prefab:
   m_ObjectHideFlags: 0
@@ -6119,7 +6370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4937400350197396, guid: f01805ed73531734ab70861d80fcff2e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01805ed73531734ab70861d80fcff2e, type: 2}
@@ -6246,7 +6497,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899550254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -8, z: -10}
+  m_LocalPosition: {x: -1491, y: 697, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2025490534}
@@ -6258,6 +6509,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 63490304}
+--- !u!1 &1919395319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919395320}
+  m_Layer: 0
+  m_Name: StarTrekBossPath1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1919395320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919395319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1834, y: 797, z: 8.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1437798511}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920165455
 Prefab:
   m_ObjectHideFlags: 0
@@ -6319,60 +6598,41 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1870.9452
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalPosition.y
       value: -862.5152
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    - target: {fileID: 4717464280143116, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
       propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157635689861700, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
-      propertyPath: m_Name
-      value: BossSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55,
-        type: 2}
-      propertyPath: spawnable
-      value: 
-      objectReference: {fileID: 1470611205402096, guid: f528d3e9c0189ca4bb48dea53b26660b,
-        type: 2}
-    - target: {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55,
-        type: 2}
-      propertyPath: numberOfEnemies
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114854206724830298, guid: 8f1e781c36aa65f4aab6717e1587fc55,
-        type: 2}
-      propertyPath: triggerRadius
-      value: 200
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
+    m_RemovedComponents:
+    - {fileID: 114813389455974426, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 2adb7b4dfd56cf34a9217f6cbf1de170, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1929953489 stripped
 Transform:
@@ -6587,6 +6847,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 1195646314}
+--- !u!1 &2006689519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006689520}
+  m_Layer: 0
+  m_Name: StarTrekBossPath1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2006689520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006689519}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1800, y: 919, z: 8.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1437798511}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2025490533
 GameObject:
   m_ObjectHideFlags: 0
