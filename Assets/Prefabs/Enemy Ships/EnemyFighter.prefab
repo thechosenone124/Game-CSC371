@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPercentage: 10
+  spawnPercentage: 1
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!212 &212038921049746970
 SpriteRenderer:

@@ -74,8 +74,8 @@ MonoBehaviour:
   rotationOverTime: 100
   sizeOverTime: 0.98
   alphaOverTime: 1.115
-  minSize: 1
-  maxSize: 2
+  minSize: 2
+  maxSize: 4
   minAlpha: 0.625
   maxAlpha: 0.859
 --- !u!198 &198384856205156286

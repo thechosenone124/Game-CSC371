@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114682358911783204}
   - component: {fileID: 60195965193449180}
   - component: {fileID: 114491932197545600}
+  - component: {fileID: 114437310416077358}
   m_Layer: 0
   m_Name: StarTrekBoss
   m_TagString: Boss
@@ -143,7 +144,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -373,6 +374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1977772271130670, guid: 27980727a4c15de40a626c43fded7010, type: 2}
   shootFreq: 1
+--- !u!114 &114437310416077358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666035164382982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  pickup: {fileID: 1235105931701692, guid: 21221c86390fac54497864222f05ca62, type: 2}
 --- !u!114 &114491932197545600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,7 +468,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1380229947
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 0fd545654e99a46958c1bf069d443935, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
