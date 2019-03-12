@@ -99,6 +99,9 @@ public class Boss1 : MonoBehaviour
       {
          healthBar.SetActive(false);
          gameObject.SetActive(false);
+         if(GameController.instance.isTutorial){
+            GameController.instance.TutorialBossIsDead();
+         }
          GameController.instance.PlayerWins();
       }
    }

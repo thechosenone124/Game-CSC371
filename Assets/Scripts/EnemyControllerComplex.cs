@@ -13,7 +13,7 @@ public class EnemyControllerComplex : MonoBehaviour
     private Vector2 offset;
     private int flag = 1;
     private Vector2 heading;
-    public float Radius = 7f;
+    public float Radius = 20f;
     public float bulletFreq;
     public GameObject projectile;
     public float RotateSpeed = 5f;
