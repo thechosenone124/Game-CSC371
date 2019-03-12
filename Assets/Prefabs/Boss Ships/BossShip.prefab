@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 125
+  bossNumber: 1
+  numberOfLayers: 1
   redTime: 0.05
 --- !u!114 &114807352748922616
 MonoBehaviour:
