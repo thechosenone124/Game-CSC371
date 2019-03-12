@@ -72,6 +72,9 @@ TagManager:
   - name: Projectile
     uniqueID: 937074289
     locked: 0
+  - name: Space Station
+    uniqueID: 4143508989
+    locked: 0
   - name: Ship Background
     uniqueID: 235000981
     locked: 0

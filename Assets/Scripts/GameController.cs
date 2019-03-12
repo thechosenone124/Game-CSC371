@@ -22,8 +22,8 @@ public class GameController : MonoBehaviour
                             WEAPONSROOM,
                             ENGINEROOM,
                             NOAHGUN,
-                            FOURWAYROOM,
                             MISSILELAUNCHER,
+                            FOURWAYROOM,
                             GUN,
                             NUMBEROFTYPES }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
 
@@ -152,6 +152,16 @@ public class GameController : MonoBehaviour
         }
         UpdateBoost();
         isBoosting = true;
+    }
+
+    private void RegenerateShield(float shieldAmt)
+    {
+        currentShield += shieldAmt;
+        if (currentShield >= maxShield)
+        {
+            currentShield = maxShield;
+        }
+        UpdateShield();
     }
 
     private void RegenerateBoost(float boostAmt)

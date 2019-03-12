@@ -9,44 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1157635689861700}
+  m_RootGameObject: {fileID: 1730872075460484}
   m_IsPrefabAsset: 1
---- !u!1 &1157635689861700
+--- !u!1 &1730872075460484
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4805593090135130}
-  - component: {fileID: 58378954538830252}
-  - component: {fileID: 114854206724830298}
+  - component: {fileID: 4717464280143116}
+  - component: {fileID: 58033199157481896}
+  - component: {fileID: 114813389455974426}
   m_Layer: 0
-  m_Name: ComplexEnemySpawner
+  m_Name: BossSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4805593090135130
+--- !u!4 &4717464280143116
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157635689861700}
+  m_GameObject: {fileID: 1730872075460484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1870.9452, y: -862.5152, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58378954538830252
+--- !u!58 &58033199157481896
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157635689861700}
+  m_GameObject: {fileID: 1730872075460484}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -56,17 +56,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 100
---- !u!114 &114854206724830298
+--- !u!114 &114813389455974426
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157635689861700}
+  m_GameObject: {fileID: 1730872075460484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1cf7ac848d36a4499909c709b414f67, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f048cd1ed39ac248b6af87d9ce55257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfEnemies: 3
-  spawnable: {fileID: 1332119849000982, guid: f88b28aed10d9f14f91a6aeff12ac4f0, type: 2}
-  triggerRadius: 100
+  spawnable: {fileID: 0}
+  triggerRadius: 0
+  spawnRadiusRatio: 0.5

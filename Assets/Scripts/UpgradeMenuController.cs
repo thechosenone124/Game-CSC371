@@ -113,13 +113,14 @@ public class UpgradeMenuController : MonoBehaviour {
         }
         shipGrid.SetActive(false);
         eventSystem.SetSelectedGameObject(moduleSelectButtons[0]);
+        pressSource.enabled = true;
     }
     void InventoryTextUpdate()
     {
         for (int i = 0; i < InventoryTextObjects.Length - 2; i++)
         {
             InventoryTextObjects[i].GetComponent<Text>().text = "" + numModules[i];
-            //moduleSelectButtons[i].GetComponent<Button>().interactable = numModules[i] > 0;
+            moduleSelectButtons[i].GetComponent<Button>().interactable = numModules[i] > 0;
         }
     }
     void disableUnreachable()
@@ -197,11 +198,17 @@ public class UpgradeMenuController : MonoBehaviour {
     
     public void commitUpgrade()
     {
-        //if (shipData.ValidShip())
-        GameController.instance.DisableUpgradeMenu();
-        GameObject.Find("Player 1").GetComponent<CameraHolder>().playerCamera.SetActive(true);
-		GameObject.Find("Player 2").GetComponent<CameraHolder>().playerCamera.SetActive(true);
-        GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
-        GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
+        if (inventory.GetInventory()[0] == 0)
+        {
+            GameController.instance.DisableUpgradeMenu();
+            GameObject.Find("Player 1").GetComponent<CameraHolder>().playerCamera.SetActive(true);
+            GameObject.Find("Player 2").GetComponent<CameraHolder>().playerCamera.SetActive(true);
+            GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(0).gameObject);
+            GameObject.Find("Ship").GetComponent<ShipInfoDavin>().unfreezePlayer(GameObject.Find("Players").transform.GetChild(1).gameObject);
+        }
+        else
+        {
+            //Tell player they need to add the cockpit before they can leave this menu
+        }
     }
 }

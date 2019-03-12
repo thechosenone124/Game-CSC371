@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour {
 
     public bool AddItem(int itemCode)
     {
+        Debug.Log("Inventory: Adding a " + ((GameController.ItemTypes)itemCode).ToString());
         if (itemCode >= (int)GameController.ItemTypes.NUMBEROFTYPES) return false; // if index of item type doesn't exist
         else if (itemCode == (int)GameController.ItemTypes.COCKPIT || itemCode == (int)GameController.ItemTypes.WEAPONSROOM || itemCode == (int)GameController.ItemTypes.ENGINEROOM) //cockpit, weaponsroom, and engineroom can only be 0 or 1
         {

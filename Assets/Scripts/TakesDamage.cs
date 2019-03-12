@@ -9,10 +9,10 @@ public class TakesDamage : MonoBehaviour {
 	public int enemyHealth;
 	private float damageTime = 0;
 
-    private LootDrop loot;
+    private PickupDropper dropper;
     private MakeBarriersInvulnerable barrier;
 	void Start () {
-		loot = GetComponent<LootDrop>();
+		dropper = GetComponent<PickupDropper>();
         barrier = GetComponent<MakeBarriersInvulnerable>();
 	}
 	
@@ -26,12 +26,9 @@ public class TakesDamage : MonoBehaviour {
             //SendMessage("IncreaseLayerIndex");
         }
         if(enemyHealth == 0){
-            if(loot != null){
-                loot.DropLoot();
-            }
-            if(barrier != null){
-                barrier.WeakenBarrier();
-            }
+            if (dropper != null) dropper.TrySpawnPickup();
+            if(barrier != null) barrier.WeakenBarrier();
+            
             Destroy(gameObject);
         }
 		if(damageTime > 0){
