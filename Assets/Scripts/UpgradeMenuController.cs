@@ -23,6 +23,8 @@ public class UpgradeMenuController : MonoBehaviour {
     private GameObject[] InventoryTextObjects;
     private int selectedModule;
     private Inventory inventory;
+    private AudioSource pressSource;
+    public AudioClip press;
   
     // Use this for initialization
     void Awake ()
@@ -54,13 +56,32 @@ public class UpgradeMenuController : MonoBehaviour {
         {
             int newI = i;
             moduleSelectButtons[i].GetComponent<Button>().onClick.AddListener(() => addModule(newI));
+            moduleSelectButtons[i].GetComponent<Button>().onClick.AddListener(() => PressSound());
         }
         moduleSelectButtons[moduleSelectButtons.Count - 2].GetComponent<Button>().onClick.AddListener(() => addModule(-1));
+        moduleSelectButtons[moduleSelectButtons.Count - 2].GetComponent<Button>().onClick.AddListener(() => PressSound());
         moduleSelectButtons[moduleSelectButtons.Count - 1].GetComponent<Button>().onClick.AddListener(() => commitUpgrade());
+        moduleSelectButtons[moduleSelectButtons.Count - 1].GetComponent<Button>().onClick.AddListener(() => PressSound());
 
         shipGrid.SetActive(false);
+        pressSource = AddAudio(press, 1.0f);
     }
 	
+    private AudioSource AddAudio(AudioClip clip, float vol)
+    {
+        AudioSource newAudio = gameObject.AddComponent<AudioSource>();
+        newAudio.clip = clip;
+        newAudio.loop = false;
+        newAudio.playOnAwake = false;
+        newAudio.volume = vol;
+        return newAudio;
+    }
+    
+    public void PressSound()
+    {
+        pressSource.PlayOneShot(press);
+    }
+    
 	public void ActivateUpgrade () {
 
         numModules = inventory.GetInventory();
