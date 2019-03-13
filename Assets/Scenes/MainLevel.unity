@@ -282,6 +282,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 1930869976}
+--- !u!1 &131800313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1843881135750048, guid: f3e7b32f344ca444d93613ab3c67902c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1478113254}
 --- !u!1001 &134652452
 Prefab:
   m_ObjectHideFlags: 0
@@ -1093,13 +1098,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114909561334142682, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: modules.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 28
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 771
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1208,6 +1218,12 @@ Prefab:
     - target: {fileID: 114909561334142682, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
         type: 2}
       propertyPath: modules.Array.data[5]
+      value: 
+      objectReference: {fileID: 1518560474312464, guid: 97e338f5508c8064fb2ccf7ae461bb94,
+        type: 2}
+    - target: {fileID: 114909561334142682, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
+        type: 2}
+      propertyPath: modules.Array.data[6]
       value: 
       objectReference: {fileID: 1509410745348424, guid: f122972832fec0848a7c24a66111771d,
         type: 2}
@@ -2920,7 +2936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4248725959488376, guid: f88b28aed10d9f14f91a6aeff12ac4f0, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f88b28aed10d9f14f91a6aeff12ac4f0, type: 2}
@@ -3909,17 +3925,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4601259140710356, guid: 5c6e4754ff8b19c4497d3e2193a27a8c,
     type: 2}
   m_PrefabInternal: {fileID: 376806946}
---- !u!114 &1198307066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1198307060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0262089e3f1c50d46b8f3ab37f5309c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1200371923
 Prefab:
   m_ObjectHideFlags: 0
@@ -4107,6 +4112,11 @@ MonoBehaviour:
   spawnable: {fileID: 1470611205402096, guid: f528d3e9c0189ca4bb48dea53b26660b, type: 2}
   triggerRadius: 150
   spawnRadiusRatio: 0.5
+--- !u!1 &1270431317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256499809137804, guid: f3e7b32f344ca444d93613ab3c67902c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1478113254}
 --- !u!1001 &1272035054
 Prefab:
   m_ObjectHideFlags: 0
@@ -4436,6 +4446,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1e781c36aa65f4aab6717e1587fc55, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1413010500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1654190139414626, guid: f3e7b32f344ca444d93613ab3c67902c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1478113254}
 --- !u!1 &1422659050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1016874118606642, guid: 590f1ee676eed374d943222dd40d914f,
@@ -4825,6 +4840,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSelectButtons.Array.size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 224999965871143900, guid: f3e7b32f344ca444d93613ab3c67902c,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -4915,21 +4940,58 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114959336062327824, guid: f3e7b32f344ca444d93613ab3c67902c,
-        type: 2}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 598617477}
     - target: {fileID: 114900472296000402, guid: f3e7b32f344ca444d93613ab3c67902c,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1946288487}
+    - target: {fileID: 114959336062327824, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 598617477}
     - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
         type: 2}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 598617477}
+    - target: {fileID: 114029456669833224, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: m_Text
+      value: Add Plasma Bay
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSelectButtons.Array.data[8]
+      value: 
+      objectReference: {fileID: 131800313}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSelectButtons.Array.data[7]
+      value: 
+      objectReference: {fileID: 1270431317}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSelectButtons.Array.data[6]
+      value: 
+      objectReference: {fileID: 1413010500}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSelectButtons.Array.data[5]
+      value: 
+      objectReference: {fileID: 1769965883}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: f1d9603f99913454a95a8830fd6fb27a,
+        type: 3}
+    - target: {fileID: 114763205969746096, guid: f3e7b32f344ca444d93613ab3c67902c,
+        type: 2}
+      propertyPath: moduleSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: aada28b659531d3478444fe2ebd8cb84,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e7b32f344ca444d93613ab3c67902c, type: 2}
   m_IsPrefabAsset: 0
@@ -6346,6 +6408,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4805593090135130, guid: 8f1e781c36aa65f4aab6717e1587fc55,
     type: 2}
   m_PrefabInternal: {fileID: 1765747541}
+--- !u!1 &1769965883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1587512851438654, guid: f3e7b32f344ca444d93613ab3c67902c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1478113254}
 --- !u!1001 &1773259401
 Prefab:
   m_ObjectHideFlags: 0
@@ -6722,7 +6789,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899550254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -138, y: -52, z: -10}
+  m_LocalPosition: {x: 14, y: -17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2025490534}
