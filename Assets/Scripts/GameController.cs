@@ -218,6 +218,18 @@ public class GameController : MonoBehaviour
         return currentShield;
     }
 
+    public void AddHealthCapped(float percentage)
+    {
+        float addme = (percentage / 100f) * maxHealth;
+        currentHealth = Mathf.Min(addme + currentHealth, maxHealth);
+    }
+
+    public void AddSheildCapped(float percentage)
+    {
+        float addme = (percentage / 100f) * maxShield;
+        currentShield = Mathf.Min(addme + currentShield, maxShield);
+    }
+
     public void setHealth(float newHealth)
    {
       currentHealth = newHealth;

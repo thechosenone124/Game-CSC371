@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 60195965193449180}
   - component: {fileID: 114491932197545600}
   - component: {fileID: 114437310416077358}
+  - component: {fileID: 114956581893935470}
+  - component: {fileID: 114519908586260450}
   m_Layer: 0
   m_Name: StarTrekBoss
   m_TagString: Boss
@@ -386,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 100
+  dropOffset: {x: -2, y: 0}
   pickup: {fileID: 1235105931701692, guid: 21221c86390fac54497864222f05ca62, type: 2}
 --- !u!114 &114491932197545600
 MonoBehaviour:
@@ -399,6 +402,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPoints: {fileID: 1513518453188572}
+--- !u!114 &114519908586260450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666035164382982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 0, y: 2}
+  pickup: {fileID: 1627458785434092, guid: 5a73b2e94f94d174b856b518357bddaa, type: 2}
 --- !u!114 &114599210370446268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,6 +452,20 @@ MonoBehaviour:
   bossNumber: 2
   numberOfLayers: 3
   redTime: 0.05
+--- !u!114 &114956581893935470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666035164382982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 2, y: 0}
+  pickup: {fileID: 1423263304687952, guid: 9b33cba46e6d81c48a9ce026b3572ba0, type: 2}
 --- !u!212 &212972070446493288
 SpriteRenderer:
   m_ObjectHideFlags: 1

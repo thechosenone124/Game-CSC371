@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeathPickup : MonoBehaviour {
+public class HealthPickup : MonoBehaviour {
 
-    [Range(5f,  100f)] public float percentage = 10f;
+    [Range(5f,  100f)] public float healPercentage = 10f;
 
     [Range(20f, 100f)] public float rotationOverTime = 50f;
     [Range(0.01f, 5f)] public float sizeOverTime = 5f;
@@ -25,7 +25,7 @@ public class HeathPickup : MonoBehaviour {
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        rend.color = new Color(rend.color.r, rend.color.b, rend.color.g, maxAlpha);
+        rend.color = new Color(rend.color.r, rend.color.g, rend.color.b, maxAlpha);
         transform.localScale = new Vector3(maxSize, maxSize, maxSize);
     }
 
@@ -38,11 +38,10 @@ public class HeathPickup : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.transform.root.CompareTag("Cockpit") || collision.transform.root.CompareTag("Gun") || collision.transform.root.CompareTag("Room") || collision.transform.root.CompareTag("EngineRoom"))
         if (collision.transform.root.CompareTag("PlayerShip"))
         {
-            Debug.Log("PickupController: OnTriggerEnter2D -- " + name + " collided with ship");
-            //GameController.instance.GetComponent<Inventory>().AddItem(itemType);
+            Debug.Log("HealthPickup: OnTriggerEnter2D -- " + name + " collided with ship");
+            GameController.instance.AddHealthCapped(healPercentage);
             Destroy(gameObject);
         }
     }
