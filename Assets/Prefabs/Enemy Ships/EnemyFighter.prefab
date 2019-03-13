@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114213907790687558}
   - component: {fileID: 114181787652940648}
   - component: {fileID: 114506300565050394}
+  - component: {fileID: 114984843506569960}
   m_Layer: 0
   m_Name: EnemyFighter
   m_TagString: Enemy
@@ -166,7 +167,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 1
+  dropOffset: {x: 1, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+--- !u!114 &114984843506569960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332119849000982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 20
+  dropOffset: {x: -1, y: 0}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!212 &212038921049746970
 SpriteRenderer:
   m_ObjectHideFlags: 1

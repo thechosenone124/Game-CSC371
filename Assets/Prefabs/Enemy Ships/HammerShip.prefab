@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 60566019376467806}
   - component: {fileID: 114167138079121794}
   - component: {fileID: 114554499190883294}
+  - component: {fileID: 114734951995487146}
+  - component: {fileID: 114534009343907588}
   m_Layer: 0
   m_Name: HammerShip
   m_TagString: Enemy
@@ -107,6 +109,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114534009343907588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897516076559044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 50
+  dropOffset: {x: 1, y: 0}
+  pickup: {fileID: 1627458785434092, guid: 3b8269a2a8767394a87e9b0433fbeee6, type: 2}
 --- !u!114 &114554499190883294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +137,20 @@ MonoBehaviour:
   speed: 4
   target: {fileID: 0}
   radius: 10
+--- !u!114 &114734951995487146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897516076559044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: -1, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!212 &212002407832993212
 SpriteRenderer:
   m_ObjectHideFlags: 1
