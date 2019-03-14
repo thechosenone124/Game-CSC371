@@ -15,8 +15,8 @@ public class PickupController : MonoBehaviour {
     [Range(0.01f, 5f)] public float sizeOverTime     = 5f;
     [Range(0.5f, 2f)]  public float alphaOverTime    = 1f;
 
-    [Range(0.01f, 2f)] public float minSize  = 0.1f;
-    [Range(0.01f, 4f)] public float maxSize  = 2f;
+    [Range(0.01f, 4f)] public float minSize  = 0.1f;
+    [Range(0.01f, 8f)] public float maxSize  = 2f;
     [Range(0.2f,  1f)]  public float minAlpha = 0.1f;
     [Range(0.2f,  1f)]  public float maxAlpha = 0.8f;
 

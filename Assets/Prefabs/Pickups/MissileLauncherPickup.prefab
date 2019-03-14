@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1235105931701692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.960716, y: 4.1426105, z: 0}
+  m_LocalPosition: {x: -78.1461, y: -26.591755, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,8 +74,8 @@ MonoBehaviour:
   rotationOverTime: 100
   sizeOverTime: 0.98
   alphaOverTime: 1.115
-  minSize: 2
-  maxSize: 4
+  minSize: 3
+  maxSize: 5
   minAlpha: 0.625
   maxAlpha: 0.859
 --- !u!198 &198384856205156286
@@ -4650,8 +4650,8 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 3
-  m_MinParticleSize: 0
-  m_MaxParticleSize: 1.83
+  m_MinParticleSize: 0.01
+  m_MaxParticleSize: 0.1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 3.09

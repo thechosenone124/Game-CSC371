@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1235105931701692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.960716, y: 4.1426105, z: 0}
+  m_LocalPosition: {x: -84.806244, y: -72.83856, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,11 +73,11 @@ MonoBehaviour:
   itemType: 3
   rotationOverTime: 100
   sizeOverTime: 0.98
-  alphaOverTime: 1.115
-  minSize: 0.816
-  maxSize: 1.68
-  minAlpha: 0.625
-  maxAlpha: 0.859
+  alphaOverTime: 0.6
+  minSize: 2
+  maxSize: 4
+  minAlpha: 0.8
+  maxAlpha: 1
 --- !u!198 &198384856205156286
 ParticleSystem:
   m_ObjectHideFlags: 1
