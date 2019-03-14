@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LootDrop : MonoBehaviour {
 	public void DropLoot(){
-		GameController.instance.AddToInventory();
 	}
 
 }

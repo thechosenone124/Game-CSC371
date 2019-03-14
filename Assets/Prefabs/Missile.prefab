@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95240616537148236}
   - component: {fileID: 50113941455144174}
   - component: {fileID: 61977568949112432}
-  - component: {fileID: 114096005956027224}
+  - component: {fileID: 114836380834195792}
   m_Layer: 0
   m_Name: Missile
   m_TagString: EnemyMissile
@@ -107,7 +107,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114096005956027224
+--- !u!114 &114836380834195792
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,14 +115,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977772271130670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521f08c0048a9de448c79f73512856e9, type: 3}
+  m_Script: {fileID: 11500000, guid: a99df1415b355964eb8f84404a257ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLength: 10
   speed: 70
-  timeToFlurry: 1
-  timeBetweenTurns: 1
-  turnAngleRange: 45
+  timeToFlurry: 0.25
+  timeBetweenTurns: 0.5
+  turnAngleRange: 30
   rb: {fileID: 50113941455144174}
 --- !u!212 &212344374994714492
 SpriteRenderer:

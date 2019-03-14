@@ -7,6 +7,7 @@ public class BossTakesDamage : MonoBehaviour
 
    // Use this for initialization
     private bool gotHit = false;
+    public PickupDropper[] droppers;
     public int enemyHealth = 200;
     public int bossNumber;
     public int numberOfLayers;
@@ -23,7 +24,7 @@ public class BossTakesDamage : MonoBehaviour
    // Update is called once per frame
    void Update()
    {
-        if(damageTaken > damageNeededToIncreaseLayer)
+        if(damageTaken > damageNeededToIncreaseLayer && numberOfLayers != 1)
         {
             SendMessage("IncreaseLayerIndex");
             damageTaken = 0;
@@ -45,13 +46,13 @@ public class BossTakesDamage : MonoBehaviour
          damageTime = 0;
          gameObject.GetComponent<SpriteRenderer>().color = Color.white;
       }
-      if (enemyHealth == 0)
+      if (enemyHealth <= 0)
       {
-            if(bossNumber == 0)
+            if(GameController.instance.isTutorial && bossNumber == 1)
             {
                 GameController.instance.TutorialBossIsDead();
             }
-            else if(bossNumber == 1)
+            else if((!GameController.instance.isTutorial) && bossNumber == 1)
             {
                 GameController.instance.Boss1IsDead();
             }
@@ -67,6 +68,10 @@ public class BossTakesDamage : MonoBehaviour
             {
                 GameController.instance.Boss4IsDead();
             }
+            for(int i = 0;i < droppers.GetLength(0); i++){
+                droppers[i].TrySpawnPickup();
+            }
+            Destroy(gameObject);
         }
    }
    void OnTriggerEnter2D(Collider2D col)

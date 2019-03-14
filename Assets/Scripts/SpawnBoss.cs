@@ -10,16 +10,18 @@ public class SpawnBoss : MonoBehaviour {
 	private bool shouldSpawn = false;
 	private bool hasSpawned = false;
     private float spawnRadius;
+	private int bossStartHealth;
 
 	void Start(){
 		gameObject.GetComponent<CircleCollider2D>().radius = triggerRadius;
         spawnRadius = triggerRadius * spawnRadiusRatio;
+		bossStartHealth = spawnable.GetComponent<BossTakesDamage>().enemyHealth;
 		spawnable.SetActive(false);
 	}
 
 	void Update(){
 		if(shouldSpawn && !hasSpawned){
-				spawnable.SetActive(true);
+			spawnable.SetActive(true);
 			shouldSpawn = false;
 			hasSpawned = true;
 		}
@@ -27,6 +29,15 @@ public class SpawnBoss : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.CompareTag("Cockpit")){
 			shouldSpawn = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other){
+		if(other.CompareTag("Cockpit") && !GameController.instance.IsThisBossDead(spawnable.GetComponent<BossTakesDamage>().bossNumber)){
+			spawnable.GetComponent<BossTakesDamage>().enemyHealth = bossStartHealth;
+			shouldSpawn = false;
+			hasSpawned = false;
+			spawnable.SetActive(false);
 		}
 	}
 

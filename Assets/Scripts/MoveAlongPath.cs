@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveAlongPath : MonoBehaviour {
 
@@ -14,14 +15,40 @@ public class MoveAlongPath : MonoBehaviour {
 	public bool doRotation = true;
 
 	public float detectionDistance;
+
+
+	private GameObject currentHealthBar;
+   	private GameObject ratioText;
+   	private GameObject healthBarBackground;
+   	private GameObject healthBarBorder;
+   	private float currentHealth;
+	public GameObject healthBar;
+	private float maxHealth;
+
+
+	void Awake()
+   	{
+		currentHealthBar = healthBar.transform.Find("CurrentHealth").gameObject;               //Set CurrentHealthBar to active
+		currentHealthBar.SetActive(true);
+		ratioText = healthBar.transform.Find("RatioText").gameObject.gameObject;               //Set RatioText to active
+		ratioText.SetActive(true);
+		healthBarBackground = healthBar.transform.Find("HealthBarBackground").gameObject;      //Set HealthBarBackground to active
+		healthBarBackground.SetActive(true);
+		healthBarBorder = healthBar.transform.Find("HealthBarBorder").gameObject;              //Set HealthBarBorder to active
+		healthBarBorder.SetActive(true);
+   }
 	void Start () {
 		direction = path[currentPathIndex].transform.position - transform.position;
 		Quaternion eulerRot = Quaternion.Euler(0, 0, Mathf.Atan2(-direction.x, direction.y) * 180 / Mathf.PI);
 		transform.rotation = eulerRot;
+		maxHealth = gameObject.GetComponent<BossTakesDamage>().enemyHealth;
+      	currentHealth = maxHealth;
+      	UpdateHealthBar();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		currentHealth = GetComponent<BossTakesDamage>().enemyHealth;
 		UpdateCurrentPathPoint();
 		direction = path[currentPathIndex].transform.position - transform.position;
 		MoveShip(direction);
@@ -31,6 +58,19 @@ public class MoveAlongPath : MonoBehaviour {
 		else{
 			GetComponent<WeaponPointManager>().StopWeapons();
 		}
+		if (currentHealth == 0)
+      	{
+        	healthBar.SetActive(false);
+        }
+		
+		UpdateHealthBar();
+	}
+
+	public void UpdateHealthBar()
+	{
+		float ratio = currentHealth / maxHealth;
+		currentHealthBar.GetComponent<Image>().rectTransform.localScale = new Vector3(ratio, 1, 1);
+		ratioText.GetComponent<Text>().text = currentHealth.ToString("0") + " / " + maxHealth.ToString("0");
 	}
 
 	private void UpdateCurrentPathPoint(){
@@ -54,4 +94,18 @@ public class MoveAlongPath : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp(transform.rotation, eulerRot, Time.deltaTime * rotationSpeed);
 		}
 	}
+
+	void OnDisable(){
+      currentHealthBar.SetActive(false);
+      ratioText.SetActive(false);
+      healthBarBackground.SetActive(false);
+      healthBarBorder.SetActive(false);
+   }
+
+   void OnEnable(){
+      currentHealthBar.SetActive(true);
+      ratioText.SetActive(true);
+      healthBarBackground.SetActive(true);
+      healthBarBorder.SetActive(true);
+   }
 }

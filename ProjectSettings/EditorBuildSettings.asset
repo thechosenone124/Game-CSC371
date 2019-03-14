@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMEnu.unity
     guid: 6bfb22a380eba724da022bccea272a20
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DemoLevel.unity
     guid: 33539a97ec5ad21419e70aa14d8b05a0
   - enabled: 0
     path: Assets/UnitySamples/Scenes/MainMenu.unity
     guid: a3136992dde1cd847bedb78bd3109f03
+  - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: 0d0e7231f50ae8940816adfac9494b30
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: fa7788b630f97a344b33a4e4fae82102
   m_configObjects: {}

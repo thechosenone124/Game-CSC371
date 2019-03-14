@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -70,6 +71,9 @@ public class GameController : MonoBehaviour
 
     public GameObject AsteroidBarrier;
 
+    private bool tutorialOver = false;
+    private float timer = 0f;
+
     void Awake()
    {
       if (instance == null)
@@ -105,6 +109,7 @@ public class GameController : MonoBehaviour
    // Update is called once per frame
    void Update()
    {
+       
        if(isTutorial){
             TutorialState();
             changedState = State;
@@ -113,6 +118,13 @@ public class GameController : MonoBehaviour
                 AsteroidBarrier.SetActive(true);
                 AsteroidBarrier.transform.GetChild(1).GetComponent<DestructableBarrier>().barrierHealth = 1000000;
 
+            }
+            if(tutorialOver){
+                Debug.Log(timer);
+                timer += Time.deltaTime;
+                if(timer >= 3.0f){
+                    SceneManager.LoadScene(2);
+                }
             }
        }
    }
@@ -242,9 +254,18 @@ public class GameController : MonoBehaviour
 
    public void PlayerLoses()
    {
-      GameObject.Find("Ship").SetActive(false);
-      gameStateText.text = "You Died!";
+       if(isTutorial){
+            GameObject.Find("Ship").SetActive(false);
+            gameStateText.text = "Jump Away!";
+            tutorialOver = true;
+       }
+       else{
+            GameObject.Find("Ship").SetActive(false);
+            gameStateText.text = "You Died!";
+       }
    }
+   
+
 
    public void DisableUpgradeMenu(){
        UpgradeMenu.SetActive(false);
@@ -312,7 +333,8 @@ public class GameController : MonoBehaviour
             tutorialTextNumber++;
 
         }
-        else if(inventoryCount == 1 && tutorialTextNumber == 2){
+        else if(inventoryCount >= 1 && tutorialTextNumber == 2){
+            GetComponent<MakeBarriersInvulnerable>().WeakenBarrier();
             AdvanceText();
             tutorialTextNumber++;
 
@@ -343,6 +365,7 @@ public class GameController : MonoBehaviour
         inventoryCount++;
     }
     public void TutorialBossIsDead(){
+        gameStateText.text = "Warning!";
         tutorialBossDefeated = true;
     }
     public void Boss1IsDead(){
@@ -356,5 +379,17 @@ public class GameController : MonoBehaviour
     }
     public void Boss4IsDead(){
         boss4Defeated = true;
+    }
+    public bool IsThisBossDead(int bossNum){
+        if(bossNum == 0)
+            return tutorialBossDefeated;
+        else if(bossNum == 1)
+            return boss1Defeated;
+        else if(bossNum == 2)
+            return boss2Defeated;
+        else if(bossNum == 3)
+            return boss3Defeated;
+        else
+            return boss4Defeated;
     }
 }
