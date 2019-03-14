@@ -164,7 +164,7 @@ MonoBehaviour:
   target: {fileID: 0}
   projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
   speed: 5
-  shootRange: 50
+  shootRange: 150
   triggerRange: 100
   bulletFreq: 1
 --- !u!114 &114409651768494272
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 25
-  dropOffset: {x: 1, y: 0}
+  dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!212 &212374620370146432
 SpriteRenderer:

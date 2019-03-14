@@ -6,7 +6,8 @@ public class BossTakesDamage : MonoBehaviour
 {
 
    // Use this for initialization
-    private bool gotHit = false;
+    private int gotHit = 0;
+    public PickupDropper[] droppers;
     public int enemyHealth = 200;
     public int bossNumber;
     public int numberOfLayers;
@@ -23,16 +24,16 @@ public class BossTakesDamage : MonoBehaviour
    // Update is called once per frame
    void Update()
    {
-        if(damageTaken > damageNeededToIncreaseLayer)
+        if(damageTaken > damageNeededToIncreaseLayer && numberOfLayers != 1)
         {
             SendMessage("IncreaseLayerIndex");
             damageTaken = 0;
         }
-        if (gotHit)
+        if (gotHit > 0)
       {
-            enemyHealth -= 1;
+            enemyHealth -= gotHit;
             damageTaken += 1;
-            gotHit = false;
+            gotHit = 0;
             damageTime += redTime;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
       }
@@ -45,13 +46,13 @@ public class BossTakesDamage : MonoBehaviour
          damageTime = 0;
          gameObject.GetComponent<SpriteRenderer>().color = Color.white;
       }
-      if (enemyHealth == 0)
+      if (enemyHealth <= 0)
       {
-            if(bossNumber == 0)
+            if(GameController.instance.isTutorial && bossNumber == 1)
             {
                 GameController.instance.TutorialBossIsDead();
             }
-            else if(bossNumber == 1)
+            else if((!GameController.instance.isTutorial) && bossNumber == 1)
             {
                 GameController.instance.Boss1IsDead();
             }
@@ -67,13 +68,24 @@ public class BossTakesDamage : MonoBehaviour
             {
                 GameController.instance.Boss4IsDead();
             }
+            for(int i = 0;i < droppers.GetLength(0); i++){
+                droppers[i].TrySpawnPickup();
+            }
+            if(bossNumber == 4){
+                GameController.instance.PlayerWins();
+            }
+            Destroy(gameObject);
         }
    }
    void OnTriggerEnter2D(Collider2D col)
    {
       if (col.gameObject.CompareTag("Projectile"))
       {
-         gotHit = true;
+         gotHit = 3;
+      }
+      else if (col.gameObject.CompareTag("PlayerMissile"))
+      {
+         gotHit = 10;
       }
    }
 }

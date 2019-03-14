@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 302b9ae70ed358f4dbb72b16b115cfde
+guid: c1922e73bdc8660428bc42510104e773
 TextureImporter:
   fileIDToRecycleName:
     21300000: Player 2 Idle_0
@@ -84,28 +84,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,7 +102,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f5bdb67f7eb8f0408df85d48365d59b
+      spriteID: 18676c36550b56747b82b2b974fb79e0
       vertices: []
       indices: 
       edges: []
@@ -144,7 +122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c86ceda94e7f8644baee599dce9a2f5
+      spriteID: 9fa43b4e04ebe924da590933ca3a2feb
       vertices: []
       indices: 
       edges: []
@@ -156,7 +134,7 @@ TextureImporter:
         x: 592
         y: 40
         width: 96
-        height: 208
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd63d3b1fa5e0e4aae157f61c2b8176
+      spriteID: 651c4ff2e74960b44aff1bf190a5918e
       vertices: []
       indices: 
       edges: []
@@ -184,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7799a4929945dd841921d535ba983cb6
+      spriteID: 7443be465e429404aa481d02e0b369d3
       vertices: []
       indices: 
       edges: []
@@ -192,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 13d55020103c1da41a74a72e3fe62dd8
+    spriteID: defab75b24a835a468605c190429ffee
     vertices: []
     indices: 
     edges: []
