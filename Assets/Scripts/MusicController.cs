@@ -15,4 +15,14 @@ public class MusicController : MonoBehaviour {
         audio.volume = 1.0f;
         audio.Play();
     }
+
+    public void Off()
+    {
+        audio.mute = true;
+    }
+
+    public void On()
+    {
+        audio.mute = true;
+    }
 }
