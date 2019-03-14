@@ -120,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLength: 10
   speed: 70
-  timeToFlurry: 0
-  timeBetweenTurns: 0.5
+  timeToFlurry: 1
+  timeBetweenTurns: 1
   turnAngleRange: 45
   rb: {fileID: 50623351444449608}
 --- !u!212 &212307991898834406

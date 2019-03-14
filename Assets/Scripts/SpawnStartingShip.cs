@@ -93,9 +93,6 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
 			return false;
 		}
-		else if(rooms[x,y+1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.PLASMABAY){
-			return false;
-		}
 		else{
 			return true;
 		}
@@ -114,9 +111,6 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
-			return false;
-		}
-		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.PLASMABAY){
 			return false;
 		}
 		else if(rooms[x,y-1].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.ENGINEROOM){
@@ -145,9 +139,6 @@ public class SpawnStartingShip : MonoBehaviour {
 		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
 			return false;
 		}
-		else if(rooms[x-1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.PLASMABAY){
-			return false;
-		}
 		else{
 			return true;
 		}
@@ -169,9 +160,6 @@ public class SpawnStartingShip : MonoBehaviour {
 			return false;
 		}
 		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.MISSILELAUNCHER){
-			return false;
-		}
-		else if(rooms[x+1,y].GetComponent<CreateRoom>().GetModuleType() == (int)GameController.ItemTypes.PLASMABAY){
 			return false;
 		}
 		else{
