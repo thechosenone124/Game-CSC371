@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114332558538779274}
   - component: {fileID: 114268430847047956}
   - component: {fileID: 114785126636860936}
+  - component: {fileID: 114409651768494272}
   m_Layer: 0
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -166,6 +167,20 @@ MonoBehaviour:
   shootRange: 150
   triggerRange: 100
   bulletFreq: 1
+--- !u!114 &114409651768494272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098017732048582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: -1, y: 0}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114638473997554462
 MonoBehaviour:
   m_ObjectHideFlags: 1
