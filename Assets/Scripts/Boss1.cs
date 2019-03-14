@@ -95,14 +95,10 @@ public class Boss1 : MonoBehaviour
 
       currentHealth = gameObject.GetComponent<BossTakesDamage>().enemyHealth;
       UpdateHealthBar();
-      if (currentHealth == 0)
+      if (currentHealth <= 0)
       {
          healthBar.SetActive(false);
          gameObject.SetActive(false);
-         if(GameController.instance.isTutorial){
-            GameController.instance.TutorialBossIsDead();
-         }
-         GameController.instance.PlayerWins();
       }
    }
 

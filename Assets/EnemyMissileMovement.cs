@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissileMovement : MonoBehaviour {
+public class EnemyMissileMovement : MonoBehaviour {
 
    public float spawnLength = 0.5f;
    public float speed = 10f;
@@ -43,7 +43,7 @@ public class MissileMovement : MonoBehaviour {
    }
 
    void OnTriggerEnter2D(Collider2D other){
-      if(other.CompareTag("SpaceDebris") || other.CompareTag("MapBorder") || other.CompareTag("Enemy") || other.CompareTag("Boss"))
+      if(other.CompareTag("SpaceDebris") || other.CompareTag("MapBorder"))
       {
          Destroy(gameObject);
       }
