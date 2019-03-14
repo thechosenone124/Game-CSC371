@@ -23,7 +23,6 @@ TagManager:
   - EngineStation
   - EnemyMissile
   - EnemyPlasma
-  - PlayerMissile
   layers:
   - Default
   - TransparentFX

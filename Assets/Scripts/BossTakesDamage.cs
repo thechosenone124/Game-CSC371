@@ -6,7 +6,7 @@ public class BossTakesDamage : MonoBehaviour
 {
 
    // Use this for initialization
-    private int gotHit = 0;
+    private bool gotHit = false;
     public PickupDropper[] droppers;
     public int enemyHealth = 200;
     public int bossNumber;
@@ -29,11 +29,11 @@ public class BossTakesDamage : MonoBehaviour
             SendMessage("IncreaseLayerIndex");
             damageTaken = 0;
         }
-        if (gotHit > 0)
+        if (gotHit)
       {
-            enemyHealth -= gotHit;
+            enemyHealth -= 1;
             damageTaken += 1;
-            gotHit = 0;
+            gotHit = false;
             damageTime += redTime;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
       }
@@ -71,9 +71,6 @@ public class BossTakesDamage : MonoBehaviour
             for(int i = 0;i < droppers.GetLength(0); i++){
                 droppers[i].TrySpawnPickup();
             }
-            if(bossNumber == 4){
-                GameController.instance.PlayerWins();
-            }
             Destroy(gameObject);
         }
    }
@@ -81,11 +78,7 @@ public class BossTakesDamage : MonoBehaviour
    {
       if (col.gameObject.CompareTag("Projectile"))
       {
-         gotHit = 3;
-      }
-      else if (col.gameObject.CompareTag("PlayerMissile"))
-      {
-         gotHit = 10;
+         gotHit = true;
       }
    }
 }

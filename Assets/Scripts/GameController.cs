@@ -127,9 +127,6 @@ public class GameController : MonoBehaviour
                 }
             }
        }
-       if(boss1Defeated && boss2Defeated && boss3Defeated && !capitolShip.activeInHierarchy){
-           capitolShip.SetActive(true);
-       }
    }
 
    //Health manipulation

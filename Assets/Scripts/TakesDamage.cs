@@ -5,7 +5,7 @@ using UnityEngine;
 public class TakesDamage : MonoBehaviour {
 
 	// Use this for initialization
-	private int gotHit = 0;
+	private bool gotHit = false;
 	public int enemyHealth;
 	private float damageTime = 0;
 
@@ -18,14 +18,14 @@ public class TakesDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(gotHit > 0){
-            enemyHealth -= gotHit;
-            gotHit = 0;
+		if(gotHit){
+            enemyHealth -= 1;
+            gotHit = false;
             damageTime += .1f;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             //SendMessage("IncreaseLayerIndex");
         }
-        if(enemyHealth <= 0){
+        if(enemyHealth == 0){
             if (dropper != null) dropper.TrySpawnPickup();
             if(barrier != null) barrier.WeakenBarrier();
             
@@ -42,11 +42,7 @@ public class TakesDamage : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.CompareTag("Projectile"))
         {
-            gotHit = 3;
-        }
-        else if (col.gameObject.CompareTag("PlayerMissile"))
-        {
-            gotHit = 10;
+            gotHit = true;
         }
     }
 

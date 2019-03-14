@@ -279,9 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e51409495f9cd45ace0d302811f4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droppers:
-  - {fileID: 114632911540393912}
-  enemyHealth: 200
+  enemyHealth: 125
   bossNumber: 1
   numberOfLayers: 1
   redTime: 0.05
@@ -297,7 +295,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 100
-  dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114807352748922616
 MonoBehaviour:
