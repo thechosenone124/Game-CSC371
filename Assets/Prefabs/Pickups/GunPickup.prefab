@@ -73,11 +73,11 @@ MonoBehaviour:
   itemType: 3
   rotationOverTime: 100
   sizeOverTime: 0.98
-  alphaOverTime: 0.6
-  minSize: 2
+  alphaOverTime: 1.115
+  minSize: 1.43
   maxSize: 4
-  minAlpha: 0.8
-  maxAlpha: 1
+  minAlpha: 0.625
+  maxAlpha: 0.859
 --- !u!198 &198384856205156286
 ParticleSystem:
   m_ObjectHideFlags: 1

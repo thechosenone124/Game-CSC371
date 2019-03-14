@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686658299335348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.3473, y: -32.757545, z: 0}
+  m_LocalPosition: {x: 25.206268, y: 0.044323444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,11 +73,11 @@ MonoBehaviour:
   itemType: 6
   rotationOverTime: 100
   sizeOverTime: 0.32
-  alphaOverTime: 1
-  minSize: 0.8
-  maxSize: 1.6
-  minAlpha: 0.8
-  maxAlpha: 1
+  alphaOverTime: 1.115
+  minSize: 0.6
+  maxSize: 0.8
+  minAlpha: 0.625
+  maxAlpha: 0.859
 --- !u!198 &198646119843619110
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4650,8 +4650,8 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 3
-  m_MinParticleSize: 0.02
-  m_MaxParticleSize: 0.1
+  m_MinParticleSize: 0.08
+  m_MaxParticleSize: 0.2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 3.09
