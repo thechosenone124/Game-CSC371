@@ -36,7 +36,9 @@ public class GunControl : MonoBehaviour {
             {
                 Instantiate(projectile, transform.position, transform.rotation);
             }
-            gunAnim.SetTrigger("Fire");
+            if(gunAnim != null){
+                gunAnim.SetTrigger("Fire");
+            }
             timer = 0;
 
         }

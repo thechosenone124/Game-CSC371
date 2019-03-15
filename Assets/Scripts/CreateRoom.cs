@@ -17,7 +17,7 @@ public class CreateRoom : MonoBehaviour {
 
 	public void BuildRoom(GameObject module, int neighbors, int moduleType){
 		if(hasChild == 1){
-			if(this.moduleType == (int)GameController.ItemTypes.GUN || this.moduleType == (int)GameController.ItemTypes.NOAHGUN || this.moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
+			if(this.moduleType == (int)GameController.ItemTypes.PLASMABAY || this.moduleType == (int)GameController.ItemTypes.NOAHGUN || this.moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
 				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
 			}
 			Destroy(transform.GetChild(0).gameObject);
@@ -41,7 +41,7 @@ public class CreateRoom : MonoBehaviour {
 
 	public void RemoveRoom(){
 		if(hasChild == 1){
-			if(this.moduleType == (int)GameController.ItemTypes.GUN || this.moduleType == (int)GameController.ItemTypes.NOAHGUN || this.moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
+			if(this.moduleType == (int)GameController.ItemTypes.PLASMABAY || this.moduleType == (int)GameController.ItemTypes.NOAHGUN || this.moduleType == (int)GameController.ItemTypes.MISSILELAUNCHER){
 				GameObject.Find("Ship").GetComponent<ShipWeaponController>().RemoveGun(child);
 			}
 			Destroy(transform.GetChild(0).gameObject);
@@ -75,6 +75,8 @@ public class CreateRoom : MonoBehaviour {
 				break;
 			case (int)GameController.ItemTypes.MISSILELAUNCHER:
 				break;
+			case (int)GameController.ItemTypes.PLASMABAY:
+				break;
 		}
 	}
 
@@ -104,6 +106,10 @@ public class CreateRoom : MonoBehaviour {
 				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;
 			case (int)GameController.ItemTypes.MISSILELAUNCHER:
+				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
+				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
+				break;
+			case (int)GameController.ItemTypes.PLASMABAY:
 				child.gameObject.GetComponent<GunConfigurer>().FaceNeighbor(neighbors);
 				child.gameObject.GetComponent<GunConfigurer>().AddSelfToGuns();
 				break;
