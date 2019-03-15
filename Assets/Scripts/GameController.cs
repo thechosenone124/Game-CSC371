@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
    private float currentHealth;
    public GameObject UpgradeMenu;
    public int State;
+   public MusicController ambience;
     
     // Enums are better because they guarantee we don't set two const equal to the same number
     public enum ItemTypes { COCKPIT,
@@ -74,6 +75,9 @@ public class GameController : MonoBehaviour
     private bool tutorialOver = false;
     private float timer = 0f;
 
+    private bool healthAddedThisFrame = false;
+    private bool sheildAddedThisFrame = false;
+
     void Awake()
    {
       if (instance == null)
@@ -84,6 +88,7 @@ public class GameController : MonoBehaviour
       {
          Destroy(gameObject);
       }
+        ambience = GameObject.Find("Main Camera").GetComponent<MusicController>();
    }
 
    // Use this for initialization
@@ -108,8 +113,7 @@ public class GameController : MonoBehaviour
 
    // Update is called once per frame
    void Update()
-   {
-       
+    { 
        if(isTutorial){
             TutorialState();
             changedState = State;
@@ -130,6 +134,9 @@ public class GameController : MonoBehaviour
        if(boss1Defeated && boss2Defeated && boss3Defeated && !capitolShip.activeInHierarchy){
            capitolShip.SetActive(true);
        }
+        sheildAddedThisFrame = false;
+        healthAddedThisFrame = false;
+
    }
 
    //Health manipulation
@@ -235,14 +242,23 @@ public class GameController : MonoBehaviour
 
     public void AddHealthCapped(float percentage)
     {
+        if (healthAddedThisFrame) return;
         float addme = (percentage / 100f) * maxHealth;
+        Debug.Log("Current Health: " + currentHealth + "      New Health: " + Mathf.Min(addme + currentHealth, maxHealth));
         currentHealth = Mathf.Min(addme + currentHealth, maxHealth);
+        UpdateHealthBar();
+        healthAddedThisFrame = true;
+
     }
 
     public void AddSheildCapped(float percentage)
     {
+        if (sheildAddedThisFrame) return;
         float addme = (percentage / 100f) * maxShield;
+        Debug.Log("Current Sheild: " + currentShield + "      New Sheild: " + Mathf.Min(addme + currentShield, maxShield));
         currentShield = Mathf.Min(addme + currentShield, maxShield);
+        UpdateShield();
+        sheildAddedThisFrame = true;
     }
 
     public void setHealth(float newHealth)
