@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
    private float currentHealth;
    public GameObject UpgradeMenu;
    public int State;
+   public MusicController ambience;
     
     // Enums are better because they guarantee we don't set two const equal to the same number
     public enum ItemTypes { COCKPIT,
@@ -84,6 +85,7 @@ public class GameController : MonoBehaviour
       {
          Destroy(gameObject);
       }
+        ambience = GameObject.Find("Main Camera").GetComponent<MusicController>();
    }
 
    // Use this for initialization
