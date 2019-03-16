@@ -13,10 +13,10 @@ public class MoveAlongPath : MonoBehaviour {
 	public float moveSpeed;
 	public float borderSize;
 	public bool doRotation = true;
+    public bool endOfPath = false;
 
 	public float detectionDistance;
-
-
+    
 	private GameObject currentHealthBar;
    	private GameObject ratioText;
    	private GameObject healthBarBackground;
@@ -44,26 +44,30 @@ public class MoveAlongPath : MonoBehaviour {
 		maxHealth = gameObject.GetComponent<BossTakesDamage>().enemyHealth;
       	currentHealth = maxHealth;
       	UpdateHealthBar();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		currentHealth = GetComponent<BossTakesDamage>().enemyHealth;
-		UpdateCurrentPathPoint();
+        if (currentHealth == 0)
+        {
+            healthBar.SetActive(false);
+        }
+        UpdateHealthBar();
+
+        UpdateCurrentPathPoint();
 		direction = path[currentPathIndex].transform.position - transform.position;
-		MoveShip(direction);
-		if(Vector3.Magnitude(direction) <= detectionDistance){
+        if (!endOfPath)
+        {
+            MoveShip(direction);
+        }
+
+		if(Vector3.Magnitude(GameObject.Find("Ship").transform.position - transform.position) <= detectionDistance){
 			GetComponent<WeaponPointManager>().FireWeapons();
 		}
 		else{
 			GetComponent<WeaponPointManager>().StopWeapons();
 		}
-		if (currentHealth == 0)
-      	{
-        	healthBar.SetActive(false);
-        }
-		
-		UpdateHealthBar();
 	}
 
 	public void UpdateHealthBar()
@@ -78,10 +82,18 @@ public class MoveAlongPath : MonoBehaviour {
 		float bottomOfBorder = path[currentPathIndex].transform.position.y - borderSize;
 		float rightOfBorder = path[currentPathIndex].transform.position.x + borderSize;
 		float leftOfBorder = path[currentPathIndex].transform.position.x - borderSize;
-		if(transform.position.y < topOfBorder && transform.position.y > bottomOfBorder && transform.position.x <= rightOfBorder && transform.position.x >= leftOfBorder){
-			currentPathIndex++;
+        if (transform.position.y < topOfBorder && transform.position.y > bottomOfBorder 
+            && transform.position.x <= rightOfBorder && transform.position.x >= leftOfBorder){  //check if the ship is closer distance than 'borderSize' to the next point
+            if (path.Length > 1)
+            {
+                currentPathIndex++;
+            }
+            else
+            {
+                endOfPath = true;
+            }
 		}
-		if(currentPathIndex == path.Length){
+		if (currentPathIndex == path.Length){
 			currentPathIndex = 0;
 		}
 	}

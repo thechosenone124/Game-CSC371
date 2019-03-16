@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class SpawnBoss : MonoBehaviour {
 	public GameObject spawnable;
-	public float triggerRadius;
-    [Range (0f,1f)]
-    public float spawnRadiusRatio = 0.5f;
 	private bool shouldSpawn = false;
 	private bool hasSpawned = false;
-    private float spawnRadius;
 	private int bossStartHealth;
 
 	void Start(){
-		gameObject.GetComponent<CircleCollider2D>().radius = triggerRadius;
-        spawnRadius = triggerRadius * spawnRadiusRatio;
 		bossStartHealth = spawnable.GetComponent<BossTakesDamage>().enemyHealth;
 		spawnable.SetActive(false);
 	}

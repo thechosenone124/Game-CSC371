@@ -105,6 +105,7 @@ public class GameController : MonoBehaviour
 
         //shield initialization
         currentShield = maxShield;
+        UpdateShield();
 
         //game state text initialization
         gameStateText.text = "";
@@ -145,7 +146,7 @@ public class GameController : MonoBehaviour
    {
       float ratio = currentHealth / maxHealth;
       currentHealthBar.rectTransform.localScale = new Vector3(ratio * .6f, .6f, 1);
-      ratioText.text = (ratio * 100).ToString("0") + "%";
+      ratioText.text = currentHealth.ToString("0") + " / " + maxHealth;
    }
 
     //boost manipulation
@@ -153,7 +154,7 @@ public class GameController : MonoBehaviour
     {
         float ratio = currentBoost / maxBoost;
         currentBoostBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        boostRatioText.text = (ratio * 100).ToString("0") + "%";
+        //boostRatioText.text = (ratio * 100).ToString("0") + "%";
     }
 
     //shield manipulation
@@ -161,7 +162,7 @@ public class GameController : MonoBehaviour
     {
         float ratio = currentShield / maxShield;
         currentShieldBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        shieldRatioText.text = (ratio * 100).ToString("0") + "%";
+        shieldRatioText.text = currentShield.ToString("0") + " / " + maxShield;
     }
 
     private void UseBoost(float boostAmt)
@@ -313,30 +314,30 @@ public class GameController : MonoBehaviour
 
     private void AdvanceText(){
         if(tutorialTextNumber == 0){
-            tutorialText.text = "The cockpit controls the ships movement, use the left stick to fly the ship and right trigger to boost. "+
-                                "The weapons station controls the guns, use the left stick to aim and right trigger to fire. "+
-                                "The engine room must be repaired if the boost breaks, this is done by interacting with it and holding right trigger until boost is fixed.";
+            tutorialText.text = "The cockpit controls the ship's movement. Use the Left Joystick to fly the ship and \"RT\" to boost. "+
+                                "The weapons station controls the guns. Use the Left Joystick to aim and \"RT\" to fire. " +
+                                "The engine room must be repaired if your ship's boost breaks. Fix the boost by interacting with the engine room station and holding \"RT\" until the boost bar refills completely.";
         }
         else if(tutorialTextNumber == 1){
-            tutorialText.text = "There are Federation scout ships ahead. Destroy them with your guns! When an enemy is destroyed there is a chance it will drop a new ship component. "+
+            tutorialText.text = "Careful, there are Federation scout ships ahead. Destroy them with your guns! When an enemy is destroyed there is a chance it will drop a new ship component. "+
                                 "You can dodge enemy fire by moving around and careful use of the boost.";
         }
         else if(tutorialTextNumber == 2){
-            tutorialText.text = "Good job! You got a new ship component. Continue onward!";
+            tutorialText.text = "Nice, it looks you picked up an extra ship component dropped from that enemy ship you destroyed. That'll come in handy. We still need to find that contact, continue your search.";
         }
         else if(tutorialTextNumber == 3){
-            tutorialText.text =  "If you fly to a space station and hit \"X\" you will open the ship upgrade menu.";
+            tutorialText.text =  "Looks like there's a space station ahead. You should stop by it an upgrade your ship with that ship component you scavenged. If you fly next to a space station and hit \"X\" you will open the ship Upgrade Menu.";
         }
         else if(tutorialTextNumber == 4){
-            tutorialText.text = "This is the upgrade menu for the ship. Select a component from the menu that you have picked up from looting. "+
-                                "Find a valid spot in the menu to place the item and hit \"A\" to place the item. "+
-                                "When finished select the finish upgrade button.";
+            tutorialText.text = "This is the Upgrade Menu for the ship. Select a scavenged component you want to add from the menu. "+
+                                "Then, find a place you would like to add the component on the ship and hit \"A\" to place the item. "+
+                                "When you are finished modifying your ship select the \"Finish Upgrade\" button.";
         }
         else if(tutorialTextNumber == 5){
-            tutorialText.text = "Oh no! A Federation flag ship is approaching from above! It will destroy the space station! You must try to defend it!";
+            tutorialText.text = "Oh no! The scanners show a Federation flag ship is approaching up ahead! This job was trap! No running away now, looks like you'll have you fight your way out of here!";
         }
         else if(tutorialTextNumber == 6){
-            tutorialText.text = "You did it! You destroyed the flag ship! But wait something is coming on the scanners!";
+            tutorialText.text = "Great job! You destroyed the flag ship! But wait, there's another ship coming on the scanners. It's HUGE! Get out of there!!";
         }
         else if (tutorialTextNumber > 6){
             tutorialText.text = "";
