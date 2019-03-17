@@ -123,6 +123,11 @@ public class GameController : MonoBehaviour
     private bool healthAddedThisFrame = false;
     private bool sheildAddedThisFrame = false;
 
+    private float shieldTimer = 0f;
+    private bool hitFlag = false;
+    public float shieldRechargeTime = 3f;
+    public float shieldRechargeSpeed = 3f;
+
     void Awake()
     {
         if (instance == null)
@@ -190,6 +195,16 @@ public class GameController : MonoBehaviour
         }
         sheildAddedThisFrame = false;
         healthAddedThisFrame = false;
+        if(hitFlag){
+            shieldTimer = shieldRechargeTime;
+            hitFlag = false;
+        }
+        if(shieldTimer > 0){
+            shieldTimer -= Time.deltaTime;
+        }
+        else if (shieldTimer <= 0){
+            RegenerateShield(shieldRechargeSpeed);
+        }
 
     }
 
@@ -261,6 +276,7 @@ public class GameController : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
+        hitFlag = true;
         if (shieldBroken)
         {
             currentHealth -= damage;
@@ -279,6 +295,7 @@ public class GameController : MonoBehaviour
                 shieldBroken = true;
             }
         }
+
         UpdateHealthBar();
         UpdateShield();
     }
