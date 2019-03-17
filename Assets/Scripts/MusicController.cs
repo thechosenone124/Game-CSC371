@@ -25,4 +25,9 @@ public class MusicController : MonoBehaviour {
     {
         audio.mute = true;
     }
+
+    public void SetVolume(float f)
+    {
+        audio.volume = f;
+    }
 }

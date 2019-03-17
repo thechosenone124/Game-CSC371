@@ -134,6 +134,7 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
         ambience = GameObject.Find("Main Camera").GetComponent<MusicController>();
+        ambience.SetVolume(0.7f);
     }
 
     // Use this for initialization
