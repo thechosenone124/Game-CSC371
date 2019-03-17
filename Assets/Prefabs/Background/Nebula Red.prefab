@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925031580935128}
   - component: {fileID: 212370507973049864}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Nebula Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,95 +6,139 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
 
-   public static GameController instance;
-
-   //Health
-   public float maxHealth = 100f;
-   public Image currentHealthBar;
-   public Text ratioText;
-   public Text gameStateText;
-   private float currentHealth;
-   public GameObject UpgradeMenu;
-   public int State;
-   public MusicController ambience;
-    
     // Enums are better because they guarantee we don't set two const equal to the same number
-    public enum ItemTypes { COCKPIT,
-                            WEAPONSROOM,
-                            ENGINEROOM,
-                            NOAHGUN,
-                            MISSILELAUNCHER,
-                            PLASMABAY,
-                            FOURWAYROOM,
-                            GUN,
-                            NUMBEROFTYPES }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
+    public enum ItemTypes
+    {
+        COCKPIT,
+        WEAPONSROOM,
+        ENGINEROOM,
+        NOAHGUN,
+        MISSILELAUNCHER,
+        PLASMABAY,
+        FOURWAYROOM,
+        GUN,
+        NUMBEROFTYPES
+    }; // make sure the last element is NUMBEROFTYPES. this serves as the length of the list
 
-    public enum GameStates { FREEROAM,
-                             MODIFYINGSHIP,
-                             PLAYERWON,
-                             NUMBEROFSTATES}; // make sure the last element is NUMBEROFSTATES. this serves as the length of the list
+    public enum GameStates
+    {
+        FREEROAM,
+        MODIFYINGSHIP,
+        PLAYERWON,
+        NUMBEROFSTATES
+    }; // make sure the last element is NUMBEROFSTATES. this serves as the length of the list
 
-    //boost
+    private ShipInfoDavin shipInfo;
+
+    //Game State--------------------------------
+    [Header("Game State Info"), Space(5)]
+    public Text gameStateText;
+    public int State;
+
+    private int changedState;
+    //------------------------------------------
+
+
+    //Upgrade Menu/Inventory Info---------------
+    [Header("Upgrade Menu Info"), Space(5)]
+    public GameObject UpgradeMenu;
+
+    private int inventoryCount = 0;
+    //------------------------------------------
+
+    //Map Info----------------------------------
+    [Header("Map Info"), Space(5)]
+    public GameObject map;
+    public bool mapStatus = false;
+    //------------------------------------------
+
+
+    //Music Info--------------------------------
+    [Header("Music Info"), Space(5)]
+    public MusicController ambience;
+    //------------------------------------------
+
+
+    //Health------------------------------------
+    [Header("Ship Health Info"), Space(5)]
+    public float maxHealth = 100f;
+    public Image currentHealthBar;
+    public Text ratioText;
+
+    private float currentHealth;
+    //------------------------------------------
+
+
+    //Shield------------------------------------
+    [Header("Shield Info"), Space(5)]
+    public float maxShield = 100f;
+    public Image currentShieldBar;
+    public Text shieldRatioText;
+    public bool shieldBroken = false;
+
+    private float currentShield;
+    //------------------------------------------
+
+
+    //Boost-------------------------------------
+    [Header("Boost Info"), Space(5)]
     public float maxBoost = 100f;
     public Image currentBoostBar;
     public Text boostRatioText;
-    private float currentBoost;
     public bool isBoosting;
     public bool boostBroken;
+
+    private float currentBoost;
     private float timeToBreak;
+    //------------------------------------------
+
+    //Boss Info---------------------------------
+    [Header("Boss Info"), Space(5)]
+    public GameObject capitolShip;
 
     private bool tutorialBossDefeated = false;
     private bool boss1Defeated = false;
     private bool boss2Defeated = false;
     private bool boss3Defeated = false;
     private bool boss4Defeated = false;
+    //------------------------------------------
 
-    //shield
-    public float maxShield = 100f;
-    public Image currentShieldBar;
-    public Text shieldRatioText;
-    private float currentShield;
-    public bool shieldBroken = false;
 
-    private ShipInfoDavin shipInfo;
-
-    public Text tutorialText;
-    private int tutorialTextNumber = 0;
+    //Tutorial Info-----------------------------
+    [Header("Tutorial Info"), Space(5)]
     public bool isTutorial;
-
-    private int BarrierDestroyed = 0;
-
-    private int changedState;
-
-    private int inventoryCount = 0;
-
-    public GameObject capitolShip;
-
+    public Text tutorialText;
     public GameObject AsteroidBarrier;
 
+    private int BarrierDestroyed = 0;
+    private int tutorialTextNumber = 0;
     private bool tutorialOver = false;
     private float timer = 0f;
+    //------------------------------------------
+
+    private GameObject ship;
 
     private bool healthAddedThisFrame = false;
     private bool sheildAddedThisFrame = false;
 
     void Awake()
-   {
-      if (instance == null)
-      {
-         instance = this;
-      }
-      else if (instance != null)
-      {
-         Destroy(gameObject);
-      }
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         ambience = GameObject.Find("Main Camera").GetComponent<MusicController>();
-   }
+    }
 
-   // Use this for initialization
-   void Start()
-   {
+    // Use this for initialization
+    void Start()
+    {
         State = (int)GameStates.FREEROAM;
         //healthbar initialization
         currentHealth = maxHealth;
@@ -110,13 +154,16 @@ public class GameController : MonoBehaviour
         //game state text initialization
         gameStateText.text = "";
 
-        shipInfo = GameObject.Find("Ship").GetComponent<ShipInfoDavin>();
-   }
+        ship = GameObject.Find("Ship");
+        shipInfo = ship.GetComponent<ShipInfoDavin>();
 
-   // Update is called once per frame
-   void Update()
+        mapStatus = false;
+    }
+
+    // Update is called once per frame
+    void Update()
     { 
-       if(isTutorial){
+        if(isTutorial){     //Game is in Tutorial Level
             TutorialState();
             changedState = State;
             if(tutorialBossDefeated == true){
@@ -126,28 +173,32 @@ public class GameController : MonoBehaviour
 
             }
             if(tutorialOver){
-                Debug.Log(timer);
                 timer += Time.deltaTime;
                 if(timer >= 3.0f){
                     SceneManager.LoadScene(2);
                 }
             }
-       }
-       if(boss1Defeated && boss2Defeated && boss3Defeated && !capitolShip.activeInHierarchy){
-           capitolShip.SetActive(true);
-       }
+        }
+        else    //Game is in Main Level
+        {
+            if (boss1Defeated && boss2Defeated && boss3Defeated && !capitolShip.activeInHierarchy)
+            {
+                capitolShip.SetActive(true);
+            }
+            SetMap();
+        }
         sheildAddedThisFrame = false;
         healthAddedThisFrame = false;
 
-   }
+    }
 
-   //Health manipulation
-   public void UpdateHealthBar()
-   {
-      float ratio = currentHealth / maxHealth;
-      currentHealthBar.rectTransform.localScale = new Vector3(ratio * .6f, .6f, 1);
-      ratioText.text = currentHealth.ToString("0") + " / " + maxHealth;
-   }
+    //Health manipulation
+    public void UpdateHealthBar()
+    {
+        float ratio = currentHealth / maxHealth;
+        currentHealthBar.rectTransform.localScale = new Vector3(ratio * .6f, .6f, 1);
+        ratioText.text = currentHealth.ToString("0") + " / " + maxHealth;
+    }
 
     //boost manipulation
     public void UpdateBoost()
@@ -175,7 +226,6 @@ public class GameController : MonoBehaviour
                 timeToBreak = CalculateRandomChance();
         }
         UpdateBoost();
-        isBoosting = true;
     }
 
     private void RegenerateShield(float shieldAmt)
@@ -209,7 +259,7 @@ public class GameController : MonoBehaviour
     }
 
     private void TakeDamage(float damage)
-   {
+    {
         if (shieldBroken)
         {
             currentHealth -= damage;
@@ -230,12 +280,12 @@ public class GameController : MonoBehaviour
         }
         UpdateHealthBar();
         UpdateShield();
-   }
+    }
 
-   public float getCurrentHealth()
-   {
-      return currentHealth;
-   }
+    public float getCurrentHealth()
+    {
+        return currentHealth;
+    }
 
     public float getCurrentShield()
     {
@@ -264,38 +314,53 @@ public class GameController : MonoBehaviour
     }
 
     public void setHealth(float newHealth)
-   {
-      currentHealth = newHealth;
-   }
+    {
+        currentHealth = newHealth;
+    }
 
-   public void PlayerWins()
-   {
-      gameStateText.text = "You Win!";
-   }
+    public void PlayerWins()
+    {
+        gameStateText.text = "You Win!";
+    }
 
-   public void PlayerLoses()
-   {
-       if(isTutorial){
-            GameObject.Find("Ship").SetActive(false);
+    public void PlayerLoses()
+    {
+        if(isTutorial){
+            ship.SetActive(false);
             gameStateText.text = "Jump Away!";
             tutorialOver = true;
-       }
-       else{
-            GameObject.Find("Ship").SetActive(false);
+        }
+        else{
+            ship.SetActive(false);
             gameStateText.text = "You Died!";
-       }
-   }
+        }
+    }
    
+    public void SetMap()
+    {
+        if (Input.GetButtonDown("SelectButton"))
+        {
+            mapStatus = !mapStatus;
+        }
 
+        if (!mapStatus)
+        {
+            map.SetActive(false);   //Deactivate Map
+        }
+        else
+        {
+            map.SetActive(true);    //Activate Map
+        }
+    }
 
-   public void DisableUpgradeMenu(){
-       UpgradeMenu.SetActive(false);
-   }
+    public void DisableUpgradeMenu(){
+        UpgradeMenu.SetActive(false);
+    }
 
-   public void EnableUpgradeMenu(){
-      UpgradeMenu.SetActive(true);
-      GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
-   }
+    public void EnableUpgradeMenu(){
+        UpgradeMenu.SetActive(true);
+        GameObject.Find("UpgradeCanvas").GetComponent<UpgradeMenuController>().ActivateUpgrade();
+    }
 
     private float CalculateRandomChance()
     {

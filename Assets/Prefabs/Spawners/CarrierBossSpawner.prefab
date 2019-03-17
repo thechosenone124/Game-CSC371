@@ -9,74 +9,74 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1730872075460484}
+  m_RootGameObject: {fileID: 1688962117794568}
   m_IsPrefabAsset: 1
---- !u!1 &1135308816955766
+--- !u!1 &1039633018473058
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4109536118562004}
-  - component: {fileID: 212879750291949316}
+  - component: {fileID: 4601582875071152}
+  - component: {fileID: 212032070498781574}
   m_Layer: 21
-  m_Name: BossMapIcon
+  m_Name: CarrierBossMapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1730872075460484
+--- !u!1 &1688962117794568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4717464280143116}
-  - component: {fileID: 58033199157481896}
-  - component: {fileID: 114975515014248948}
+  - component: {fileID: 4922898156769470}
+  - component: {fileID: 58387248463228776}
+  - component: {fileID: 114731670999048922}
   m_Layer: 0
-  m_Name: BossSpawner
+  m_Name: CarrierBossSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4109536118562004
+--- !u!4 &4601582875071152
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135308816955766}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9712316, w: 0.23813696}
+  m_GameObject: {fileID: 1039633018473058}
+  m_LocalRotation: {x: -0, y: -0, z: 0.932626, w: 0.36084458}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
-  m_Father: {fileID: 4717464280143116}
+  m_Father: {fileID: 4922898156769470}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -152.447}
---- !u!4 &4717464280143116
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 137.696}
+--- !u!4 &4922898156769470
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730872075460484}
+  m_GameObject: {fileID: 1688962117794568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: -862.5152, z: 0}
+  m_LocalPosition: {x: -160, y: 800, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4109536118562004}
+  - {fileID: 4601582875071152}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58033199157481896
+--- !u!58 &58387248463228776
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730872075460484}
+  m_GameObject: {fileID: 1688962117794568}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -85,25 +85,25 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 200.28038
---- !u!114 &114975515014248948
+  m_Radius: 350
+--- !u!114 &114731670999048922
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730872075460484}
+  m_GameObject: {fileID: 1688962117794568}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f048cd1ed39ac248b6af87d9ce55257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnable: {fileID: 0}
---- !u!212 &212879750291949316
+--- !u!212 &212032070498781574
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135308816955766}
+  m_GameObject: {fileID: 1039633018473058}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 742745511
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d7abc122da63d484baee03ea7ed1de9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0aeee91bcf5127d44a74b5dfed245a34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

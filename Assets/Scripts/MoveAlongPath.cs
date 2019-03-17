@@ -24,6 +24,7 @@ public class MoveAlongPath : MonoBehaviour {
    	private float currentHealth;
 	public GameObject healthBar;
 	private float maxHealth;
+    private GameObject playerShip;
 
 
 	void Awake()
@@ -44,6 +45,7 @@ public class MoveAlongPath : MonoBehaviour {
 		maxHealth = gameObject.GetComponent<BossTakesDamage>().enemyHealth;
       	currentHealth = maxHealth;
       	UpdateHealthBar();
+        playerShip = GameObject.Find("Ship");
     }
 	
 	// Update is called once per frame
@@ -62,7 +64,7 @@ public class MoveAlongPath : MonoBehaviour {
             MoveShip(direction);
         }
 
-		if(Vector3.Magnitude(GameObject.Find("Ship").transform.position - transform.position) <= detectionDistance){
+		if(Vector3.Magnitude(playerShip.transform.position - transform.position) <= detectionDistance){
 			GetComponent<WeaponPointManager>().FireWeapons();
 		}
 		else{

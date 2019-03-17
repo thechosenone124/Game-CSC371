@@ -77,6 +77,7 @@ public class ShipMovementDavin : MonoBehaviour {
         {
             if (pic.GetRTButton() == 1 && !GameController.instance.boostBroken)
             {
+                GameController.instance.isBoosting = true;
                 GameController.instance.SendMessage("UseBoost", usageAmt);
                 timeStamp = Time.time + coolDownPeriod;
                 if(boostTimeStamp == 0 && GameController.instance.GetCurrentBoost() == 0){
@@ -89,6 +90,7 @@ public class ShipMovementDavin : MonoBehaviour {
             }
             else
             {
+                GameController.instance.isBoosting = false;
                 //velocityDrag = baseDrag;
                 inputAcceleration = baseAccel;
                 maxSpeed = baseSpeed;
@@ -97,8 +99,6 @@ public class ShipMovementDavin : MonoBehaviour {
             {
                 GameController.instance.boostBroken = true;
             }
-
-            GameController.instance.isBoosting = false;
 
             if (Time.time >= timeStamp && !GameController.instance.boostBroken)
             {

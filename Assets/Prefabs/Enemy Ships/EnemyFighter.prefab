@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114213907790687558}
   - component: {fileID: 114181787652940648}
   - component: {fileID: 114506300565050394}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: EnemyFighter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 1
+  dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!212 &212038921049746970
 SpriteRenderer:

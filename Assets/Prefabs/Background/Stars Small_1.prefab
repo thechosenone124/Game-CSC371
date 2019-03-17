@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4550941587849714}
   - component: {fileID: 212827082319367002}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Stars Small_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

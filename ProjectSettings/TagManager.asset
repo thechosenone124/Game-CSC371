@@ -45,11 +45,11 @@ TagManager:
   - GunModule
   - Pickups
   - PlayerToolTips
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BackGround
+  - MapBackground
+  - Enemy
+  - Boss
+  - MapBorder
   - 
   - 
   - 

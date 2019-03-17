@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class SpawnBoss : MonoBehaviour {
 	public GameObject spawnable;
+    public GameObject spawnableMapIcon;
 	private bool shouldSpawn = false;
 	private bool hasSpawned = false;
 	private int bossStartHealth;
+    private int bossNumber;
+    private Vector3 bossStartLoc;
 
 	void Start(){
 		bossStartHealth = spawnable.GetComponent<BossTakesDamage>().enemyHealth;
-		spawnable.SetActive(false);
+        bossStartLoc = spawnable.transform.position;
+        bossNumber = spawnable.GetComponent<BossTakesDamage>().bossNumber;
+        spawnable.SetActive(false);
 	}
 
 	void Update(){
@@ -19,6 +24,10 @@ public class SpawnBoss : MonoBehaviour {
 			shouldSpawn = false;
 			hasSpawned = true;
 		}
+        if (spawnableMapIcon != null && GameController.instance.IsThisBossDead(bossNumber))
+        {
+            spawnableMapIcon.SetActive(false);
+        }
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.CompareTag("Cockpit")){
@@ -27,10 +36,11 @@ public class SpawnBoss : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other){
-		if(other.CompareTag("Cockpit") && !GameController.instance.IsThisBossDead(spawnable.GetComponent<BossTakesDamage>().bossNumber)){
+		if(other.CompareTag("Cockpit") && !GameController.instance.IsThisBossDead(bossNumber)){
 			spawnable.GetComponent<BossTakesDamage>().enemyHealth = bossStartHealth;
 			shouldSpawn = false;
 			hasSpawned = false;
+            spawnable.transform.position = bossStartLoc;
 			spawnable.SetActive(false);
 		}
 	}
