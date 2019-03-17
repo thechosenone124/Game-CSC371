@@ -23,7 +23,7 @@ public class MusicController : MonoBehaviour {
 
     public void On()
     {
-        audio.mute = true;
+        audio.mute = false;
     }
 
     public void SetVolume(float f)
