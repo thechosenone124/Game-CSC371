@@ -1750,6 +1750,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1666035164382982, guid: 27d52c72f65184bd0a42b84451b681de,
     type: 2}
   m_PrefabInternal: {fileID: 360792111}
+--- !u!114 &360792113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 360792112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3771a4e7f809a394fa7e078fe232df11, type: 3}
 --- !u!114 &360792115 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114437310416077358, guid: 27d52c72f65184bd0a42b84451b681de,
@@ -5500,6 +5512,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1363115120674476, guid: cf7854002350fdd4587cecd6d0aa857a,
     type: 2}
   m_PrefabInternal: {fileID: 1393159513}
+--- !u!114 &1284148139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1284148138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3771a4e7f809a394fa7e078fe232df11, type: 3}
 --- !u!4 &1284148144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4129120204468784, guid: cf7854002350fdd4587cecd6d0aa857a,
@@ -6830,6 +6854,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4305972790081570, guid: f528d3e9c0189ca4bb48dea53b26660b,
     type: 2}
   m_PrefabInternal: {fileID: 599260042}
+--- !u!114 &1528597806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528597804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3771a4e7f809a394fa7e078fe232df11, type: 3}
 --- !u!1001 &1576895138
 Prefab:
   m_ObjectHideFlags: 0
