@@ -26,13 +26,15 @@ GameObject:
   - component: {fileID: 114490471943398458}
   - component: {fileID: 114584246767360678}
   - component: {fileID: 114632911540393912}
-  m_Layer: 0
+  - component: {fileID: 114758204263006034}
+  - component: {fileID: 114541338348832816}
+  m_Layer: 23
   m_Name: BossShip
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1534704166282634
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4441841197866954}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: ProjectileSpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +58,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4671650436907622}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: ProjectileSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,15 +71,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470611205402096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.42876887, w: 0.9034142}
+  m_LocalPosition: {x: -1235.5, y: -302.8, z: 0}
   m_LocalScale: {x: 15, y: -15, z: 1}
   m_Children:
   - {fileID: 4671650436907622}
   - {fileID: 4441841197866954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50.779003}
 --- !u!4 &4441841197866954
 Transform:
   m_ObjectHideFlags: 1
@@ -268,6 +270,20 @@ MonoBehaviour:
   triggerRange: 200
   bulletFreq: 0.75
   maxHealth: 0
+--- !u!114 &114541338348832816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470611205402096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114584246767360678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppers:
   - {fileID: 114632911540393912}
-  enemyHealth: 200
+  - {fileID: 114541338348832816}
+  enemyHealth: 400
   bossNumber: 1
   numberOfLayers: 1
   redTime: 0.05
@@ -299,6 +316,18 @@ MonoBehaviour:
   spawnPercentage: 100
   dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+--- !u!114 &114758204263006034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470611205402096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3771a4e7f809a394fa7e078fe232df11, type: 3}
 --- !u!114 &114807352748922616
 MonoBehaviour:
   m_ObjectHideFlags: 1

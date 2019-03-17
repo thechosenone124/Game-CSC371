@@ -5,12 +5,12 @@ using UnityEngine;
 public class ShipRepairController : MonoBehaviour {
 	private float timer = 0;
 	private float coolDownTime = 100;
-	private float regenAmt = 3.0f;
+	public float regenAmt = .25f;
 	private bool regenBoost = false;
 
 	public void TryRepair(PlayerInputContainer pcon){
 		if(pcon.GetRTButton() == 1 && GameController.instance.boostBroken){
-			timer += (float).25f;
+			timer += regenAmt;
 			GameController.instance.SetBoost(timer);
 			GameController.instance.UpdateBoost();
 			if(timer >= coolDownTime){

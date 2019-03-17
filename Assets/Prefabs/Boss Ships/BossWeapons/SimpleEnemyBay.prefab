@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyShip: {fileID: 1098017732048582, guid: 9459f930d68c24704aca151a711e440a, type: 2}
-  launchFreq: 2
+  launchFreq: 1.5

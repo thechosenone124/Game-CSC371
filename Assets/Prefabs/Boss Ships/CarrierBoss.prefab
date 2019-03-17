@@ -24,7 +24,11 @@ GameObject:
   - component: {fileID: 114110245670201778}
   - component: {fileID: 114498525769878806}
   - component: {fileID: 60264041239274122}
-  m_Layer: 0
+  - component: {fileID: 114847515627648180}
+  - component: {fileID: 114826916951016596}
+  - component: {fileID: 114192656851623112}
+  - component: {fileID: 114346261751645310}
+  m_Layer: 23
   m_Name: CarrierBoss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -39,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4411797328126832}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CarrierBossWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4762113709368486}
   - component: {fileID: 114856982545411912}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: SimpleEnemyBay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4358049701258062}
   - component: {fileID: 114946186179732890}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: NoahGun (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4183150053104300}
   - component: {fileID: 114978011250587314}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: NoahGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,14 +146,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016874118606642}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -74, y: 877, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.41330758, w: 0.9105915}
+  m_LocalPosition: {x: -128, y: -813, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4411797328126832}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.826004}
 --- !u!4 &4762113709368486
 Transform:
   m_ObjectHideFlags: 1
@@ -297,10 +301,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e51409495f9cd45ace0d302811f4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 240
-  bossNumber: 2
-  numberOfLayers: 3
+  droppers:
+  - {fileID: 114847515627648180}
+  - {fileID: 114192656851623112}
+  - {fileID: 114346261751645310}
+  enemyHealth: 500
+  bossNumber: 3
+  numberOfLayers: 1
   redTime: 0.05
+--- !u!114 &114192656851623112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016874118606642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
+--- !u!114 &114346261751645310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016874118606642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!114 &114450542676749436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,7 +357,9 @@ MonoBehaviour:
   moveSpeed: 15
   borderSize: 10
   doRotation: 1
+  endOfPath: 0
   detectionDistance: 200
+  healthBar: {fileID: 0}
 --- !u!114 &114498525769878806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,6 +372,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPoints: {fileID: 1108261145201762}
+--- !u!114 &114826916951016596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016874118606642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3771a4e7f809a394fa7e078fe232df11, type: 3}
+--- !u!114 &114847515627648180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016874118606642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1518560474312464, guid: 97e338f5508c8064fb2ccf7ae461bb94, type: 2}
 --- !u!114 &114856982545411912
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -127,6 +127,11 @@ public class GameController : MonoBehaviour
     private bool hitFlag = false;
     public float shieldRechargeTime = 3f;
     public float shieldRechargeSpeed = 3f;
+    public float volume = 0.3f;
+
+    private bool playerDied = false;
+
+
 
     void Awake()
     {
@@ -139,12 +144,12 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
         ambience = GameObject.Find("Main Camera").GetComponent<MusicController>();
-        ambience.SetVolume(0.7f);
     }
 
     // Use this for initialization
     void Start()
     {
+        ambience.SetVolume(volume);
         State = (int)GameStates.FREEROAM;
         //healthbar initialization
         currentHealth = maxHealth;
@@ -205,7 +210,13 @@ public class GameController : MonoBehaviour
         else if (shieldTimer <= 0){
             RegenerateShield(shieldRechargeSpeed);
         }
-
+        if(playerDied && (Input.GetButtonDown("J1A") || Input.GetButtonDown("J2A"))){
+            ship.transform.position = Vector3.zero;
+            ship.SetActive(true);
+            gameStateText.text = "";
+            currentHealth = 50;
+            playerDied = false;
+        }
     }
 
     //Health manipulation
@@ -277,7 +288,7 @@ public class GameController : MonoBehaviour
     private void TakeDamage(float damage)
     {
         hitFlag = true;
-        if (shieldBroken)
+        if (currentShield <= 0)
         {
             currentHealth -= damage;
             if (currentHealth <= 0)
@@ -292,7 +303,6 @@ public class GameController : MonoBehaviour
             if(currentShield <= 0)
             {
                 currentShield = 0;
-                shieldBroken = true;
             }
         }
 
@@ -350,7 +360,8 @@ public class GameController : MonoBehaviour
         }
         else{
             ship.SetActive(false);
-            gameStateText.text = "You Died!";
+            gameStateText.text = "You Died!\nPress A to Revive";
+            playerDied = true;
         }
     }
    
@@ -403,13 +414,13 @@ public class GameController : MonoBehaviour
         }
         else if(tutorialTextNumber == 1){
             tutorialText.text = "Careful, there are Federation scout ships ahead. Destroy them with your guns! When an enemy is destroyed there is a chance it will drop a new ship component. "+
-                                "You can dodge enemy fire by moving around and careful use of the boost.";
+                                "You can dodge enemy fire by moving around and with careful use of the boost.";
         }
         else if(tutorialTextNumber == 2){
             tutorialText.text = "Nice, it looks you picked up an extra ship component dropped from that enemy ship you destroyed. That'll come in handy. We still need to find that contact, continue your search.";
         }
         else if(tutorialTextNumber == 3){
-            tutorialText.text =  "Looks like there's a space station ahead. You should stop by it an upgrade your ship with that ship component you scavenged. If you fly next to a space station and hit \"X\" you will open the ship Upgrade Menu.";
+            tutorialText.text =  "Looks like there's a space station ahead. You should stop by it and upgrade your ship with that ship component you scavenged. If you fly next to a space station and hit \"X\" you will open the ship Upgrade Menu.";
         }
         else if(tutorialTextNumber == 4){
             tutorialText.text = "This is the Upgrade Menu for the ship. Select a scavenged component you want to add from the menu. "+

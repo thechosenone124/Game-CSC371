@@ -23,16 +23,8 @@ public class FlashShieldWarningScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.getCurrentShield() <= 20)
+        if (GameController.instance.getCurrentShield() <= .2*GameController.instance.maxShield)
         {
-            if (GameController.instance.shieldBroken)
-            {
-                sprite.sprite = repairSprite;
-            }
-            else
-            {
-                sprite = GetComponent<Image>();
-            }
             if (!stampSet)
             {
                 timeStamp = Time.time + flashTime;

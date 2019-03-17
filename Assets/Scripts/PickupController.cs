@@ -42,7 +42,7 @@ public class PickupController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.transform.root.CompareTag("Cockpit") || collision.transform.root.CompareTag("Gun") || collision.transform.root.CompareTag("Room") || collision.transform.root.CompareTag("EngineRoom"))
-        if(collision.CompareTag("EngineRoom"))
+        if(collision.CompareTag("EngineRoom") || collision.CompareTag("Cockpit") || collision.CompareTag("Room") || collision.CompareTag("Gun"))
         {
             Debug.Log("PickupController: OnTriggerEnter2D -- " + name + " collided with ship");
             GameController.instance.GetComponent<Inventory>().AddItem(itemType);

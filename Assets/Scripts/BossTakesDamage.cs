@@ -9,21 +9,27 @@ public class BossTakesDamage : MonoBehaviour
     private int gotHit = 0;
     public PickupDropper[] droppers;
     public int enemyHealth = 200;
+    private int maxHealth;
     public int bossNumber;
     public int numberOfLayers;
     private float damageTime = 0;
     private float damageTaken = 0;
+    private float regenTimer = 0f;
+    public float regenTime;
     public float redTime;
     private float damageNeededToIncreaseLayer;
+    public int regenHealthAmt = 1;
      
    void Start()
    {
+        maxHealth = enemyHealth;
         damageNeededToIncreaseLayer = enemyHealth / numberOfLayers;
    }
 
    // Update is called once per frame
    void Update()
    {
+        regenTimer += Time.deltaTime;
         if(damageTaken > damageNeededToIncreaseLayer && numberOfLayers != 1)
         {
             SendMessage("IncreaseLayerIndex");
@@ -76,6 +82,10 @@ public class BossTakesDamage : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        if(enemyHealth < maxHealth && regenTimer >= regenTime){
+            enemyHealth += regenHealthAmt;
+            regenTimer = 0;
+        }
    }
    void OnTriggerEnter2D(Collider2D col)
    {
@@ -86,6 +96,10 @@ public class BossTakesDamage : MonoBehaviour
       else if (col.gameObject.CompareTag("PlayerMissile"))
       {
          gotHit = 10;
+      }
+      else if (col.gameObject.CompareTag("Plasma"))
+      {
+         gotHit = 5;
       }
    }
 }

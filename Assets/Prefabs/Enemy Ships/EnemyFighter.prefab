@@ -124,7 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 21
+  droppers:
+  - {fileID: 114506300565050394}
 --- !u!114 &114213907790687558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,11 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 8
+  speed: 20
   Radius: 80
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 1
+  RotateSpeed: 0.7
 --- !u!114 &114488926585840326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPercentage: 1
+  spawnPercentage: 4
   dropOffset: {x: 0, y: 0}
-  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+  pickup: {fileID: 1235105931701692, guid: b57bde88d89f84a4e8cd35e1e7384878, type: 2}
 --- !u!212 &212038921049746970
 SpriteRenderer:
   m_ObjectHideFlags: 1

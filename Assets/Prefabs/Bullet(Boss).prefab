@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLength: 2.5
-  speed: 80
+  speed: 120
   rb: {fileID: 50873741071448584}
 --- !u!212 &212920520134300254
 SpriteRenderer:

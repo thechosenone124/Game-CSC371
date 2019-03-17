@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114332558538779274}
   - component: {fileID: 114268430847047956}
   - component: {fileID: 114785126636860936}
+  - component: {fileID: 114204674015196494}
   m_Layer: 22
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -137,6 +138,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114204674015196494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098017732048582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 1.5
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114268430847047956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 15
+  droppers:
+  - {fileID: 114785126636860936}
+  - {fileID: 114204674015196494}
 --- !u!114 &114332558538779274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,8 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
-  speed: 5
-  shootRange: 150
+  speed: 20
+  shootRange: 50
   triggerRange: 100
   bulletFreq: 1
 --- !u!114 &114638473997554462
@@ -189,8 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPercentage: 25
-  dropOffset: {x: 0, y: 0}
+  spawnPercentage: 3
+  dropOffset: {x: 10, y: 0}
   pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!212 &212374620370146432
 SpriteRenderer:

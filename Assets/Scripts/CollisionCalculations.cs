@@ -23,17 +23,17 @@ public class CollisionCalculations : MonoBehaviour {
         {
             timeStamp = Time.time +coolDownPeriod;
             Destroy(collision.gameObject);
-            GameController.instance.SendMessage("TakeDamage", 3);
+            GameController.instance.SendMessage("TakeDamage", 6);
         }
         if (collision.gameObject.CompareTag("EnemyMissile"))
         {
             Destroy(collision.gameObject);
-            GameController.instance.SendMessage("TakeDamage", 10);
+            GameController.instance.SendMessage("TakeDamage", 20);
         }
         if (collision.gameObject.CompareTag("EnemyPlasma"))
         {
             Destroy(collision.gameObject);
-            GameController.instance.SendMessage("TakeDamage", 5);
+            GameController.instance.SendMessage("TakeDamage", 10);
         }
     }
 }

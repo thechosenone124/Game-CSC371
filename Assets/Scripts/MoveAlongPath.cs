@@ -118,8 +118,11 @@ public class MoveAlongPath : MonoBehaviour {
    }
 
    void OnEnable(){
-      if (GameController.instance != null)
-          GameController.instance.ambience.Off();
+	   Debug.Log(GameController.instance); 
+      if (GameController.instance != null){
+		Debug.Log("Hello I am being run!"); 
+	    GameController.instance.ambience.Off();
+	  }
       currentHealthBar.SetActive(true);
       ratioText.SetActive(true);
       healthBarBackground.SetActive(true);

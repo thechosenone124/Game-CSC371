@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114794220367964696}
   - component: {fileID: 114955167393098574}
   - component: {fileID: 114620401295313950}
+  - component: {fileID: 114109355060309560}
   m_Layer: 22
   m_Name: EnemyFighter (2)
   m_TagString: Enemy
@@ -46,6 +47,7 @@ GameObject:
   - component: {fileID: 114539373126818732}
   - component: {fileID: 114969977675294188}
   - component: {fileID: 114464878891986020}
+  - component: {fileID: 114264704260546434}
   m_Layer: 22
   m_Name: EnemyFighter
   m_TagString: Enemy
@@ -67,6 +69,7 @@ GameObject:
   - component: {fileID: 114727553740122896}
   - component: {fileID: 114161745570601250}
   - component: {fileID: 114232727166464104}
+  - component: {fileID: 114931151678451130}
   m_Layer: 22
   m_Name: EnemyFighter (1)
   m_TagString: Enemy
@@ -96,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1136588301493556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.6, y: -15.6, z: 0}
+  m_LocalPosition: {x: 25.8, y: -24, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 4518634777759612}
@@ -109,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965610618430986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 630.9225, y: 435.52835, z: 0}
+  m_LocalPosition: {x: -350.69537, y: -148.42949, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4795270144867824}
@@ -125,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1962455046420928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 10.7, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 4518634777759612}
@@ -138,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1926613164236810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.1, y: -16, z: 0}
+  m_LocalPosition: {x: -24.7, y: -23.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 4518634777759612}
@@ -345,6 +348,20 @@ PolygonCollider2D:
       - {x: 0.089999996, y: -0.84}
       - {x: 0.089999996, y: -1.18}
       - {x: 0.14, y: -1.3199999}
+--- !u!114 &114109355060309560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1136588301493556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 4
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: b57bde88d89f84a4e8cd35e1e7384878, type: 2}
 --- !u!114 &114161745570601250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,11 +374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 8
-  Radius: 20
+  speed: 20
+  Radius: 80
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 1
+  RotateSpeed: 0.7
 --- !u!114 &114232727166464104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,7 +390,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 21
+  droppers:
+  - {fileID: 114931151678451130}
+--- !u!114 &114264704260546434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926613164236810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 4
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: b57bde88d89f84a4e8cd35e1e7384878, type: 2}
 --- !u!114 &114464878891986020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -385,7 +418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 21
+  droppers:
+  - {fileID: 114264704260546434}
 --- !u!114 &114539373126818732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,7 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 21
+  droppers:
+  - {fileID: 114109355060309560}
 --- !u!114 &114727553740122896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +471,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114931151678451130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1962455046420928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 4
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: b57bde88d89f84a4e8cd35e1e7384878, type: 2}
 --- !u!114 &114955167393098574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,11 +497,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 8
-  Radius: 20
+  speed: 20
+  Radius: 80
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 1
+  RotateSpeed: 0.7
 --- !u!114 &114969977675294188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,11 +514,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 8
-  Radius: 20
+  speed: 20
+  Radius: 80
   bulletFreq: 1.5
   projectile: {fileID: 1079983964451360, guid: 50b3c00a2b47c8c47a94467646e49145, type: 2}
-  RotateSpeed: 1
+  RotateSpeed: 0.7
 --- !u!212 &212210201778400076
 SpriteRenderer:
   m_ObjectHideFlags: 1

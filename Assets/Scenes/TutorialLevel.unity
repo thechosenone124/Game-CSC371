@@ -24398,6 +24398,16 @@ Prefab:
       propertyPath: maxShield
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
+        type: 2}
+      propertyPath: ambience
+      value: 
+      objectReference: {fileID: 1805436918}
+    - target: {fileID: 114469691984223064, guid: becdfa3fa27cb3c42a358859be771b03,
+        type: 2}
+      propertyPath: shieldRechargeSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becdfa3fa27cb3c42a358859be771b03, type: 2}
   m_IsPrefabAsset: 0
@@ -39483,6 +39493,7 @@ GameObject:
   - component: {fileID: 1805436916}
   - component: {fileID: 1805436915}
   - component: {fileID: 1805436914}
+  - component: {fileID: 1805436918}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39518,7 +39529,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 524087
+    m_Bits: 14155575
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -39600,6 +39611,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805436918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1805436912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8416e5fbebbcf44b4f168d78869eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 20bf5c3da7223f24cb2f959c045bc6f1, type: 3}
 --- !u!1 &1805440981
 GameObject:
   m_ObjectHideFlags: 0

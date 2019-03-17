@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 114449889775135706}
   - component: {fileID: 114875670046835908}
   - component: {fileID: 114641466929187150}
+  - component: {fileID: 114165470804678794}
+  - component: {fileID: 114719508786999280}
   m_Layer: 22
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -63,6 +65,8 @@ GameObject:
   - component: {fileID: 114422955665670650}
   - component: {fileID: 114653468146596196}
   - component: {fileID: 114994392685521640}
+  - component: {fileID: 114421124424869642}
+  - component: {fileID: 114146253634488520}
   m_Layer: 22
   m_Name: SimpleEnemy (1)
   m_TagString: Enemy
@@ -85,6 +89,8 @@ GameObject:
   - component: {fileID: 114676930158093216}
   - component: {fileID: 114148133325120624}
   - component: {fileID: 114057273010433724}
+  - component: {fileID: 114541110512106758}
+  - component: {fileID: 114800633774066488}
   m_Layer: 22
   m_Name: SimpleEnemy (4)
   m_TagString: Enemy
@@ -428,7 +434,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 15
+  droppers:
+  - {fileID: 114541110512106758}
+  - {fileID: 114800633774066488}
+--- !u!114 &114146253634488520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586523025591082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 1.5
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114148133325120624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,10 +465,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
-  speed: 5
+  speed: 20
   shootRange: 50
   triggerRange: 100
   bulletFreq: 1
+--- !u!114 &114165470804678794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217052821126104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 3
+  dropOffset: {x: 10, y: 0}
+  pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
+--- !u!114 &114421124424869642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586523025591082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 3
+  dropOffset: {x: 10, y: 0}
+  pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!114 &114422955665670650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -470,6 +521,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114541110512106758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769681413085950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 3
+  dropOffset: {x: 10, y: 0}
+  pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!114 &114641466929187150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,7 +546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 15
+  droppers:
+  - {fileID: 114165470804678794}
+  - {fileID: 114719508786999280}
 --- !u!114 &114653468146596196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
-  speed: 5
+  speed: 20
   shootRange: 50
   triggerRange: 100
   bulletFreq: 1
@@ -511,6 +579,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114719508786999280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217052821126104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 1.5
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+--- !u!114 &114800633774066488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769681413085950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 1.5
+  dropOffset: {x: 0, y: 0}
+  pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114875670046835908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -524,7 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectile: {fileID: 1199177490869764, guid: 03b457f152627284d9ee121b540e97d1, type: 2}
-  speed: 5
+  speed: 20
   shootRange: 50
   triggerRange: 100
   bulletFreq: 1
@@ -539,7 +635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8f720c82fd140a458dfa75af2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 15
+  droppers:
+  - {fileID: 114421124424869642}
+  - {fileID: 114146253634488520}
 --- !u!212 &212542581220300886
 SpriteRenderer:
   m_ObjectHideFlags: 1

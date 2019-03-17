@@ -28,6 +28,7 @@ public class CreateRoom : MonoBehaviour {
 		}
 		Instantiate(module,transform.position,Quaternion.identity,transform);
 		this.child = transform.GetChild(switchCount).gameObject;
+		switchCount = 0;
 		this.moduleType = moduleType;
 		ModuleHandler(moduleType,neighbors);
 		hasChild = 1;

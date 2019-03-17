@@ -9,10 +9,9 @@ public class TakesDamage : MonoBehaviour {
 	public int enemyHealth;
 	private float damageTime = 0;
 
-    private PickupDropper dropper;
+    public PickupDropper[] droppers;
     private MakeBarriersInvulnerable barrier;
 	void Start () {
-		dropper = GetComponent<PickupDropper>();
         barrier = GetComponent<MakeBarriersInvulnerable>();
 	}
 	
@@ -26,7 +25,9 @@ public class TakesDamage : MonoBehaviour {
             //SendMessage("IncreaseLayerIndex");
         }
         if(enemyHealth <= 0){
-            if (dropper != null) dropper.TrySpawnPickup();
+            for(int i = 0; i < droppers.GetLength(0); i++){
+                droppers[i].TrySpawnPickup();
+            }
             if(barrier != null) barrier.WeakenBarrier();
             
             Destroy(gameObject);
@@ -47,6 +48,10 @@ public class TakesDamage : MonoBehaviour {
         else if (col.gameObject.CompareTag("PlayerMissile"))
         {
             gotHit = 10;
+        }
+        else if (col.gameObject.CompareTag("Plasma"))
+        {
+            gotHit = 5;
         }
     }
 

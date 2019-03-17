@@ -24,6 +24,7 @@ TagManager:
   - EnemyMissile
   - EnemyPlasma
   - PlayerMissile
+  - Plasma
   layers:
   - Default
   - TransparentFX
