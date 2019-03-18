@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Author: Bryan
 public class ScrollingBackground : MonoBehaviour {
    public GameObject backgroundPrefab;
    private GameObject[,] tiles = new GameObject[3,3];

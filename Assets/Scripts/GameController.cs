@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+//Author: Brandon, Collaborators: Everyone
 public class GameController : MonoBehaviour
 {
     public static GameController instance;

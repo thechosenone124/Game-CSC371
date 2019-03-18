@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
-
+//Author: Bryan
 public class SelectOnInput : MonoBehaviour {
 
     public EventSystem eventSystem;

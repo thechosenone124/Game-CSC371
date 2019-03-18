@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//Author: Zachary, collaborators: Davin, Bryan
 public class MoveAlongPath : MonoBehaviour {
 
 	public GameObject[] path;
