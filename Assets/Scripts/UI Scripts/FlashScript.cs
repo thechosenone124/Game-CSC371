@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/* Contributors:
+ * Zachary Barram
+ * Brandon Ryan
+ */
 public class FlashScript : MonoBehaviour {
 
     public double flashTime = 0.5;

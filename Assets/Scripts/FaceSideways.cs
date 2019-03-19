@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Brandon Ryan
+ */
 public class FaceSideways : MonoBehaviour {
 
     // Use this for initialization

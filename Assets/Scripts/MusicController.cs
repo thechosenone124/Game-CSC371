@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Bryan Tan
+ */
 public class MusicController : MonoBehaviour {
 
     private AudioSource audio;

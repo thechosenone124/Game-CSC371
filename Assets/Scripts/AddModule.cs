@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ */
 public class AddModule : MonoBehaviour {
 	private const int NOAHGUN = 5;
 	private bool partSpawned = false;

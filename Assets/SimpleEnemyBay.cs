@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ */
 public class SimpleEnemyBay : MonoBehaviour {
 
 	// Use this for initialization

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Bryan Tan
+ */
 public class UpgradeCanvasManager : MonoBehaviour {
 	public void disableUI(){
 		transform.GetChild(0).gameObject.SetActive(false);

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Noah Paige
+ */
 public class GunConfigurer : MonoBehaviour {
 	public void FaceNeighbor(int neighbors){
 		if((neighbors & 4) > 0){

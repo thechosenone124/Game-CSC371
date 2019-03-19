@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Brandon Ryan
+ */
 public class simpleShipEnemy : MonoBehaviour {
 
     public GameObject target;

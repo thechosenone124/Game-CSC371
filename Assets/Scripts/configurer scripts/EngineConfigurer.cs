@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Noah Paige
+ */
 public class EngineConfigurer : MonoBehaviour {
 	private GameObject upDoor,leftDoor,rightDoor;
 	private GameObject upPath,leftPath,rightPath;

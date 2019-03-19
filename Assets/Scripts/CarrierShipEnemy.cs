@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Author: Zachary Barram
-
+/* Contributors:
+ * Brandon Ryan
+ */
 public class CarrierShipEnemy : MonoBehaviour
 {
 

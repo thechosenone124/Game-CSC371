@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Brandon Ryan
+ */
 public class ShipRepairController : MonoBehaviour {
 	private float timer = 0;
 	private float coolDownTime = 100;

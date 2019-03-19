@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/* Contributors:
+ * 
+ */
 public class Healthbar : MonoBehaviour {
 
     public Image currentHealthBar;

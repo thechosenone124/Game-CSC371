@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/* Contributors:
+ * Zachary Barram
+ * Brandon Ryan
+ * Davin Johnson
+ */
 public class Boss1 : MonoBehaviour
 {
 

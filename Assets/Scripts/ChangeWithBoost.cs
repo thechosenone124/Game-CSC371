@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/* Contributors:
+ * Zachary Barram
+ */
 public class ChangeWithBoost : MonoBehaviour {
 	private Image boostBar;
 	private Color green = new Color(((float)9/255),((float)207/255),((float)116/255),((float)255/255));

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * 
+ */
 public class GunControl : MonoBehaviour {
 
     public float shootFrequency = 0.5f;

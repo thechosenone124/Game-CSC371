@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Davin Johnson
+ * Brandon Ryan
+ */
 public class BossTakesDamage : MonoBehaviour
 {
 

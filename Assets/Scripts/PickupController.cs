@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEditor;
-
+/* Contributors:
+ * Noah Paige
+ */
 public class PickupController : MonoBehaviour {
 
     string[] types = Enum.GetNames(typeof(GameController.ItemTypes));

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Davin Johnson
+ */
 public class DestructableBarrier : MonoBehaviour {
 
 	// Use this for initialization

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ */
 public class ShipMovementController : MonoBehaviour {
 
     public float baseSpeed = 0.5f;

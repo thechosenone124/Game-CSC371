@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Noah Paige
+ */
 public class StayInsideShip : MonoBehaviour {
     [Header("Keeps player objects inside the ship")]
     [Header("If this script is on player, there is no need to make the ship the player's parent.")]

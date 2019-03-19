@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Noah Paige
+ */
 public class PlayerInputContainer : MonoBehaviour {
 
     public bool isOperatingStation = false;

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ */
 public class CreateRoom : MonoBehaviour {
 	private int x,y;
 	private int childNum;

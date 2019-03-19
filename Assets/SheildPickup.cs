@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * 
+ */
 public class SheildPickup : MonoBehaviour {
 
     [Range(5f, 100f)] public float sheildHealPercentage = 10f;

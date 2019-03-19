@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ * Zachary Barram
+ * Noah Paige
+ */
 public class ShipInfoDavin : MonoBehaviour {
 
     public float maxHealth = 100f;

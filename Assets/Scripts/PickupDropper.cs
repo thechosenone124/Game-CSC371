@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Noah Paige
+ */
 public class PickupDropper : MonoBehaviour {
 
     [Range(0.0001f, 100f)] public float spawnPercentage = 50f;

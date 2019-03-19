@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ */
 public class WeaponAimControl : MonoBehaviour {
 
    public float reticleDeadZone = 0.2f;

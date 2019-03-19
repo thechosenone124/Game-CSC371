@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Davin Johnson
+ */
 public class EnemyBulletMovement : MonoBehaviour {
 
    public float spawnLength = 0.5f;

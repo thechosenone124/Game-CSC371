@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ */
 public class SpawnComplexEnemies : MonoBehaviour {
 	public int numberOfEnemies;
 	public GameObject spawnable;

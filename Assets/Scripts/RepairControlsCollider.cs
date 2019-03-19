@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Brandon Ryan
+ */
 public class RepairControlsCollider : MonoBehaviour {
 
 

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/* Contributors:
+ * Noah Paige
+ */
 public class Inventory : MonoBehaviour {
 
     [Range(8, 32)]

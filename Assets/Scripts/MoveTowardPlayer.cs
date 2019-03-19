@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * 
+ */
 public class MoveTowardPlayer : MonoBehaviour
 {
     public Vector3 vel;

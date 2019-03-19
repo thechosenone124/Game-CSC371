@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Noah Paige
+ */
 public class CockpitConfigurer : MonoBehaviour {
 	private GameObject downDoor;
 	private GameObject downPath;

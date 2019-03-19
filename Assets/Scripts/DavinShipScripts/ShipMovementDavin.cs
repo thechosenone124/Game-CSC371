@@ -1,7 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ * Zachary Barram
+ * Noah Paige
+ * Brandon Ryan
+ */
 public class ShipMovementDavin : MonoBehaviour {
 
     [Header("Base Speed Settings:")]

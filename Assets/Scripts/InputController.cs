@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * 
+ */
 public class InputController : MonoBehaviour {
 
     public GameObject Player1;

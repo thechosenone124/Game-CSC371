@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Noah Paige
+ */
 public class EnemyController2 : MonoBehaviour
 {
     // Start is called before the first frame update

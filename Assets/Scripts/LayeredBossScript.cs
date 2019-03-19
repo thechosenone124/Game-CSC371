@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/* Contributors:
+ * Brandon Ryan
+ */
 public class LayeredBossScript : MonoBehaviour {
 
     public Sprite[] layers;

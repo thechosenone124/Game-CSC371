@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Zachary Barram
+ * Noah Paige
+ */
 public class WeaponsRoomConfigurer : MonoBehaviour {
 	private GameObject upDoor,downDoor,leftDoor,rightDoor;
 	private GameObject upPath,downPath,leftPath,rightPath;

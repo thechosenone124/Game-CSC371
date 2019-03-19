@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ * Zachary Barram
+ */
 public class PlayerMovementControllerDavin : MonoBehaviour {
 
     [Range(0.1f, 1.5f)]

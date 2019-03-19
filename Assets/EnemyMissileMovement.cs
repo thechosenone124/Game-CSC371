@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Davin Johnson
+ */
 public class EnemyMissileMovement : MonoBehaviour {
 
    public float spawnLength = 0.5f;

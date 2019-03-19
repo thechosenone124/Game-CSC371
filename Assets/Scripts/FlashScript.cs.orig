@@ -14,11 +14,7 @@ public class FlashScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<Image>();
-<<<<<<< HEAD
-        sprite.enabled = false;
-=======
         sprite.enabled = true;
->>>>>>> Davin-Branch
 	}
 	
 	// Update is called once per frame
