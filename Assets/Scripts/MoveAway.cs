@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 /* Contributors:
- * 
+ * Zach Barram
+ * Brandon Ryan
+ * Noah Paige
+ * Davin Johnson
  */
 public class MoveAway : MonoBehaviour
 {

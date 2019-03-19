@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 /* Contributors:
  * Davin Johnson
+ * Brandon Ryan
+ * Zachary Barram
  */
 public class ShipInformation : MonoBehaviour {
 

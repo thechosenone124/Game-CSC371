@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 /* Contributors:
- * 
+ * Brandon Ryan
  */
 public class TestControlScript : MonoBehaviour
 

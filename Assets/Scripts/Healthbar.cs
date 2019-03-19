@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /* Contributors:
- * 
+ * Brandon Ryan
  */
 public class Healthbar : MonoBehaviour {
 

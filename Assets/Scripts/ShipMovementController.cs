@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /* Contributors:
  * Davin Johnson
+ * Brandon Ryan
  */
 public class ShipMovementController : MonoBehaviour {
 
