@@ -223,12 +223,19 @@ public class GameController : MonoBehaviour
             RegenerateShield(shieldRechargeSpeed);
         }
         if(playerDied && (Input.GetButtonDown("J1A") || Input.GetButtonDown("J2A"))){
-            ship.transform.position = Vector3.zero;
-            ship.SetActive(true);
-            gameStateText.text = "";
-            currentHealth = 50;
-            UpdateHealthBar();
-            playerDied = false;
+            if (isTutorial)
+            {
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                ship.transform.position = Vector3.zero;
+                ship.SetActive(true);
+                gameStateText.text = "";
+                currentHealth = 50;
+                UpdateHealthBar();
+                playerDied = false;
+            }
         }
     }
 
@@ -366,10 +373,16 @@ public class GameController : MonoBehaviour
 
     public void PlayerLoses()
     {
-        if(isTutorial){
+        if(isTutorial && tutorialBossDefeated){
             ship.SetActive(false);
             gameStateText.text = "Jump Away!";
             tutorialOver = true;
+        }
+        else if (isTutorial)
+        {
+            ship.SetActive(false);
+            gameStateText.text = "You Died!\nPress A to Restart Tutorial";
+            playerDied = true;
         }
         else{
             ship.SetActive(false);
@@ -436,15 +449,15 @@ public class GameController : MonoBehaviour
             tutorialText.text =  "Looks like there's a space station ahead. You should stop by it and upgrade your ship with that ship component you scavenged. If you fly next to a space station and hit \"X\" you will open the ship Upgrade Menu.";
         }
         else if(tutorialTextNumber == 4){
-            tutorialText.text = "This is the Upgrade Menu for the ship. Select a scavenged component you want to add from the menu. "+
-                                "Then, find a place you would like to add the component on the ship and hit \"A\" to place the item. "+
+            tutorialText.text = "This is the Upgrade Menu for the ship. Select a scavenged component you want to add from the menu using the Left Joystick. "+
+                                "Then, find a place you would like to add the component on the ship and hit \"A\" to place the component. "+
                                 "When you are finished modifying your ship select the \"Finish Upgrade\" button.";
         }
         else if(tutorialTextNumber == 5){
-            tutorialText.text = "Oh no! The scanners show a Federation flag ship is approaching up ahead! This job was trap! No running away now, looks like you'll have you fight your way out of here!";
+            tutorialText.text = "Oh no! The scanners show a Federation Flagship is approaching up ahead! This job was trap! No running away now, looks like you'll have you fight your way out of here!";
         }
         else if(tutorialTextNumber == 6){
-            tutorialText.text = "Great job! You destroyed the flag ship! But wait, there's another ship coming on the scanners. It's HUGE! Get out of there!!";
+            tutorialText.text = "Great job! You destroyed the Flagship! But wait, there's another ship coming on the scanners. It's HUGE! Get out of there!!";
         }
         else if (tutorialTextNumber > 6){
             tutorialText.text = "";
