@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /* Contributors:
+ * Noah Paige
  * Davin Johnson
  * Brandon Ryan
  * Zachary Barram
