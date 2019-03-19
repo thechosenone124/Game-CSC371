@@ -498,7 +498,9 @@ MonoBehaviour:
   enemyHealth: 100
   bossNumber: 4
   numberOfLayers: 1
+  regenTime: 0
   redTime: 0.05
+  regenHealthAmt: 2
 --- !u!114 &114923720929132104
 MonoBehaviour:
   m_ObjectHideFlags: 1

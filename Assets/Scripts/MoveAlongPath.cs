@@ -118,9 +118,9 @@ public class MoveAlongPath : MonoBehaviour {
    }
 
    void OnEnable(){
-	   Debug.Log(GameController.instance); 
+	  //Debug.Log(GameController.instance); 
       if (GameController.instance != null){
-		Debug.Log("Hello I am being run!"); 
+		//Debug.Log("Hello I am being run!"); 
 	    GameController.instance.ambience.Off();
 	  }
       currentHealthBar.SetActive(true);

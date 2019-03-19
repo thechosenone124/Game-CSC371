@@ -4,6 +4,7 @@ using UnityEngine;
 /* Contributors:
  * Zachary Barram
  * Noah Paige
+ * Davin Johnson
  */
 public class ShipWeaponController : MonoBehaviour {
 

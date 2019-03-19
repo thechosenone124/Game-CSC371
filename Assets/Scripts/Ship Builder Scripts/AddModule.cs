@@ -27,7 +27,10 @@ public class AddModule : MonoBehaviour {
 		if(other.CompareTag("EngineRoom") && (Input.GetButtonDown("J1X") || Input.GetButtonDown("J2X")) && 
             GameController.instance.State != (int)GameController.GameStates.MODIFYINGSHIP)
         {
-			GameController.instance.setHealth(100);
+            if (GameController.instance.getCurrentHealth() < 50)
+            {
+                GameController.instance.setHealth(50);
+            }
 			GameController.instance.UpdateHealthBar();
 			GameController.instance.EnableUpgradeMenu();
 			GameObject.Find("Ship").transform.rotation = Quaternion.identity;

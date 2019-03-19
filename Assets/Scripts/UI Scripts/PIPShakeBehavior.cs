@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Contributors:
+ * Noah Paige
+ * Davin Johnson
+ */
 public class PIPShakeBehavior : MonoBehaviour {
 
     // Transform of the GameObject you want to shake

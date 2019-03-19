@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 /* Contributors:
- *
- *
+ * Davin Johnson
  */
 public class CameraHolder : MonoBehaviour {
 

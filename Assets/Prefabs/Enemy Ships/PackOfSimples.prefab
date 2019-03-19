@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114641466929187150}
   - component: {fileID: 114165470804678794}
   - component: {fileID: 114719508786999280}
+  - component: {fileID: 114993375045176186}
   m_Layer: 22
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -67,6 +68,7 @@ GameObject:
   - component: {fileID: 114994392685521640}
   - component: {fileID: 114421124424869642}
   - component: {fileID: 114146253634488520}
+  - component: {fileID: 114446533374290086}
   m_Layer: 22
   m_Name: SimpleEnemy (1)
   m_TagString: Enemy
@@ -91,6 +93,7 @@ GameObject:
   - component: {fileID: 114057273010433724}
   - component: {fileID: 114541110512106758}
   - component: {fileID: 114800633774066488}
+  - component: {fileID: 114028918797734168}
   m_Layer: 22
   m_Name: SimpleEnemy (4)
   m_TagString: Enemy
@@ -423,6 +426,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114028918797734168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769681413085950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114057273010433724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +455,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114541110512106758}
   - {fileID: 114800633774066488}
+  - {fileID: 114028918797734168}
 --- !u!114 &114146253634488520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,6 +527,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114446533374290086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586523025591082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114449889775135706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,6 +582,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114165470804678794}
   - {fileID: 114719508786999280}
+  - {fileID: 114993375045176186}
 --- !u!114 &114653468146596196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,6 +657,20 @@ MonoBehaviour:
   shootRange: 50
   triggerRange: 100
   bulletFreq: 1
+--- !u!114 &114993375045176186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217052821126104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114994392685521640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,6 +686,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114421124424869642}
   - {fileID: 114146253634488520}
+  - {fileID: 114446533374290086}
 --- !u!212 &212542581220300886
 SpriteRenderer:
   m_ObjectHideFlags: 1

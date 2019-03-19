@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114632911540393912}
   - component: {fileID: 114758204263006034}
   - component: {fileID: 114541338348832816}
+  - component: {fileID: 114970175421230348}
   m_Layer: 23
   m_Name: BossShip
   m_TagString: Boss
@@ -298,10 +299,13 @@ MonoBehaviour:
   droppers:
   - {fileID: 114632911540393912}
   - {fileID: 114541338348832816}
+  - {fileID: 114970175421230348}
   enemyHealth: 400
   bossNumber: 1
   numberOfLayers: 1
+  regenTime: 0
   redTime: 0.05
+  regenHealthAmt: 1
 --- !u!114 &114632911540393912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 100
-  dropOffset: {x: 0, y: 0}
+  dropOffset: {x: 10, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
 --- !u!114 &114758204263006034
 MonoBehaviour:
@@ -340,6 +344,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114970175421230348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470611205402096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: 10, y: 10}
+  pickup: {fileID: 1423263304687952, guid: 9b33cba46e6d81c48a9ce026b3572ba0, type: 2}
 --- !u!212 &212876099760532812
 SpriteRenderer:
   m_ObjectHideFlags: 1

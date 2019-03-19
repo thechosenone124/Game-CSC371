@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114826916951016596}
   - component: {fileID: 114192656851623112}
   - component: {fileID: 114346261751645310}
+  - component: {fileID: 114499915471958196}
   m_Layer: 23
   m_Name: CarrierBoss
   m_TagString: Boss
@@ -305,10 +306,13 @@ MonoBehaviour:
   - {fileID: 114847515627648180}
   - {fileID: 114192656851623112}
   - {fileID: 114346261751645310}
+  - {fileID: 114499915471958196}
   enemyHealth: 500
   bossNumber: 3
   numberOfLayers: 1
+  regenTime: 0
   redTime: 0.05
+  regenHealthAmt: 1
 --- !u!114 &114192656851623112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 100
-  dropOffset: {x: 0, y: 0}
+  dropOffset: {x: 0, y: 10}
   pickup: {fileID: 1686658299335348, guid: c1d63946b01eb4a4590f8c264950b837, type: 2}
 --- !u!114 &114346261751645310
 MonoBehaviour:
@@ -372,6 +376,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPoints: {fileID: 1108261145201762}
+--- !u!114 &114499915471958196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016874118606642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 100
+  dropOffset: {x: -10, y: 10}
+  pickup: {fileID: 1423263304687952, guid: 9b33cba46e6d81c48a9ce026b3572ba0, type: 2}
 --- !u!114 &114826916951016596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPercentage: 100
-  dropOffset: {x: 0, y: 0}
+  dropOffset: {x: 10, y: 0}
   pickup: {fileID: 1518560474312464, guid: 97e338f5508c8064fb2ccf7ae461bb94, type: 2}
 --- !u!114 &114856982545411912
 MonoBehaviour:

@@ -1131,13 +1131,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130820651705934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4601259140710356}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4650603637639494
 Transform:
   m_ObjectHideFlags: 1
@@ -2380,6 +2380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0262089e3f1c50d46b8f3ab37f5309c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regenAmt: 0.5
 --- !u!114 &114093983793868686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2767,9 +2768,9 @@ MonoBehaviour:
   speedIncrease: 100
   accelIncrease: 50
   dragDecrease: 0
-  coolDownPeriod: 1
+  coolDownPeriod: 0.85
   usageAmt: 0.5
-  regenAmt: 0.3
+  regenAmt: 0.35
   maxSpeedIncrease: 25
   player1: {fileID: 1602775467575250}
   player2: {fileID: 1860133779069648}
@@ -3194,8 +3195,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 742745511
   m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3fe129df7e98dcf4e9b873d7ef15ae7b, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: cc8578f39cf630e418201acd091beadf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

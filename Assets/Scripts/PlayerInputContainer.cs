@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /* Contributors:
  * Noah Paige
+ * Davin Johnson
  */
 public class PlayerInputContainer : MonoBehaviour {
 

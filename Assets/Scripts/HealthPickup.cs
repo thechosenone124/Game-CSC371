@@ -40,9 +40,9 @@ public class HealthPickup : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.root.CompareTag("PlayerShip"))
+        if (collision.CompareTag("EngineRoom") || collision.CompareTag("Cockpit") || collision.CompareTag("Room") || collision.CompareTag("Gun"))
         {
-            Debug.Log("HealthPickup: OnTriggerEnter2D -- " + name + " collided with ship");
+            //Debug.Log("HealthPickup: OnTriggerEnter2D -- " + name + " collided with ship");
             GameController.instance.AddHealthCapped(healPercentage);
             Destroy(gameObject);
         }

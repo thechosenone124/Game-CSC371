@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114053001587617724}
   - component: {fileID: 114928923379111304}
   - component: {fileID: 114516586934892082}
+  - component: {fileID: 114519848808175700}
   m_Layer: 22
   m_Name: SimpleEnemy (3)
   m_TagString: Enemy
@@ -52,6 +53,7 @@ GameObject:
   - component: {fileID: 114641466929187150}
   - component: {fileID: 114261638432939244}
   - component: {fileID: 114467771068273006}
+  - component: {fileID: 114824569328173602}
   m_Layer: 22
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -91,6 +93,7 @@ GameObject:
   - component: {fileID: 114806695300641270}
   - component: {fileID: 114633594356455346}
   - component: {fileID: 114068108169419566}
+  - component: {fileID: 114757221596100234}
   m_Layer: 22
   m_Name: SimpleEnemy (2)
   m_TagString: Enemy
@@ -115,6 +118,7 @@ GameObject:
   - component: {fileID: 114994392685521640}
   - component: {fileID: 114930061677573750}
   - component: {fileID: 114688167675702518}
+  - component: {fileID: 114703470313027182}
   m_Layer: 22
   m_Name: SimpleEnemy (1)
   m_TagString: Enemy
@@ -139,6 +143,7 @@ GameObject:
   - component: {fileID: 114057273010433724}
   - component: {fileID: 114170430167889906}
   - component: {fileID: 114621137918914340}
+  - component: {fileID: 114033798684335096}
   m_Layer: 22
   m_Name: SimpleEnemy (4)
   m_TagString: Enemy
@@ -679,6 +684,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114033798684335096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769681413085950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114053001587617724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,6 +713,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114928923379111304}
   - {fileID: 114516586934892082}
+  - {fileID: 114519848808175700}
 --- !u!114 &114057273010433724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -709,6 +729,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114170430167889906}
   - {fileID: 114621137918914340}
+  - {fileID: 114033798684335096}
 --- !u!114 &114068108169419566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -866,6 +887,20 @@ MonoBehaviour:
   spawnPercentage: 1.5
   dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+--- !u!114 &114519848808175700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115384350074180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114621137918914340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -909,6 +944,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114261638432939244}
   - {fileID: 114467771068273006}
+  - {fileID: 114824569328173602}
 --- !u!114 &114653468146596196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,6 +988,34 @@ MonoBehaviour:
   spawnPercentage: 1.5
   dropOffset: {x: 0, y: 0}
   pickup: {fileID: 1235105931701692, guid: 13f4ce44fe3ed4dfc9364233f413c7cf, type: 2}
+--- !u!114 &114703470313027182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586523025591082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
+--- !u!114 &114757221596100234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520180967710978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114806695300641270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -967,6 +1031,21 @@ MonoBehaviour:
   droppers:
   - {fileID: 114633594356455346}
   - {fileID: 114068108169419566}
+  - {fileID: 114757221596100234}
+--- !u!114 &114824569328173602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217052821126104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd24e438d422b8e41a7c63d16a1ace98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPercentage: 5
+  dropOffset: {x: 0, y: -10}
+  pickup: {fileID: 1423263304687952, guid: eeefa1bf4896b584d9027e5ea0f36fb9, type: 2}
 --- !u!114 &114875670046835908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1039,6 +1118,7 @@ MonoBehaviour:
   droppers:
   - {fileID: 114930061677573750}
   - {fileID: 114688167675702518}
+  - {fileID: 114703470313027182}
 --- !u!212 &212416127160617336
 SpriteRenderer:
   m_ObjectHideFlags: 1

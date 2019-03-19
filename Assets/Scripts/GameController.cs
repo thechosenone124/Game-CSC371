@@ -94,6 +94,7 @@ public class GameController : MonoBehaviour
     private float timeToBreak;
     //------------------------------------------
 
+
     //Boss Info---------------------------------
     [Header("Boss Info"), Space(5)]
     public GameObject capitolShip;
@@ -103,6 +104,13 @@ public class GameController : MonoBehaviour
     private bool boss2Defeated = false;
     private bool boss3Defeated = false;
     private bool boss4Defeated = false;
+    //------------------------------------------
+
+        
+    //Help Window Info--------------------------
+    [Header("Help Window Info"), Space(5)]
+    public float helpWindowDisableDistance = 200f;
+    public GameObject helpWindow;
     //------------------------------------------
 
 
@@ -197,6 +205,10 @@ public class GameController : MonoBehaviour
                 capitolShip.SetActive(true);
             }
             SetMap();
+            if (ship.transform.position.magnitude >= helpWindowDisableDistance) //disable Help Window when ship flys farther than helpWindowDisableDistance from start
+            {
+                helpWindow.SetActive(false);
+            }
         }
         sheildAddedThisFrame = false;
         healthAddedThisFrame = false;
@@ -215,6 +227,7 @@ public class GameController : MonoBehaviour
             ship.SetActive(true);
             gameStateText.text = "";
             currentHealth = 50;
+            UpdateHealthBar();
             playerDied = false;
         }
     }

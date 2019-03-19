@@ -52,6 +52,7 @@ public class Boss1 : MonoBehaviour
    }
 
    void OnDisable(){
+      GameController.instance.ambience.On();
       currentHealthBar.SetActive(false);
       ratioText.SetActive(false);
       healthBarBackground.SetActive(false);
@@ -63,7 +64,12 @@ public class Boss1 : MonoBehaviour
       ratioText.SetActive(true);
       healthBarBackground.SetActive(true);
       healthBarBorder.SetActive(true);
-   }
+      if (GameController.instance != null)
+      {
+          //Debug.Log("Hello I am being run!"); 
+          GameController.instance.ambience.Off();
+      }
+    }
 
    void Start()
    {
@@ -124,5 +130,5 @@ public class Boss1 : MonoBehaviour
       bullet1.transform.rotation = Quaternion.LookRotation(Vector3.forward, playerDirection1);
       bullet2.transform.rotation = Quaternion.LookRotation(Vector3.forward, playerDirection2);
 
-   }
+    }
 }
